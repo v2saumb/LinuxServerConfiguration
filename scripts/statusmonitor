@@ -1,0 +1,22 @@
+#!/bin/sh
+echo 'starting status recording'
+ date >> status_update.txt
+echo "-------------------Apache  Status--------------" >> status_update.txt
+service apache2 status >> status_update.txt
+echo "-------------------Fail2ban  Status--------------" >> status_update.txt
+sudo service fail2ban status >> status_update.txt
+echo "-------------------ssh  Status--------------" >> status_update.txt
+ps -aux|grep sshd  >> status_update.txt
+echo "-------------------ufw  Status--------------" >> status_update.txt
+sudo ufw  status >> status_update.txt
+echo "-------------------netstat  Connected Status--------------" >> status_update.txt
+netstat -aln|grep 'CONNECTED'  >> status_update.txt
+echo "---------netstat  Listening Status--------------" >> status_update.txt
+netstat  -aln|grep 'LISTENING'  >> status_update.txt
+echo "---------DB  Status--------------" >> status_update.txt
+ps -ef|grep 'catalog'  >> status_update.txt
+echo 'information collected sending mail...'
+echo "Current status update from sams-catalog-server" | mutt -a "./status_update.txt" -s "Current Status at sams-catalog-server" -- v2saumb@gmail.com, grader@localhost
+echo "mail sent.."
+rm ./status_update.txt
+echo "task complete"
