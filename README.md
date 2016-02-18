@@ -412,10 +412,93 @@ sudo apt-get install sendmail
 ```
 
 - Update the host information **/etc/local-host-names** file
+- Use the following commands to configure send mail
+
 ```python
+#Edit the file 
+sudo nano /etc/local-host-names
+
+#Edit the file and add the domain name
+# in this case samscatalogapp.com
+samscatalogapp.com
+
+#save and exit
+
+# restart the networking service
+sudo /etc/init.d/networking restart  
+
+# restart the host name servie
+sudo service hostname restart 
+
+# take a backup of the file /etc/mail/sendmail.mc 
+cp /etc/mail/sendmail.mc /etc/mail/sendmail.mc.original
+
+#edit the sendmail.mc file to add host
+sudo nano /etc/mail/sendmail.mc 
+
+#edit the file and add the domain configuration
+define('confDOMAIN_NAME', 'samscatalogapp.com')dnl
+
+#complete the configuration 
+sudo make -C /etc/mail/
+
+```
+
+###14 Install Logwatcher
+
+Install and configure logwatcher to run daily to ensure you get a daily summary mail of system activity. 
+- Use the following commands to install and configure logwatcher
+
+```python
+
+#get the updates
+sudo apt-get update
+
+# install the logwatch 
+sudo apt-get install logwatch
+
+#Make a tmp directory for logwatcher
+sudo mkdir /var/cache/logwatch
+
+#Take a backup of the default configurations file
+sudo cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.orig
+
+
+#Edit the file and change the desired settings
+sudo nano /etc/logwatch/conf/logwatch.conf
+
+#Change who recieves the mails from logwatcher
+MailTo = v2saumb@gmail.com root grader
+
+#Change the from email address
+MailFrom = sysadmin@samscatalogapp.com
+
+#Change the Reange of data to check to ALL or whatever you choose
+Range = ALL
+
+#Change the level of details that you want to recieve
+Detail = Med
+
+#Set the servvice to what you need
+Service = All
+
+#save and exit
+
+```
+- Set up a cron to run daily. The details of the logwatcher script are covered in the Scripts secion. I have set it up to run twice daily.
+
+```python
+#Add the logwatcher script to  cron
+#edit and add the following lines
+sudo crontab -e
+
+# logwatcher script runs twice a day at 11:45 AM and 23:45 PM
+45  11,23 * * * /etc/monitoringscripts/logwatcher
 
 
 ```
+
+
 
 
 **[Back to top](#table-of-contents)**
