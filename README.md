@@ -444,7 +444,7 @@ sudo make -C /etc/mail/
 
 ```
 
-###14 Install Logwatcher
+###14. Install Logwatcher
 
 Install and configure logwatcher to run daily to ensure you get a daily summary mail of system activity. 
 - Use the following commands to install and configure logwatcher
@@ -497,9 +497,162 @@ sudo crontab -e
 
 
 ```
+###15. Install Apache
+- Install apache2 the web server where our web appliation will run.
+- We will cover the configureation in the Application Configurations section.
+- Install the required libraries and modules
+
+```python
+# get the latest updates
+sudo apt-get update
+
+#install apache2
+sudo apt-get install apache2
+
+#install python module this will be used later
+sudo apt-get install python-setuptools libapache2-mod-wsgi
+
+#install the python-dev
+sudo apt-get install libapache2-mod-wsgi python-dev
+
+#restart apache
+sudo service apache2 restart
 
 
+```
+- You can now verify that you see the default apache welcome page on port 80.
 
+
+###16. Set Timezone UTC
+
+- Use the following command to change the timezone. Follow the on screen options to choose UTC.
+
+```python
+sudo dpkg-reconfigure tzdata
+
+```
+
+###17. Install Fail2Ban
+
+**Fail2ban** automatically adds firewall rules to block suspicious users. 
+
+
+```python
+# Get the updates
+sudo apt-get update
+
+#install fail2ban
+sudo apt-get install fail2ban
+
+# take the backup of the configuration file
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+#edit the configuration file to change the default settings
+sudo nano /etc/fail2ban/jail.local
+
+#change the following settings in the configuration file.
+
+# Increase the ban time,the bantime controls how many seconds an offending member is banned for
+
+bantime = 1800
+
+#The findtime specifies an amount of time in seconds 
+
+findtime = 600  
+
+#The maxretry directive indicates the number of attempts to be tolerated within the findtime
+
+maxretry = 6     
+
+#Set what program will be used to send the alerts
+
+mta = sendmail
+
+# Set who will recieve th email alerts.
+
+destemail = youraccount@email.com
+
+
+# setup a default sender name for the alert mails
+
+sendername = Fail2BanAlerts
+
+#Use the action_mwl action, which does the same thing, 
+# but also includes the offending log lines that triggered the ban:
+
+action = %(action_mwl)s
+
+# Enable monitoring on for Apache
+
+...
+
+[apache]
+enabled  = true
+
+...
+
+[apache-noscript]
+enabled  = true
+
+...
+
+[apache-overflows]
+ enabled  = true
+
+
+# Copy [apache-overflows]  section and create additional checks for bad bots and nohome
+
+[apache-badbots]
+
+enabled  = true
+port     = http,https
+filter   = apache-badbots
+logpath  = /var/log/apache*/*error.log
+maxretry = 2
+
+
+[apache-nohome]
+
+enabled  = true
+port     = http,https
+filter   = apache-nohome
+logpath  = /var/log/apache*/*error.log
+maxretry = 2
+
+# enable monitoring or PHP
+
+[php-url-fopen]
+enabled = true
+
+
+#Change the port for ssh and ssh-ddos and enable monitoring on those ports
+
+[ssh]
+
+enabled  = true
+port     = 2200
+
+
+[ssh-ddos]
+
+enabled  = true
+port     = 2200
+
+
+# save and exit the file
+
+# iptables-persistent to allow the server to automatically set up our firewall rules at boot. 
+#These can be acquired from Ubuntu's default repositories
+
+sudo apt-get install iptables-persistent
+
+#Stop the service
+sudo service fail2ban stop
+
+#Start the fail2ban service
+sudo service fail2ban start
+
+```
 
 **[Back to top](#table-of-contents)**
 ---    
@@ -523,6 +676,8 @@ sudo crontab -e
 [coderepo]: https://github.com/v2saumb/catalog/tree/feature/prod-changes
 [nanoman]: http://www.nano-editor.org/dist/v2.0/nano.html
 [ufwhelp]: https://help.ubuntu.com/community/UFW
+[fail2banapache]:https://www.digitalocean.com/community/tutorials/how-to-protect-an-apache-server-with-fail2ban-on-ubuntu-14-04
+[fail2banssh]: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
 https://www.ftmon.org/blog/secure-ubuntu-server/
 https://help.ubuntu.com/community/Logwatch
 https://discussions.udacity.com/t/p5-how-i-got-through-it/15342
