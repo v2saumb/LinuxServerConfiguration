@@ -16,7 +16,27 @@ Requirementd for this project wree to take a baseline installation of a Linux di
 
 1. [Setup And Configurations](#setupandconfigurations)
     - [General Configuration](#general-configuration)
-        1. []()
+        *   [Get Latest Updates](#get-latest-updates)
+        *   [Ugrade Packages](#upgrade-packages)
+        *   [Cleanup installations and uninstalls](#cleanup-installations-and-uninstalls)
+        *   [Install finger ](#install-finger)
+        *   [Install nano](#install-nano)
+        *   [Create New User ](#creeate-new-user)
+        *   [Set SUDO Permissions](#set-sudo-permissions)
+        *   [Creating A Public Key Pair](#creating-apublic-key-pair)
+        *   [Disable Root Login](#disable-root-login)
+        *   [Setup UFW Firewall ](#setup-ufw-firewall)
+        *   [Setup Host Name](#setup-host-name)
+        *   [Setup EMail](#setup-email)
+        *   [Install Logwatcher](#install-logwatcher)
+        *   [Install Apache](#install-apache)
+        *   [Set Timezone UTC](#setup-timezone-utc)
+        *   [Install Fail2Ban](#install-fail2ban)
+        *   [Install PSAD](#install-psad)
+        *   [Setup Automatinc Updates](#setup-automatic-updates)
+        *   [Install AptiCron](#install-apticron)
+        *   [Setup PostgresSql](#setup-postgressql)
+
     - [Web Application Configuration and Setup](#web-appliation-configuration-and-setup)
     - [Creating The Database ](#creating-the-database)   
     - [Populate Basic Data](#populate-basic-data)   
@@ -90,7 +110,7 @@ The code for the samscatalog app can be downloaded from the `feature/prod-change
 
 Following are the configuration changes and details of the new softwares that were installed to make the web application work.
 
-###1. Get Latest Updates
+### Get Latest Updates
 
 If not already logged in log in to the environment using the [ssh url][#terminal-login-url] if you are logged in using `grader` use the following command to update the package information.
 
@@ -98,7 +118,7 @@ If not already logged in log in to the environment using the [ssh url][#terminal
 sudo apt-get update
 ```
 
-###2. Ugrade Packages
+### Ugrade Packages
 
 If not already logged in log in to the environment using the [ssh url][#terminal-login-url] if you are logged in using `grader` use the following command to upgrade desired packages.
 
@@ -106,7 +126,7 @@ If not already logged in log in to the environment using the [ssh url][#terminal
 sudo apt-get upgrade
 ```
 
-###3. Cleanup installations and uninstalls
+### Cleanup installations and uninstalls
 
 If not already logged in log in to the environment using the [ssh url][#terminal-login-url] if you are logged in using `grader` use the following command to remove unrelated packages. T
 
@@ -115,7 +135,7 @@ sudo apt-get autoremove
 ```
 
 
-###4. Install finger 
+### Install finger 
 
 **finger** is a user information lookup program.
 
@@ -131,7 +151,7 @@ You can now use finger to get user information like below
 finger grader
 ```
 
-###5. Install nano
+### Install nano
 
 **nano** is a small and friendly text editor
 
@@ -149,7 +169,7 @@ You can now use nano to edit files
 nano /etc/sudoers
 ```
 
-###6. Create New User 
+### Create New User 
 
 Log in to the environment using the [ssh url][#terminal-login-url] if you are logged in with `root` user login  use the following command to create a new user **grader**.
 
@@ -165,7 +185,7 @@ sudo adduser grader
 
 follow the on-screen prompts to create the new user grader and provide additional information about the new user.
 
-###7. Set SUDO Permissions
+### Set SUDO Permissions
 
 In case you want to allow the user to use sudo performa the following steps
 
@@ -209,7 +229,7 @@ grader ALL=(ALL) NOPASSWD:ALL
 sudo chmod 644 grader
 ```
 
-###8. Creating A Public Key Pair
+### Creating A Public Key Pair
 
 - On your computer open a terminal program and use  **ssh-keygen**  to create a public key pair. Use the following command and follow the on screen instructions
 
@@ -254,7 +274,7 @@ ssh -i ~/.ssh/udacity_key.rsa grader@54.149.100.110
 
 ```
 
-###9. Disable Root Login
+### Disable Root Login
 
 - This will prevent the majority of brute force attack attempts.
 - Be very careful when making the following changes. You can lock youself out.
@@ -300,7 +320,7 @@ restart ssh
 ssh -i ~/.ssh/grader_key.rsa grader@54.149.100.110 -p 2200
 
 ```
-###10. Setup UFW Firewall 
+### Setup UFW Firewall 
 
 Setup the default firewall configuration tool for Ubuntu **UFW**. For details refer to the [UFW][ufwhelp] page.
 
@@ -364,7 +384,7 @@ To                         Action      From
 
 
 ```
-###12. Setup Host Name
+### Setup Host Name
 
 - This is **optional* in case you have registered domain.
 - Use nano to edit the **/etc/hosts** and **/etc/hostnames** files
@@ -395,7 +415,7 @@ reboot
 ```
 
 
-###13. Setup EMail
+### Setup EMail
 
 Setup a email client for sending mails to local and external users.
 
@@ -444,7 +464,7 @@ sudo make -C /etc/mail/
 
 ```
 
-###14. Install Logwatcher
+### Install Logwatcher
 
 Install and configure logwatcher to run daily to ensure you get a daily summary mail of system activity. 
 - Use the following commands to install and configure logwatcher
@@ -497,7 +517,7 @@ sudo crontab -e
 
 
 ```
-###15. Install Apache
+### Install Apache
 - Install apache2 the web server where our web appliation will run.
 - We will cover the configureation in the Application Configurations section.
 - Install the required libraries and modules
@@ -523,7 +543,7 @@ sudo service apache2 restart
 - You can now verify that you see the default apache welcome page on port 80.
 
 
-###16. Set Timezone UTC
+### Set Timezone UTC
 
 - Use the following command to change the timezone. Follow the on screen options to choose UTC.
 
@@ -532,7 +552,7 @@ sudo dpkg-reconfigure tzdata
 
 ```
 
-###17. Install Fail2Ban
+### Install Fail2Ban
 
 **Fail2ban** automatically adds firewall rules to block suspicious users. 
 
@@ -654,8 +674,301 @@ sudo service fail2ban start
 
 ```
 
+
+### Install PSAD
+
+PSAD (Port Scan Attack Detection)  will actively monitor your firewall logs to detect if port scan type attacks are in progress. 
+We can configure it to alert administrators of active threats or to automatically block such attacks. 
+
+- Turn on logging in  UFW
+- Append some LOG rules to /etc/ufw/before.rules
+
+
+```python
+
+# get the latest updates
+sudo apt-get update
+
+# install PSAD
+sudo apt-get install psad
+
+
+#update the rules /etc/ufw/before6.rules
+
+sudo  nano /etc/ufw/before6.rules
+
+#add the following rules just before the  commit
+
+-A INPUT -j  LOG
+-A FORWARD -j LOG
+
+#save and exit
+
+
+
+#update the rules /etc/ufw/before.rules
+
+sudo neno /etc/ufw/before.rules
+
+#add the following rules just before the  commit
+
+-A INPUT -j  LOG
+-A FORWARD -j LOG
+
+#save and exit
+
+#stop the ufw service
+sudo ufw disable
+
+#start the ufw service
+sudo ufw enable
+
+# configure psad for your environment
+
+#navigate to the psad directory
+
+sudo cd /etc/psad
+
+#take the backup of the conf file. Just in case some thing goes wrong
+sudo cp psad.conf psad.conf.original
+
+#Edit the psad.conf file and change the required files
+sudo nano  /etc/psad/psad.conf
+
+#change the emal address to recuegw
+EMAIL_ADDRESSES             v2saumb@gmail.com;
+
+# change the host name for the server
+HOSTNAME                    samscatalogapp.com
+
+#verify the log file path
+IPT_SYSLOG_FILE             /var/log/syslog;
+
+# update udp ports to ignore
+IGNORE_PORTS                udp/53;
+
+# Specify the danger level cautiusly or You're going to 
+# spam yourself with email if you set this too low.
+EMAIL_ALERT_DANGER_LEVEL    3;
+
+# One email only per IP threat only.
+EMAIL_LIMIT                 1;
+
+# reload PSAD
+sudo psad -R
+
+
+# update signatures with the latest threat signatures.
+psad --sig-update
+
+# import the signatures by restarting psad
+sudo psad -H
+
+
+# Verify PSAD is working.
+sudo psad --Status
+
+````
+### Setup Automatinc Updates
+
+The unattended-upgrades package can be used to automatically install updated packages, and can be configured to update all packages or just install security updates. First, install the package by entering the following in a terminal:
+
+```python
+
+#install the unattended upgrades package
+sudo apt-get install unattended-upgrades
+
+#reconfigure the unattended upgrades
+sudo dpkg-reconfigure unattended-upgrades
+
+# Edit the configuration file and modify the required settings
+sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
+
+...
+#un comment to allow the updates
+ "${distro_id}:${distro_codename}-updates";
+
+...
+#Configure the email address to get information about the updates
+Unattended-Upgrade::Mail "v2saumb@gmail.com";
+
+...
+#Un comment and set to true to recieve a mail on error
+Unattended-Upgrade::MailOnlyOnError "true";
+
+#save and exit.
+
+#Set up periodic updates edit the file and configure when you want to run the different options. The values are days
+sudo nano /etc/apt/apt.conf.d/10periodic
+
+
+#uncomment and change values where required
+
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::AutocleanInterval "7";
+APT::Periodic::Unattended-Upgrade "1";
+
+
+#save and exit
+
+
+```
+
+
+### Setup AptiCron
+
+**Apticron** will configure a cron job to email an administrator information about any packages on the system that have updates available, as well as a summary of changes in each package.
+
+- Install the apticron package, in a terminal enter:
+
+```python
+
+#install apticron
+sudo apt-get install apticron
+
+#After installation edit /etc/apticron/apticron.conf, to set the email address and other options:
+
+sudo nano /etc/apticron/apticron.conf
+
+... 
+
+#change who to send mail to 
+EMAIL="grader@samscatalogapp.com"
+
+```
+### Setup PostgresSql
+**PostgreSQL** or  **postgres** as it is commonly known, is a popular database management system. 
+
+- To install use the following commands
+
+```python
+
+# get the latest updates
+sudo apt-get update
+
+
+#install the postgressql and postgressql-contrib
+sudo apt-get install postgresql postgresql-contrib
+
+```
+
+- Update he postgres configuration to stop remote login. This will protect the system from potential attacks
+
+```python
+# edit the 
+sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+
+# uncomment and modify the settings where necesary
+
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+
+
+# save and exit
+```
+
+
 **[Back to top](#table-of-contents)**
----    
+--- 
+
+##Web Application Configuration and Setup
+In this section we will configure and install programs required bythe **samscatalogapp** web application.
+
+### Setup Catalog Database
+
+- We already installed postgres earlier. 
+- catalogdb will store all the data for the samscatalogapp web application.
+- follow the followign commands to create the **catalogdb**
+
+```python
+
+# switch user to the default postgres user
+su postgres
+
+#start the psql command line interface;
+psql
+
+# create a admin user for the catalogdb
+create user catalogadmin with createdb createrole createuser ;
+
+#alter the admin user and add password
+alter user catalogadmin with password 'xxxx';
+
+#create a new ueer with transactional previlages
+create user catalog with password 'xxxx';
+
+
+#verify that the users are created with requied privilages
+\du
+
+ Role name   |                   Attributes                   | Member of
+--------------+------------------------------------------------+-----------
+ catalog      |                                                | {}
+ catalogadmin | Superuser, Create role, Create DB              | {}
+ postgres     | Superuser, Create role, Create DB, Replication | {}
+
+
+
+#create the new database for storing catalog information
+create database catalogdb
+
+#exit the psql interface 
+\q
+
+# on the terminal login to the new database using the post gres user
+psql -d catalogdb -U postgres
+
+#lock down schema permissions
+
+#revoke/ stop public from accessing the catalogdb
+revoke all on database catalogdb from public;
+
+#revoke / stop public from accessing the public schema in catalog db
+revoke all on schema public from public;
+
+
+# Grant all permissions on the new catalogdb to catalog admin
+grant all on database catalogdb to catalogadmin;
+
+
+#Grant connect permission to the catalog user
+grant connect on database catalogdb to catalog;
+
+#set permissions for the catalog transactional user
+
+# alter the default permissions so that catalog user has select insert and update on all new tables created  
+
+alter default privileges in schema public grant select, insert,update on tables to catalog;
+
+#alter defaust privileges so that catalog user has all privileges on the new sequences in the public schema
+alter default privileges in schema public grant all on sequences to catalog;
+
+#Grant permission to the catalog user to access database usage stats
+grant usage on schema public to catalog;
+
+
+
+
+
+```
+### Configure Apache
+### Install Git
+### Get Application Code
+### Install virtualenv
+### Install And Configure virtualenvwrapper
+### Create A Virtual Environment
+### Install Rqquired Libraries 
+### 
 
 
 ## References
