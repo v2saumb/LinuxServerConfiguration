@@ -108,7 +108,7 @@ The administration login for the web application is as follows
 
 | User Name |Password|
 |:---------:|:---------------------:|
-|   admin@itemcatalog.com  |         123456        | 
+|   admin@samscatalogapp.com  |         123456        | 
 
 
 ###Web Application Repository
