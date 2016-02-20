@@ -213,6 +213,10 @@ This will have to change in the following files in the code
 -   src\catalogdb\catalog_data_script.py
 -   src\catalogdb\database_setup.py
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Modify Google OAUTH Client JSON
 
 - Log in to the google developer console and modify **Authorized JavaScript origins** and **Authorized redirect URIs** based on the servers
@@ -222,6 +226,10 @@ This will have to change in the following files in the code
 
 - Save the new settings in developer console.
 - Download and update the client_secrets.json in the /src/json folder
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Change The Path to Client JSON
 
@@ -233,6 +241,10 @@ Changed the path to client json to '/var/www/samscatalogapp/samscatalogapp/src/j
     -   Public Domain
     -   Public IP
     -   AmazonWs Public domain
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Modify Table Name
 
