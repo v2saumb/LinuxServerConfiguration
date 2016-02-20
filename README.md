@@ -42,7 +42,7 @@ Requirements for this project were to take a baseline installation of a Linux di
         *   [Install Fail2Ban](#install-fail2ban)
         *   [Install PSAD](#install-psad)
         *   [Setup Automatic Updates](#setup-automatic-updates)
-        *   [Setup AptiCron](#setup-aptiCron)
+        *   [Setup Apticron](#setup-apticron)
         *   [Setup PostgresSql](#setup-postgressql)
         *   [Install virtualenv and virtualenvwrapper](#install-virtualenv-and-virtualenvwrapper)
         *   [Install GIT](#install-git)
@@ -1054,7 +1054,7 @@ APT::Periodic::Unattended-Upgrade "1";
 
 ---    
 
-### Setup AptiCron
+### Setup Apticron
 
 **Apticron** will configure a cron job to email an administrator information about any packages on the system that have updates available, as well as a summary of changes in each package.
 
@@ -1207,12 +1207,8 @@ git config --global user.email "v2saumb@gmail.com"
 --- 
 
 ##Web Application Configuration and Setup
+
 In this section we will configure and install programs required by the **samscatalogapp** web application.
-
-
-**[Back to top](#table-of-contents)**
-
----    
 
 ### Setup Catalog Database
 
