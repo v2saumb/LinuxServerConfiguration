@@ -13,7 +13,8 @@ Requirementd for this project wree to take a baseline installation of a Linux di
     - [Web Application URLs](#web-application-urls)
     - [Administrator Login](#administrator-login)
     - [Web Application Repository](#web-application-repository)
-
+1. [Extra Credit Features](#extra-credit-features)
+1. [Monitoring Scripts ](#monitoring-scripts)
 1. [Setup And Configurations](#setupandconfigurations)
     - [General Configuration](#general-configuration)
         *   [Get Latest Updates](#get-latest-updates)
@@ -36,13 +37,17 @@ Requirementd for this project wree to take a baseline installation of a Linux di
         *   [Setup Automatinc Updates](#setup-automatic-updates)
         *   [Install AptiCron](#install-apticron)
         *   [Setup PostgresSql](#setup-postgressql)
-
+        *   [Install virtualenv and virtualenvwrapper](#install-virtualenv-and-virtualenvwrapper)
+        *   [Install GIT](#nstall-git)
     - [Web Application Configuration and Setup](#web-appliation-configuration-and-setup)
-    - [Creating The Database ](#creating-the-database)   
-    - [Populate Basic Data](#populate-basic-data)   
-    - [Running The Application ](#running-the-application)
-1. [Extra Credit Features](#extra-credit-features)
-1. [Monitoring Scripts ](#monitoring-scripts)
+        *   [Setup Catalog Database](#setup-catalog-database)
+        *   [Configure Apache](#configure-apache) 
+        *   [Get Application Code](#get-application-code)
+        *   [Create A virtual Environment](#create-a-virtual-environment)
+        *   [Create WSGI Script](#create-wsgi-script)
+        *   [Create Tables](#create-tables)
+        *   [Enable The Virtual Host](#enable-the-virtual-host)
+
 1. [References](#references)
 
 ---
@@ -103,6 +108,61 @@ The code for the samscatalog app can be downloaded from the `feature/prod-change
 
 **[Back to top](#table-of-contents)**
 ---    
+
+#Extra Credit Features
+
+Forllowing are some of the things that in incliuded
+
+- Registered and configured a public domain 'samscatalogapp.com'
+- Installed apticron for upgrade information
+- Installed logwatcher for automated log analysis
+- Installed fail2ban for banning suspisious users
+- installed glances for system monitoring
+- Installed automatic upgrades
+- Wrote and configured shell scripts to send status mail at regular intervals
+
+# Monitoring Scripts
+
+### Current Status Monitor
+- The script **/etc/monitoringscripts/statusmonitor**  monitors the various mission critical services twice every hour and sends out email to a configured email account.
+- This script monitors the status of the fowllowing services
+    *   Apache
+    *   Fail2ban
+    *   UFW
+    *   Network Statistics
+    *   Status of the catalogdb
+- The script is configured to run twice every hour through the cron
+
+```python
+# system status chsck script runs twice an hour
+29,59 * * * * /etc/monitoringscripts/statusmonitor
+```
+- A [report.txt][statusupdate] is also send as an attachment in the email that contains the status of the 
+
+
+### System Performance Monitor
+- The script **/etc/monitoringscripts/glancesmonitor**  uses the **glances** application to collect important information about the systems current performance and then sends this information in csv format.
+
+- This script monitors the fowllowing 
+    *   Disk Usage
+    *   Memory
+    *   Processes
+    *   Network 
+    *   and many more
+- The script is configured to run  every hour through the cron
+
+```python
+# system glance runs once an hour
+50 * * * * /etc/monitoringscripts/glancesmonitor
+
+```
+- A [system_glance.csv][glanceupdate] is als send as an attachment in the email
+
+- Currently it only sends the status as csv. As a next step I would probably improve this to be in a better and readable format
+
+# system glance runs once an hour
+50 * * * * /etc/monitoringscripts/glancesmonitor
+
 
 
 #Setup And Configurations
@@ -505,7 +565,7 @@ Service = All
 #save and exit
 
 ```
-- Set up a cron to run daily. The details of the logwatcher script are covered in the Scripts secion. I have set it up to run twice daily.
+- Set up a cron to run daily. Which sends out a [status mail][logwatchmail]
 
 ```python
 #Add the logwatcher script to  cron
@@ -517,6 +577,7 @@ sudo crontab -e
 
 
 ```
+
 ### Install Apache
 - Install apache2 the web server where our web appliation will run.
 - We will cover the configureation in the Application Configurations section.
@@ -935,6 +996,24 @@ source ~/.bashrc
 
 ```
 
+### Install GIT
+
+We need to install git to clone and pull the github repositories.
+
+```python
+# update the packages 
+sudo apt-get update
+
+# install git
+sudo apt-get install git
+
+# configure user information
+git config --global user.name "Saumya Bhatnagar"
+git config --global user.email "v2saumb@gmail.com"
+
+
+```
+
 **[Back to top](#table-of-contents)**
 --- 
 
@@ -1040,7 +1119,7 @@ sudo mkdir /var/www/samscatalogapp
 
 #create a directory where the python application will live.
 
-sudo /var/www/samscatalogapp/samscatalogapp
+sudo mkdir /var/www/samscatalogapp/samscatalogapp
 
 
 ```
@@ -1075,18 +1154,217 @@ Timeout 100
 #save and exit the file
 
 ```
+
 - Configure A Virtual Host
 
+    * We need to create an new virtualhost  to host our application on specific port in our case 80. 
+    * **Note that at this point some the files and directories do not exist dont worry we will add them soon**.
+
+```python
+
+#create a empty virtual host configuration file.
+
+sudo touch /etc/apache2/sites-available/samscatalogapp.conf
+
+#edit the virtual host file just created 
+sudo nano /etc/apache2/sites-available/samscatalogapp.conf
 
 
+# add the virtual host configuration for port 80
 
-### Install Git
+<VirtualHost *:80>
+        # name of the server       
+        ServerName samscatalogapp.com
+        #email address of the serveradmin for this configuration
+        ServerAdmin v2saumb@gmail.com
+
+        # specify error page
+        ErrorDocument 404 /static/errors/error.html
+        ErrorDocument 500 /static/errors/sitedownerror.html
+
+        # create a wsgi-script handler alias
+        WSGIScriptAlias / /var/www/samscatalogapp/samscatalogapp.wsgi
+
+        #set the access permissionsto the code directory
+        <Directory /var/www/samscatalogapp/samscatalogapp/>
+            Order allow,deny
+            Allow from all
+            Options -Indexes
+        </Directory>
+
+        #create an alias for flask to pick op static files
+
+        Alias /static /var/www/samscatalogapp/samscatalogapp/static
+
+        #set access permissions on the static directory
+        <Directory /var/www/samscatalogapp/samscatalogapp/static/>
+            Order allow,deny
+            Allow from all
+            Options -Indexes
+        </Directory>
+
+        #set the error log path
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        
+        #set the log level
+        LogLevel warn
+        
+        #set the accesslog path
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+```
+
+
 ### Get Application Code
+Use git to clone the github [catalog][coderepo] repository
+
+```python
+
+# switch direcitory
+sudo cd /var/www/samscatalogapp
+
+# clone the code repository
+git clone https://github.com/v2saumb/catalog.git samscatalogapp
+
+
+```
+
 ### Create A virtual Environment
-### Install And Configure virtualenvwrapper
-### Create A Virtual Environment
-### Install Rqquired Libraries 
-### 
+We need to create a python virtual environment and install the python libraries required by the samscatalogapp web application.
+
+* create a new virtual python environment
+
+```python
+#switch to the directory where you want to reate the virtual library
+sudo cd /var/www/samscatalogapp/samscatalogapp
+
+# use the virtualenv wrapper to create a virtual environment
+sudo mkvirtualenv venv
+
+```
+
+ * Install the python libraries required by the web appliction
+
+```python
+#activate the new virtual environment
+sudo source venv/bin/activate
+
+
+#install Flask (0.10.1)
+pip install flask
+
+#install httplib2 (0.9.2)
+pip install httplib2
+
+#install oauth2client (1.5.2)
+pip install oauth2client
+
+#install psycopg2 (2.6.1)
+pip install psycopg2
+
+
+#install requests (2.9.1)
+pip install requests
+
+#install SQLAlchemy (1.0.11)
+pip install sqlalchemy 
+
+#install Werkzeug (0.11.3)
+pip install werkzeug55
+
+#install WTForms (2.1)
+pip install WTFORMS
+
+#install xmltodict (0.9.2)
+pip install xmltodict
+
+
+# deactivate the virtual environment
+
+```
+
+
+### Create WSGI Script
+We need to create a **WSGI** file, Apache will use this .wsgi file to serve the **Flask** application . 
+
+- Navigate to ove to the /var/www/samscatalogapp directory and create a file named samscatalogapp.wsgi 
+
+```python
+#switch directory
+cd /var/www/samscatalogapp
+
+#create and edit the new file samscatalogapp.wsgi 
+
+nano samscatalogapp.wsgi 
+
+# Add the following lines 
+#!/usr/bin/python
+
+# activate the virtual environment
+activate_this = '/var/www/samscatalogapp/samscatalogapp/venv/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+# set the application to the path
+sys.path.insert(0,"/var/www/samscatalogapp/")
+
+# set the flask application secret key
+APP_SECRET_KEY = 'xxx'
+
+# import the flask app 
+from samscatalogapp import app as application
+# set the appplication secret key
+
+
+# save and exit
+```
+
+### Create Tables
+Use the scripts included in the code to create the tables in catlogdb
+
+```python
+#navigate to the samscatalogapp folder
+cd /var/www/samscatalogapp/samscatalogapp
+
+#initialize the virtual environment
+source venv/bin/activate
+
+#run the table creation script 
+python -m src.catalogdb.database_setup
+  
+
+# run the data initialization script to insert basic data and create the administrator user
+
+python -m src.catalogdb.catalog_data_script
+
+#deactivate the virtual environment
+deactivate
+
+
+# verify that data exists in the catalog db
+psql -h localhost -d catalogdb -U catalog
+
+# run the forllowing query to verify the data has been populated correctly.
+select * from cataloguser;
+
+
+```
+
+### Enable The Virtual Host
+
+- Enable the virtual host that we created earlier
+
+```python
+# enable the virtual host
+sudo a2ensite samscatalogapp
+
+#restart the apache service
+sudo  service apache2 restart
+
+```
+- Verify id everything works open the browser and test the application http://54.149.100.110
 
 
 ## References
@@ -1104,11 +1382,11 @@ Timeout 100
 [logwatch]: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-logwatch-log-analyzer-and-reporter-on-a-vps
 [flasksetup]: http://killtheyak.com/use-postgresql-with-django-flask/
 [finger]: http://manpages.ubuntu.com/manpages/hardy/man1/finger.1.html
-[coderepo]: https://github.com/v2saumb/catalog/tree/feature/prod-changes
+[coderepo]: https://github.com/v2saumb/catalog
 [nanoman]: http://www.nano-editor.org/dist/v2.0/nano.html
 [ufwhelp]: https://help.ubuntu.com/community/UFW
 [fail2banapache]:https://www.digitalocean.com/community/tutorials/how-to-protect-an-apache-server-with-fail2ban-on-ubuntu-14-04
 [fail2banssh]: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
-https://www.ftmon.org/blog/secure-ubuntu-server/
-https://help.ubuntu.com/community/Logwatch
-https://discussions.udacity.com/t/p5-how-i-got-through-it/15342
+[statusupdate]: ./samplealerts/status_update.txt
+[glanceupdate]: ./samplealerts/system_glance.csv
+[logwatchmail]: ./samplealerts/logwatcher_mail.txt

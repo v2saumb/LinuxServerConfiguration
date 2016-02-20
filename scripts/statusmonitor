@@ -15,8 +15,11 @@ echo "---------netstat  Listening Status--------------" >> status_update.txt
 netstat  -aln|grep 'LISTENING'  >> status_update.txt
 echo "---------DB  Status--------------" >> status_update.txt
 ps -ef|grep 'catalog'  >> status_update.txt
+cp ./status_update.txt  ./report.txt
 echo 'information collected sending mail...'
-echo "Current status update from sams-catalog-server" | mutt -a "./status_update.txt" -s "Current Status at sams-catalog-server" -- v2saumb@gmail.com, grader@localhost
+# send  email to the users
+cat ./status_update.txt | mutt -a "./report.txt" -s "Current Status at sams-catalog-server" -- v2saumb@gmail.com, grader@localhost
 echo "mail sent.."
 rm ./status_update.txt
+rm ./report.txt
 echo "task complete"
