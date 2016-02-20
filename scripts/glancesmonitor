@@ -1,0 +1,13 @@
+#!/bin/bash
+echo  starting...
+{ glances --export-csv ./system_glance.csv -q -t 20 &}
+/bin/sleep 40 
+echo killing ...
+killall glances
+echo killed
+echo 'information collected sending mail...'
+echo "Current status update from sams-catalog-server" | mutt -a "./system_glance.csv" -s "Current Status at sams-catalog-server" -- v2saumb@gmail.com,  grader@localhost
+echo "mail sent.."
+rm ./system_glance.csv
+echo  "glances complete"
+

@@ -1,0 +1,176 @@
+Fri Feb 19 23:59:01 UTC 2016
+-------------------Apache  Status--------------
+ * apache2 is running
+-------------------Fail2ban  Status--------------
+ * Status of authentication failure monitor
+ *  fail2ban is running
+-------------------ssh  Status--------------
+root      1285  0.0  0.2  61372  3012 ?        Ss   Feb17   0:00 /usr/sbin/sshd -D
+root     16252  0.0  0.0  10464   916 ?        S    23:59   0:00 grep sshd
+-------------------ufw  Status--------------
+Status: active
+
+To                         Action      From
+--                         ------      ----
+2200/tcp                   ALLOW       Anywhere
+80/tcp                     ALLOW       Anywhere
+123                        ALLOW       Anywhere
+22                         ALLOW       Anywhere
+2200/tcp (v6)              ALLOW       Anywhere (v6)
+80/tcp (v6)                ALLOW       Anywhere (v6)
+123 (v6)                   ALLOW       Anywhere (v6)
+22 (v6)                    ALLOW       Anywhere (v6)
+
+-------------------netstat  Connected Status--------------
+unix  3      [ ]         STREAM     CONNECTED     10682    
+unix  3      [ ]         STREAM     CONNECTED     9661     
+unix  3      [ ]         STREAM     CONNECTED     8858     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11089    
+unix  3      [ ]         STREAM     CONNECTED     10849    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     10804    @/tmp/dbus-kpnOsv3J
+unix  3      [ ]         STREAM     CONNECTED     10669    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10355    
+unix  3      [ ]         STREAM     CONNECTED     10282    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     11097    
+unix  3      [ ]         STREAM     CONNECTED     10780    
+unix  3      [ ]         STREAM     CONNECTED     10668    
+unix  3      [ ]         STREAM     CONNECTED     10493    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     10193    
+unix  3      [ ]         STREAM     CONNECTED     22024    @/com/ubuntu/upstart
+unix  3      [ ]         STREAM     CONNECTED     10810    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     8897     
+unix  3      [ ]         STREAM     CONNECTED     10384    
+unix  3      [ ]         STREAM     CONNECTED     10827    @/tmp/dbus-kpnOsv3J
+unix  3      [ ]         STREAM     CONNECTED     10526    
+unix  3      [ ]         STREAM     CONNECTED     11109    
+unix  3      [ ]         STREAM     CONNECTED     10908    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10281    
+unix  3      [ ]         STREAM     CONNECTED     10497    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22010    
+unix  3      [ ]         STREAM     CONNECTED     11085    @/tmp/dbus-kpnOsv3J
+unix  3      [ ]         STREAM     CONNECTED     8882     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10409    
+unix  3      [ ]         STREAM     CONNECTED     10820    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     10530    
+unix  3      [ ]         STREAM     CONNECTED     11123    @/tmp/dbus-vItQ6r3Q
+unix  3      [ ]         STREAM     CONNECTED     11063    @/tmp/dbus-kpnOsv3J
+unix  3      [ ]         STREAM     CONNECTED     10321    
+unix  3      [ ]         STREAM     CONNECTED     9662     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10324    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10196    
+unix  3      [ ]         STREAM     CONNECTED     10812    
+unix  3      [ ]         STREAM     CONNECTED     10681    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     10115    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     10857    
+unix  3      [ ]         STREAM     CONNECTED     10490    
+unix  3      [ ]         STREAM     CONNECTED     10354    
+unix  3      [ ]         STREAM     CONNECTED     10301    
+unix  3      [ ]         STREAM     CONNECTED     22030    @/com/ubuntu/upstart
+unix  3      [ ]         STREAM     CONNECTED     11104    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10877    
+unix  3      [ ]         STREAM     CONNECTED     10114    
+unix  3      [ ]         STREAM     CONNECTED     10300    
+unix  3      [ ]         STREAM     CONNECTED     10494    
+unix  3      [ ]         STREAM     CONNECTED     10385    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     10830    
+unix  3      [ ]         STREAM     CONNECTED     10703    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     11122    
+unix  3      [ ]         STREAM     CONNECTED     22014    
+unix  3      [ ]         STREAM     CONNECTED     8796     
+unix  3      [ ]         STREAM     CONNECTED     10194    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8881     
+unix  3      [ ]         STREAM     CONNECTED     10515    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10410    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21993    
+unix  3      [ ]         STREAM     CONNECTED     10824    
+unix  3      [ ]         STREAM     CONNECTED     10707    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     11064    
+unix  3      [ ]         STREAM     CONNECTED     10322    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     8719     
+unix  3      [ ]         STREAM     CONNECTED     11117    
+unix  3      [ ]         STREAM     CONNECTED     10858    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10813    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10303    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     10323    
+unix  3      [ ]         STREAM     CONNECTED     10414    
+unix  3      [ ]         STREAM     CONNECTED     10680    
+unix  3      [ ]         STREAM     CONNECTED     10356    @/tmp/dbus-UhlMOxBCb0
+unix  3      [ ]         STREAM     CONNECTED     10197    @/tmp/dbus-HLkSoiHK
+unix  3      [ ]         STREAM     CONNECTED     11103    
+unix  3      [ ]         STREAM     CONNECTED     10878    /run/user/111/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     8720     
+unix  3      [ ]         STREAM     CONNECTED     10781    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     10491    @/tmp/dbus-UhlMOxBCb0
+unix  3      [ ]         STREAM     CONNECTED     10302    
+unix  3      [ ]         STREAM     CONNECTED     10358    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     11118    @/tmp/.ICE-unix/1607
+unix  3      [ ]         STREAM     CONNECTED     10839    @/tmp/dbus-UhlMOxBCb0
+unix  3      [ ]         STREAM     CONNECTED     10495    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     22029    @/com/ubuntu/upstart
+unix  3      [ ]         STREAM     CONNECTED     10702    
+unix  3      [ ]         STREAM     CONNECTED     8797     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10382    @/tmp/dbus-UhlMOxBCb0
+unix  3      [ ]         STREAM     CONNECTED     10825    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     11065    @/tmp/dbus-kpnOsv3J
+unix  3      [ ]         STREAM     CONNECTED     10514    
+unix  3      [ ]         STREAM     CONNECTED     10706    
+unix  3      [ ]         STREAM     CONNECTED     8872     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10389    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     8857     
+unix  3      [ ]         STREAM     CONNECTED     9618     
+unix  3      [ ]         STREAM     CONNECTED     10415    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     10351    
+unix  3      [ ]         STREAM     CONNECTED     10848    
+unix  3      [ ]         STREAM     CONNECTED     9794     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11090    /run/user/111/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     10803    
+unix  3      [ ]         STREAM     CONNECTED     10907    
+unix  3      [ ]         STREAM     CONNECTED     10308    
+unix  3      [ ]         STREAM     CONNECTED     10492    
+unix  3      [ ]         STREAM     CONNECTED     10357    
+unix  3      [ ]         STREAM     CONNECTED     8898     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11098    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     10809    
+unix  3      [ ]         STREAM     CONNECTED     10527    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11062    
+unix  3      [ ]         STREAM     CONNECTED     9793     
+unix  3      [ ]         STREAM     CONNECTED     10496    
+unix  3      [ ]         STREAM     CONNECTED     10381    
+unix  3      [ ]         STREAM     CONNECTED     22012    
+unix  3      [ ]         STREAM     CONNECTED     10826    
+unix  3      [ ]         STREAM     CONNECTED     11110    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     11084    
+unix  3      [ ]         STREAM     CONNECTED     10309    @/tmp/dbus-7cfB2i09kh
+unix  3      [ ]         STREAM     CONNECTED     9619     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8871     
+unix  3      [ ]         STREAM     CONNECTED     10531    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10388    
+unix  3      [ ]         STREAM     CONNECTED     21994    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10819    
+unix  3      [ ]         STREAM     CONNECTED     10683    /run/user/111/pulse/native
+---------netstat  Listening Status--------------
+unix  2      [ ACC ]     STREAM     LISTENING     10412    @/tmp/.ICE-unix/1607
+unix  2      [ ACC ]     STREAM     LISTENING     9800     @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     11050    /var/run/sendmail/mta/smcontrol
+unix  2      [ ACC ]     STREAM     LISTENING     10172    @/tmp/dbus-HLkSoiHK
+unix  2      [ ACC ]     STREAM     LISTENING     10764    @/tmp/dbus-kpnOsv3J
+unix  2      [ ACC ]     STREAM     LISTENING     21992    @/com/ubuntu/upstart
+unix  2      [ ACC ]     STREAM     LISTENING     10413    /tmp/.ICE-unix/1607
+unix  2      [ ACC ]     STREAM     LISTENING     10173    @/tmp/dbus-Wtl7HtoT
+unix  2      [ ACC ]     STREAM     LISTENING     10190    @/tmp/dbus-P4D7He0e
+unix  2      [ ACC ]     STREAM     LISTENING     10296    @/tmp/dbus-7cfB2i09kh
+unix  2      [ ACC ]     SEQPACKET  LISTENING     7575     /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     10678    /run/user/111/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     10191    @/tmp/dbus-vItQ6r3Q
+unix  2      [ ACC ]     STREAM     LISTENING     14023    /var/run/fail2ban/fail2ban.sock
+unix  2      [ ACC ]     STREAM     LISTENING     9801     /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     10348    @/tmp/dbus-UhlMOxBCb0
+unix  2      [ ACC ]     STREAM     LISTENING     9949     /var/run/postgresql/.s.PGSQL.5432
+unix  2      [ ACC ]     STREAM     LISTENING     9444     /var/run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     8700     /var/run/dbus/system_bus_socket
+---------DB  Status--------------
+postgres  2489  1489  0 Feb17 ?        00:00:00 postgres: catalogadmin catalogdb 127.0.0.1(41870) idle                                                                      
+postgres  2490  1489  0 Feb17 ?        00:00:00 postgres: catalog catalogdb 127.0.0.1(41871) idle in transaction                                                            
+postgres  3212  1489  0 Feb17 ?        00:00:00 postgres: catalogadmin catalogdb 127.0.0.1(41919) idle                                                                      
+postgres  3213  1489  0 Feb17 ?        00:00:00 postgres: catalog catalogdb 127.0.0.1(41920) idle in transaction                                                            
+root     16267 16228  0 23:59 ?        00:00:00 grep catalog
