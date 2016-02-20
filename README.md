@@ -1,5 +1,5 @@
 ## Introduction
-Requirementd for this project wree to take a baseline installation of a Linux distribution on a virtual machine and prepare it to host the `catalog` web applications, include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
+Requirements for this project were to take a baseline installation of a Linux distribution on a virtual machine and prepare it to host the `catalog` web applications, include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
 
 ---
 
@@ -9,37 +9,45 @@ Requirementd for this project wree to take a baseline installation of a Linux di
 1. [Important Details ](#important-details)
     - [IP Address](#ip-address)
     - [SSH Port Number](#ssh-port-number)
-    - [Terminal Login URL](terminal-login-url)
+    - [Terminal Login URL](#terminal-login-url)
     - [Web Application URLs](#web-application-urls)
     - [Administrator Login](#administrator-login)
     - [Web Application Repository](#web-application-repository)
 1. [Extra Credit Features](#extra-credit-features)
 1. [Monitoring Scripts ](#monitoring-scripts)
-1. [Setup And Configurations](#setupandconfigurations)
+1. [Setup And Configurations](#setup-and-configurations)
+    - [Application Code Changes](#application-code-changes)
+        *   [Modify The Database Name Dialect And Driver](#modify-the-database-name-dialect-and-driver)
+        *   [Modify Google OAUTH Client JSON](#modify-google-oauth-client-json)
+        *   [Change The Path to Client JSON](#change-the-path-to-client-json)
+        *   [Modify Facebook OAUTH Settings](#modify-facebook-oauth-settings)
+        *   [Modify Table Name](#modify-table-name)
+        *   [Create Init File For Apache](#create-init-file-for-apache)
     - [General Configuration](#general-configuration)
         *   [Get Latest Updates](#get-latest-updates)
-        *   [Ugrade Packages](#upgrade-packages)
+        *   [Upgrade Packages](#upgrade-packages)
         *   [Cleanup installations and uninstalls](#cleanup-installations-and-uninstalls)
         *   [Install finger ](#install-finger)
         *   [Install nano](#install-nano)
-        *   [Create New User ](#creeate-new-user)
+        *   [Create New User ](#create-new-user)
         *   [Set SUDO Permissions](#set-sudo-permissions)
-        *   [Creating A Public Key Pair](#creating-apublic-key-pair)
+        *   [Creating A Public Key Pair](#creating-a-public-key-pair)
         *   [Disable Root Login](#disable-root-login)
         *   [Setup UFW Firewall ](#setup-ufw-firewall)
         *   [Setup Host Name](#setup-host-name)
         *   [Setup EMail](#setup-email)
         *   [Install Logwatcher](#install-logwatcher)
         *   [Install Apache](#install-apache)
-        *   [Set Timezone UTC](#setup-timezone-utc)
+        *   [Set Timezone UTC](#set-timezone-utc)
         *   [Install Fail2Ban](#install-fail2ban)
         *   [Install PSAD](#install-psad)
-        *   [Setup Automatinc Updates](#setup-automatic-updates)
-        *   [Install AptiCron](#install-apticron)
+        *   [Setup Automatic Updates](#setup-automatic-updates)
+        *   [Setup AptiCron](#setup-aptiCron)
         *   [Setup PostgresSql](#setup-postgressql)
         *   [Install virtualenv and virtualenvwrapper](#install-virtualenv-and-virtualenvwrapper)
-        *   [Install GIT](#nstall-git)
-    - [Web Application Configuration and Setup](#web-appliation-configuration-and-setup)
+        *   [Install GIT](#install-git)
+
+    - [Web Application Configuration and Setup](#web-application-configuration-and-setup)
         *   [Setup Catalog Database](#setup-catalog-database)
         *   [Configure Apache](#configure-apache) 
         *   [Get Application Code](#get-application-code)
@@ -54,6 +62,8 @@ Requirementd for this project wree to take a baseline installation of a Linux di
 
 #Important Details
 
+
+
 ###IP Address 
 
 The public IP address of the samscatalogapp server is  `54.149.100.110`
@@ -64,7 +74,7 @@ The samscatalogapp server can be connectes via SSH on port  `2200`
 
 ###Terminal Login URL
 
-You can use the following url to loging through a terminal.
+You can use the following url to logging through a terminal.
 
 ```python
  
@@ -80,21 +90,21 @@ You can use the following url to loging through a terminal.
 ```
 
  - **Please note the root user remote login has been disabled for security so you will have to use grader account.**
- - **Root users key will be provided in the student notes.**
- - **Grader urers key will be provided in the student notes.**
+ - **Root user’s key will be provided in the student notes.**
+ - **Grader user’s key will be provided in the student notes.**
 
 
 ###Web Application URLs
 
 You can access the web application in any one of the following ways
 
-- **Access the site using the domain name**   [Sams Catalog App][http://www.samscatalogapp.com]
-- **Access the site using the public ip**   [54.149.100.110][http://54.149.100.110]
-- **Access the amazonws public domain**   [ec2-54-149-100-110.us-west-2.compute.amazonaws.com][http://ec2-54-149-100-110.us-west-2.compute.amazonaws.com]
+- **Access the site using the domain name**   [Sams Catalog App][appbydomain]
+- **Access the site using the public ip**   [54.149.100.110][appbyip]
+- **Access the amazonws public domain**   [ec2-54-149-100-110.us-west-2.compute.amazonaws.com][appbyamzws]
 
 ###Administrator Login
 
-The administratior login for the web application is as follows
+The administration login for the web application is as follows
 
 | User Name |Password|
 |:---------:|:---------------------:|
@@ -107,25 +117,31 @@ The code for the samscatalog app can be downloaded from the `feature/prod-change
 
 
 **[Back to top](#table-of-contents)**
+
 ---    
 
 #Extra Credit Features
 
-Forllowing are some of the things that in incliuded
+Following are some of the things that in included
 
 - Registered and configured a public domain 'samscatalogapp.com'
 - Installed apticron for upgrade information
 - Installed logwatcher for automated log analysis
-- Installed fail2ban for banning suspisious users
+- Installed fail2ban for banning suspicious users
 - installed glances for system monitoring
 - Installed automatic upgrades
 - Wrote and configured shell scripts to send status mail at regular intervals
+
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 # Monitoring Scripts
 
 ### Current Status Monitor
 - The script **/etc/monitoringscripts/statusmonitor**  monitors the various mission critical services twice every hour and sends out email to a configured email account.
-- This script monitors the status of the fowllowing services
+- This script monitors the status of the following services
     *   Apache
     *   Fail2ban
     *   UFW
@@ -134,7 +150,7 @@ Forllowing are some of the things that in incliuded
 - The script is configured to run twice every hour through the cron
 
 ```python
-# system status chsck script runs twice an hour
+# system status check script runs twice an hour
 29,59 * * * * /etc/monitoringscripts/statusmonitor
 ```
 - A [report.txt][statusupdate] is also send as an attachment in the email that contains the status of the 
@@ -143,7 +159,7 @@ Forllowing are some of the things that in incliuded
 ### System Performance Monitor
 - The script **/etc/monitoringscripts/glancesmonitor**  uses the **glances** application to collect important information about the systems current performance and then sends this information in csv format.
 
-- This script monitors the fowllowing 
+- This script monitors the following 
     *   Disk Usage
     *   Memory
     *   Processes
@@ -156,16 +172,81 @@ Forllowing are some of the things that in incliuded
 50 * * * * /etc/monitoringscripts/glancesmonitor
 
 ```
-- A [system_glance.csv][glanceupdate] is als send as an attachment in the email
+- A [system_glance.csv][glanceupdate] is also send as an attachment in the email
 
 - Currently it only sends the status as csv. As a next step I would probably improve this to be in a better and readable format
 
+```python
 # system glance runs once an hour
 50 * * * * /etc/monitoringscripts/glancesmonitor
+```
 
 
+**[Back to top](#table-of-contents)**
+
+---    
 
 #Setup And Configurations
+
+##Application Code Changes
+
+### Modify The Database Name Dialect And Driver
+
+- Where ever the sqlalchemy engine is  created change  sqllite to postgres
+- Change the database name to catalogdb
+
+
+```pyrhon 
+
+# change this
+#engine = create_engine('sqlite://catalog:catalog@localhost/catalogdb')
+
+#to this
+
+engine = create_engine('postgresql://catalog:catalog@localhost/catalogdb')
+
+```
+
+This will have to change in the following files in the code
+-   application.py
+-   __init__.py
+-   src\catalogdb\catalog_data_script.py
+-   src\catalogdb\database_setup.py
+
+### Modify Google OAUTH Client JSON
+
+- Log in to the google developer console and modify **Authorized JavaScript origins** and **Authorized redirect URIs** based on the servers
+    -   Public Domain
+    -   Public IP
+    -   AmazonWs Public domain
+
+- Save the new settings in developer console.
+- Download and update the client_secrets.json in the /src/json folder
+
+### Change The Path to Client JSON
+
+Changed the path to client json to '/var/www/samscatalogapp/samscatalogapp/src/json/client_secrets.json' for the flask app to be able to read it.
+
+### Modify Facebook OAUTH Settings
+
+- Log in to the facebook developer console and **Valid OAuth redirect URIs** based on the servers
+    -   Public Domain
+    -   Public IP
+    -   AmazonWs Public domain
+
+### Modify Table Name
+
+Postgres does not allow to create table called **user** changed this to **cataloguser** in the src\catalogdb\database_setup.py file
+
+
+### Create Init File For Apache
+
+Create a copy of the file application.py with name __init__.py in the same folder as applicaion.py. The __init__.py file will run the application inside Apache.
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ##General Configuration
 
 Following are the configuration changes and details of the new softwares that were installed to make the web application work.
@@ -178,13 +259,22 @@ If not already logged in log in to the environment using the [ssh url][#terminal
 sudo apt-get update
 ```
 
-### Ugrade Packages
+**[Back to top](#table-of-contents)**
+
+---    
+
+### Upgrade Packages
 
 If not already logged in log in to the environment using the [ssh url][#terminal-login-url] if you are logged in using `grader` use the following command to upgrade desired packages.
 
 ```python
 sudo apt-get upgrade
 ```
+
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Cleanup installations and uninstalls
 
@@ -194,6 +284,10 @@ If not already logged in log in to the environment using the [ssh url][#terminal
 sudo apt-get autoremove
 ```
 
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Install finger 
 
@@ -210,6 +304,11 @@ You can now use finger to get user information like below
 ```python
 finger grader
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 
 ### Install nano
 
@@ -229,6 +328,11 @@ You can now use nano to edit files
 nano /etc/sudoers
 ```
 
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Create New User 
 
 Log in to the environment using the [ssh url][#terminal-login-url] if you are logged in with `root` user login  use the following command to create a new user **grader**.
@@ -245,9 +349,14 @@ sudo adduser grader
 
 follow the on-screen prompts to create the new user grader and provide additional information about the new user.
 
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Set SUDO Permissions
 
-In case you want to allow the user to use sudo performa the following steps
+In case you want to allow the user to use sudo perform the following steps
 
 - Login to the server using root or any other account with sudo permissions
 - Use the following command to see the contents of the **sudoers** file
@@ -289,6 +398,11 @@ grader ALL=(ALL) NOPASSWD:ALL
 sudo chmod 644 grader
 ```
 
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Creating A Public Key Pair
 
 - On your computer open a terminal program and use  **ssh-keygen**  to create a public key pair. Use the following command and follow the on screen instructions
@@ -298,7 +412,7 @@ ssh-keygen -C 'grader@54.149.100.110'
 
 ```
 - When prompted for a filename create something like **grader_key.rsa**
-- Navigate to the directrory where you saved the key and open the file in a text editor
+- Navigate to the directory where you saved the key and open the file in a text editor
 - Copy the contents of the file to clipboard
 
 - Login to the server and use the following commands to update the keys.
@@ -317,7 +431,7 @@ touch .ssh/authorized_keys
 #Edit and save the key copied from the computer
 nano .ssh/authorized_keys
 
-#Change the permissions on the **.ssh** directroy
+#Change the permissions on the **.ssh** directory
 chmod 700 .ssh
 
 #Change the permission on the key file
@@ -334,10 +448,14 @@ ssh -i ~/.ssh/udacity_key.rsa grader@54.149.100.110
 
 ```
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Disable Root Login
 
 - This will prevent the majority of brute force attack attempts.
-- Be very careful when making the following changes. You can lock youself out.
+- Be very careful when making the following changes. You can lock yourself out.
 
 - Use nano to edit `/etc/ssh/sshd_config` and make the following changes
 
@@ -373,13 +491,18 @@ restart ssh
 
 ```
 
-- **This point onwards when logging in to the server from any terminal you will have tospecify the port number like so. Logoff and test the login.
+- **This point onwards when logging in to the server from any terminal you will have to specify the port number like so. Logoff and test the login.
 
 ```python
 
 ssh -i ~/.ssh/grader_key.rsa grader@54.149.100.110 -p 2200
 
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Setup UFW Firewall 
 
 Setup the default firewall configuration tool for Ubuntu **UFW**. For details refer to the [UFW][ufwhelp] page.
@@ -393,7 +516,7 @@ ports=2200/tcp
 
 ```
 - Set up firewall rules use the following commands. 
-- Disable all incomming by default and allow the ports that you want to use
+- Disable all incoming by default and allow the ports that you want to use
 
 ```python
 
@@ -444,6 +567,11 @@ To                         Action      From
 
 
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Setup Host Name
 
 - This is **optional* in case you have registered domain.
@@ -475,9 +603,13 @@ reboot
 ```
 
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Setup EMail
 
-Setup a email client for sending mails to local and external users.
+Setup an email client for sending mails to local and external users.
 
 - Install **sendmail**
 
@@ -507,7 +639,7 @@ samscatalogapp.com
 # restart the networking service
 sudo /etc/init.d/networking restart  
 
-# restart the host name servie
+# restart the host name service
 sudo service hostname restart 
 
 # take a backup of the file /etc/mail/sendmail.mc 
@@ -523,6 +655,10 @@ define('confDOMAIN_NAME', 'samscatalogapp.com')dnl
 sudo make -C /etc/mail/
 
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Install Logwatcher
 
@@ -547,19 +683,19 @@ sudo cp /etc/logwatch/conf/logwatch.conf /etc/logwatch/conf/logwatch.conf.orig
 #Edit the file and change the desired settings
 sudo nano /etc/logwatch/conf/logwatch.conf
 
-#Change who recieves the mails from logwatcher
+#Change who receives the mails from logwatcher
 MailTo = v2saumb@gmail.com root grader
 
 #Change the from email address
 MailFrom = sysadmin@samscatalogapp.com
 
-#Change the Reange of data to check to ALL or whatever you choose
+#Change the Range of data to check to ALL or whatever you choose
 Range = ALL
 
-#Change the level of details that you want to recieve
+#Change the level of details that you want to receive
 Detail = Med
 
-#Set the servvice to what you need
+#Set the service to what you need
 Service = All
 
 #save and exit
@@ -578,9 +714,13 @@ sudo crontab -e
 
 ```
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Install Apache
-- Install apache2 the web server where our web appliation will run.
-- We will cover the configureation in the Application Configurations section.
+- Install apache2 the web server where our web application will run.
+- We will cover the configuration in the Application Configurations section.
 - Install the required libraries and modules
 
 ```python
@@ -607,6 +747,10 @@ sudo service apache2 restart
 - You can now verify that you see the default apache welcome page on port 80.
 
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Set Timezone UTC
 
 - Use the following command to change the timezone. Follow the on screen options to choose UTC.
@@ -615,6 +759,11 @@ sudo service apache2 restart
 sudo dpkg-reconfigure tzdata
 
 ```
+
+
+**[Back to top](#table-of-contents)**
+
+---     
 
 ### Install Fail2Ban
 
@@ -652,7 +801,7 @@ maxretry = 6
 
 mta = sendmail
 
-# Set who will recieve th email alerts.
+# Set who will receive the email alerts.
 
 destemail = youraccount@email.com
 
@@ -739,6 +888,10 @@ sudo service fail2ban start
 ```
 
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Install PSAD
 
 PSAD (Port Scan Attack Detection)  will actively monitor your firewall logs to detect if port scan type attacks are in progress. 
@@ -793,13 +946,13 @@ sudo ufw enable
 
 sudo cd /etc/psad
 
-#take the backup of the conf file. Just in case some thing goes wrong
+#take the backup of the conf file. Just in case something goes wrong
 sudo cp psad.conf psad.conf.original
 
 #Edit the psad.conf file and change the required files
 sudo nano  /etc/psad/psad.conf
 
-#change the emal address to recuegw
+#change the email address
 EMAIL_ADDRESSES             v2saumb@gmail.com;
 
 # change the host name for the server
@@ -811,7 +964,7 @@ IPT_SYSLOG_FILE             /var/log/syslog;
 # update udp ports to ignore
 IGNORE_PORTS                udp/53;
 
-# Specify the danger level cautiusly or You're going to 
+# Specify the danger level cautiously or You're going to 
 # spam yourself with email if you set this too low.
 EMAIL_ALERT_DANGER_LEVEL    3;
 
@@ -833,7 +986,12 @@ sudo psad -H
 sudo psad --Status
 
 ````
-### Setup Automatinc Updates
+
+**[Back to top](#table-of-contents)**
+
+---    
+
+### Setup Automatic Updates
 
 The unattended-upgrades package can be used to automatically install updated packages, and can be configured to update all packages or just install security updates. First, install the package by entering the following in a terminal:
 
@@ -857,7 +1015,7 @@ sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
 Unattended-Upgrade::Mail "v2saumb@gmail.com";
 
 ...
-#Un comment and set to true to recieve a mail on error
+#Un comment and set to true to receive a mail on error
 Unattended-Upgrade::MailOnlyOnError "true";
 
 #save and exit.
@@ -880,6 +1038,10 @@ APT::Periodic::Unattended-Upgrade "1";
 ```
 
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Setup AptiCron
 
 **Apticron** will configure a cron job to email an administrator information about any packages on the system that have updates available, as well as a summary of changes in each package.
@@ -901,6 +1063,11 @@ sudo nano /etc/apticron/apticron.conf
 EMAIL="grader@samscatalogapp.com"
 
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Setup PostgresSql
 **PostgreSQL** or  **postgres** as it is commonly known, is a popular database management system. 
 
@@ -923,7 +1090,7 @@ sudo apt-get install postgresql postgresql-contrib
 # edit the 
 sudo nano /etc/postgresql/9.3/main/pg_hba.conf
 
-# uncomment and modify the settings where necesary
+# uncomment and modify the settings where necessary
 
 # Database administrative login by Unix domain socket
 local   all             postgres                                peer
@@ -940,6 +1107,10 @@ host    all             all             ::1/128                 md5
 
 # save and exit
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Install virtualenv and virtualenvwrapper
 **virtualenv** helps you creates a folder that stores a private copy of python, pip, and other Python packages. 
@@ -965,7 +1136,7 @@ sudo  pip install virtualenvwrapper
 
 
 ```python
- # export the WORKON_HOME variable, this contains the directory where our virtual environments arestored. 
+ # export the WORKON_HOME variable, this contains the directory where our virtual environments are stored. 
 
 export WORKON_HOME=~/.virtualenvs
 
@@ -996,6 +1167,11 @@ source ~/.bashrc
 
 ```
 
+
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Install GIT
 
 We need to install git to clone and pull the github repositories.
@@ -1015,16 +1191,22 @@ git config --global user.email "v2saumb@gmail.com"
 ```
 
 **[Back to top](#table-of-contents)**
+
 --- 
 
 ##Web Application Configuration and Setup
-In this section we will configure and install programs required bythe **samscatalogapp** web application.
+In this section we will configure and install programs required by the **samscatalogapp** web application.
+
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Setup Catalog Database
 
 - We already installed postgres earlier. 
 - catalogdb will store all the data for the samscatalogapp web application.
-- follow the followign commands to create the **catalogdb**
+- follow the following commands to create the **catalogdb**
 
 ```python
 
@@ -1040,11 +1222,11 @@ create user catalogadmin with createdb createrole createuser ;
 #alter the admin user and add password
 alter user catalogadmin with password 'xxxx';
 
-#create a new ueer with transactional previlages
+#create a new user with transactional privileges
 create user catalog with password 'xxxx';
 
 
-#verify that the users are created with requied privilages
+#verify that the users are created with required privileges
 \du
 
  Role name   |                   Attributes                   | Member of
@@ -1061,7 +1243,7 @@ create database catalogdb
 #exit the psql interface 
 \q
 
-# on the terminal login to the new database using the post gres user
+# on the terminal login to the new database using the postgres user
 psql -d catalogdb -U postgres
 
 #lock down schema permissions
@@ -1084,9 +1266,9 @@ grant connect on database catalogdb to catalog;
 
 # alter the default permissions so that catalog user has select insert and update on all new tables created  
 
-alter default privileges in schema public grant select, insert,update on tables to catalog;
+alter default privileges in schema public grant select, insert, update on tables to catalog;
 
-#alter defaust privileges so that catalog user has all privileges on the new sequences in the public schema
+#alter default privileges so that catalog user has all privileges on the new sequences in the public schema
 alter default privileges in schema public grant all on sequences to catalog;
 
 #Grant permission to the catalog user to access database usage stats
@@ -1105,9 +1287,13 @@ psql -h localhost -d catalogdb -U catalog
 
 ```
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Configure Apache
 
-Now that the database is ready and we have installed the required basic software, its time to configure apache to make our application run on it.
+Now that the database is ready and we have installed the required basic software, it’s time to configure apache to make our application run on it.
 
 - Create application directory
 
@@ -1129,7 +1315,7 @@ sudo mkdir /var/www/samscatalogapp/samscatalogapp
 
 ```python
 
-# take a backup of the exixting configuration file
+# take a backup of the existing configuration file
 
 sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.original 
 
@@ -1140,7 +1326,7 @@ sudo nano /etc/apache2/apache2.conf
 ...
 Timeout 100
 
-# in the directories section add tha mapping for the application directory
+# in the directories section add that mapping for the application directory
 ... 
 
 <Directory /var/www/samscatalogapp/samscatalogapp/>
@@ -1158,11 +1344,11 @@ Timeout 100
 - Configure A Virtual Host
 
     * We need to create an new virtualhost  to host our application on specific port in our case 80. 
-    * **Note that at this point some the files and directories do not exist dont worry we will add them soon**.
+    * **Note that at this point some the files and directories do not exist don’t worry we will add them soon**.
 
 ```python
 
-#create a empty virtual host configuration file.
+#create an empty virtual host configuration file.
 
 sudo touch /etc/apache2/sites-available/samscatalogapp.conf
 
@@ -1185,7 +1371,7 @@ sudo nano /etc/apache2/sites-available/samscatalogapp.conf
         # create a wsgi-script handler alias
         WSGIScriptAlias / /var/www/samscatalogapp/samscatalogapp.wsgi
 
-        #set the access permissionsto the code directory
+        #set the access permissions to the code directory
         <Directory /var/www/samscatalogapp/samscatalogapp/>
             Order allow,deny
             Allow from all
@@ -1209,19 +1395,23 @@ sudo nano /etc/apache2/sites-available/samscatalogapp.conf
         #set the log level
         LogLevel warn
         
-        #set the accesslog path
+        #set the access log path
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
 ```
 
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Get Application Code
 Use git to clone the github [catalog][coderepo] repository
 
 ```python
 
-# switch direcitory
+# switch directory
 sudo cd /var/www/samscatalogapp
 
 # clone the code repository
@@ -1230,13 +1420,17 @@ git clone https://github.com/v2saumb/catalog.git samscatalogapp
 
 ```
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 ### Create A virtual Environment
 We need to create a python virtual environment and install the python libraries required by the samscatalogapp web application.
 
 * create a new virtual python environment
 
 ```python
-#switch to the directory where you want to reate the virtual library
+#switch to the directory where you want to create the virtual library
 sudo cd /var/www/samscatalogapp/samscatalogapp
 
 # use the virtualenv wrapper to create a virtual environment
@@ -1244,7 +1438,7 @@ sudo mkvirtualenv venv
 
 ```
 
- * Install the python libraries required by the web appliction
+ * Install the python libraries required by the web application
 
 ```python
 #activate the new virtual environment
@@ -1284,11 +1478,15 @@ pip install xmltodict
 
 ```
 
+**[Back to top](#table-of-contents)**
+
+---    
+
 
 ### Create WSGI Script
 We need to create a **WSGI** file, Apache will use this .wsgi file to serve the **Flask** application . 
 
-- Navigate to ove to the /var/www/samscatalogapp directory and create a file named samscatalogapp.wsgi 
+- Navigate to the /var/www/samscatalogapp directory and create a file named samscatalogapp.wsgi 
 
 ```python
 #switch directory
@@ -1315,11 +1513,15 @@ APP_SECRET_KEY = 'xxx'
 
 # import the flask app 
 from samscatalogapp import app as application
-# set the appplication secret key
+# set the application secret key
 
 
 # save and exit
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Create Tables
 Use the scripts included in the code to create the tables in catlogdb
@@ -1346,11 +1548,15 @@ deactivate
 # verify that data exists in the catalog db
 psql -h localhost -d catalogdb -U catalog
 
-# run the forllowing query to verify the data has been populated correctly.
+# run the following query to verify the data has been populated correctly.
 select * from cataloguser;
 
 
 ```
+
+**[Back to top](#table-of-contents)**
+
+---    
 
 ### Enable The Virtual Host
 
@@ -1374,7 +1580,9 @@ sudo  service apache2 restart
 1. [Udacity Forum :- Project 5 Resources][udacityforum1]
 1. [Logwatch Installation Guide ][logwatch]
 1. [Flask Setup ][flasksetup]
+1. [Glances][glances]
 
+[glances]: https://nicolargo.github.io/glances/
 [apacheconfvid]: https://www.youtube.com/watch?v=UrPNg4tWjUI
 [initservsetup]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04
 [automaticupd]: https://help.ubuntu.com/lts/serverguide/automatic-updates.html
@@ -1390,3 +1598,6 @@ sudo  service apache2 restart
 [statusupdate]: ./samplealerts/status_update.txt
 [glanceupdate]: ./samplealerts/system_glance.csv
 [logwatchmail]: ./samplealerts/logwatcher_mail.txt
+[appbydomain]: http://www.samscatalogapp.com
+[appbyamzws]: http://ec2-54-149-100-110.us-west-2.compute.amazonaws.com
+[appbyip]: http://54.149.100.110
