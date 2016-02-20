@@ -535,6 +535,9 @@ sudo apt-get install python-setuptools libapache2-mod-wsgi
 #install the python-dev
 sudo apt-get install libapache2-mod-wsgi python-dev
 
+#install pip for later use
+sudo pip install
+
 #restart apache
 sudo service apache2 restart
 
@@ -877,6 +880,60 @@ host    all             all             ::1/128                 md5
 # save and exit
 ```
 
+### Install virtualenv and virtualenvwrapper
+**virtualenv** helps you creates a folder that stores a private copy of python, pip, and other Python packages. 
+
+- This also gives you the flexibility to then enable this private folder while working a project. 
+- This also allows you to have different versions of Python and Python packages on a per project basis.
+
+**vitualenvwrapper** is a wrapper around the vireualenv that gives easy to understand commands and syntax.
+
+- Follow these commands to install virtualenv and virtualenvwrapper
+
+```python
+
+#install virtualenv
+sudo pip install virtualenv
+
+#install virtualenvwrapper
+sudo  pip install virtualenvwrapper
+
+```
+
+- Setup virtualenv
+
+
+```python
+ # export the WORKON_HOME variable, this contains the directory where our virtual environments arestored. 
+
+export WORKON_HOME=~/.virtualenvs
+
+# Create the new directory
+mkdir $WORKON_HOME
+
+
+# put the export in our ~/.bashrc file. This way our variable will get automatically defined
+
+echo "export WORKON_HOME=$WORKON_HOME" >> ~/.bashrc
+
+```
+
+- Setup virtualenvwrapper
+
+
+```python
+#Make the virtualenv function available in our~/.bashrc
+
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+# ensure that if pip creates an extra virtual environment, it is also placed in our WORKON_HOME directory
+
+echo "export PIP_VIRTUALENV_BASE=$WORKON_HOME" >> ~/.bashrc 
+
+#Source ~/.bashrc to load the changes
+source ~/.bashrc
+
+```
 
 **[Back to top](#table-of-contents)**
 --- 
@@ -956,15 +1013,76 @@ alter default privileges in schema public grant all on sequences to catalog;
 #Grant permission to the catalog user to access database usage stats
 grant usage on schema public to catalog;
 
+# quit the PSQL cli
+\q
+
+# Verify  that logins are working. Login using the following syntax.
+
+# For catalogadmin user
+psql -h localhost -d catalogdb -U catalogadmin
+
+# or for catalog user
+psql -h localhost -d catalogdb -U catalog
+
+```
+
+### Configure Apache
+
+Now that the database is ready and we have installed the required basic software, its time to configure apache to make our application run on it.
+
+- Create application directory
+
+```python
+#Create  A directory where the web application will live.
+
+sudo mkdir /var/www/samscatalogapp
 
 
+#create a directory where the python application will live.
+
+sudo /var/www/samscatalogapp/samscatalogapp
 
 
 ```
-### Configure Apache
+
+- Update Apache2 Configurations
+
+
+```python
+
+# take a backup of the exixting configuration file
+
+sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.original 
+
+# open the apache2.conf for editing
+sudo nano /etc/apache2/apache2.conf
+
+# reduce the default timeout to 100 seconds
+...
+Timeout 100
+
+# in the directories section add tha mapping for the application directory
+... 
+
+<Directory /var/www/samscatalogapp/samscatalogapp/>
+     Options Indexes FollowSymLinks Includes
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+
+</Directory>
+
+#save and exit the file
+
+```
+- Configure A Virtual Host
+
+
+
+
 ### Install Git
 ### Get Application Code
-### Install virtualenv
+### Create A virtual Environment
 ### Install And Configure virtualenvwrapper
 ### Create A Virtual Environment
 ### Install Rqquired Libraries 

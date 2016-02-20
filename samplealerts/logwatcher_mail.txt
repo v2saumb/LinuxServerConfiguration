@@ -1,0 +1,2643 @@
+sysadmin@samscatalogapp.com <sysadmin@samscatalogapp.com>	Fri, Feb 19, 2016 at 6:45 PM
+To: v2saumb@gmail.com, root@samscatalogapp.com, grader@samscatalogapp.com
+
+ ################### Logwatch 7.4.0 (05/29/13) ####################
+        Processing Initiated: Fri Feb 19 23:45:02 2016
+        Date Range Processed: all
+        Detail Level of Output: 5
+        Type of Output/Format: mail / text
+        Logfiles for Host: samscatalogapp.com
+ ##################################################################
+
+ --------------------- Cron Begin ------------------------
+
+ Commands Run:
+    User root:
+          cd / && run-parts --report /etc/cron.hourly: 208 Time(s)
+       /etc/monitoringscripts/glancesmonitor: 66 Time(s)
+       /etc/monitoringscripts/logwatcher : 9 Time(s)
+       /etc/monitoringscripts/statusmonitor : 188 Time(s)
+       if test -x /usr/sbin/apticron; then /usr/sbin/apticron --cron; else true; fi: 207 Time(s)
+       personal crontab reloaded: 2 Time(s)
+       start -q anacron || :: 8 Time(s)
+       test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily ): 8 Time(s)
+       test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly ): 1 Time(s)
+    User smmsp:
+       test -x /etc/init.d/sendmail && /usr/share/sendmail/sendmail cron-msp: 623 Time(s)
+
+ **Unmatched Entries**
+ DEATH (can't lock /var/run/crond.pid, otherpid may be 1290: Resource temporarily unavailable)
+ DEATH (can't lock /var/run/crond.pid, otherpid may be 1286: Resource temporarily unavailable)
+ DEATH (can't lock /var/run/crond.pid, otherpid may be 1286: Resource temporarily unavailable)
+
+ ---------------------- Cron End -------------------------
+
+
+ --------------------- dpkg status changes Begin ------------------------
+
+
+ Installed:
+    adium-theme-ubuntu:all 0.3.4-0ubuntu1
+    alsa-base:all 1.0.25+dfsg-0ubuntu4
+    alsa-utils:amd64 1.0.27.2-1ubuntu2
+    anacron:amd64 2.3-20ubuntu1
+    apache2-bin:amd64 2.4.7-1ubuntu4.9
+    apache2-data:all 2.4.7-1ubuntu4.9
+    apache2:amd64 2.4.7-1ubuntu4.9
+    apg:amd64 2.2.3.dfsg.1-2ubuntu1
+    app-install-data:all 14.04.1
+    apt-listchanges:all 2.85.13ubuntu2
+    aptdaemon-data:all 1.1.1-1ubuntu5.2
+    aptdaemon:all 1.1.1-1ubuntu5.2
+    apticron:all 1.1.55
+    aspell-en:all 7.1-0-1
+    aspell:amd64 0.60.7~20110707-1ubuntu1
+    at-spi2-core:amd64 2.10.2.is.2.10.1-0ubuntu1
+    bamfdaemon:amd64 0.5.1+14.04.20140409-0ubuntu1
+    baobab:amd64 3.8.2-1ubuntu1
+    binutils:amd64 2.24-5ubuntu14
+    bluez:amd64 4.101-0ubuntu13.1
+    build-essential:amd64 11.6ubuntu6
+    checkbox-gui:amd64 0.17.6-0ubuntu6
+    checkbox-ng-service:all 0.3-2
+    checkbox-ng:all 0.3-2
+    cheese-common:all 3.10.2-0ubuntu2
+    comerr-dev:amd64 2.1-1.42.9-3ubuntu1.3
+    compiz-core:amd64 1:0.9.11.3+14.04.20150313-0ubuntu1
+    compiz-gnome:amd64 1:0.9.11.3+14.04.20150313-0ubuntu1
+    compiz-plugins-default:amd64 1:0.9.11.3+14.04.20150313-0ubuntu1
+    compiz:all 1:0.9.11.3+14.04.20150313-0ubuntu1
+    cpp-4.8:amd64 4.8.4-2ubuntu1~14.04
+    cpp:amd64 4:4.8.2-1ubuntu6
+    crda:amd64 1.1.2-1ubuntu2
+    cups-pk-helper:amd64 0.2.5-0ubuntu1
+    dbus-x11:amd64 1.6.18-0ubuntu4.3
+    dconf-cli:amd64 0.20.0-1
+    dconf-gsettings-backend:amd64 0.20.0-1
+    dconf-service:amd64 0.20.0-1
+    desktop-file-utils:amd64 0.22-1ubuntu1
+    dictionaries-common:all 1.20.5
+    dmz-cursor-theme:all 0.4.4ubuntu1
+    dnsmasq-base:amd64 2.68-1ubuntu0.1
+    doc-base:all 0.10.5
+    dpkg-dev:all 1.17.5ubuntu5.5
+    eog:amd64 3.10.2-0ubuntu5
+    evince-common:all 3.10.3-0ubuntu10.2
+    evince:amd64 3.10.3-0ubuntu10.2
+    evolution-data-server-common:all 3.10.4-0ubuntu1.5
+    evolution-data-server-online-accounts:amd64 3.10.4-0ubuntu1.5
+    evolution-data-server:amd64 3.10.4-0ubuntu1.5
+    fail2ban:all 0.8.11-1
+    fakeroot:amd64 1.20-3ubuntu2
+    file-roller:amd64 3.10.2.1-0ubuntu4.1
+    finger:amd64 0.17-15
+    folks-common:all 0.9.5-1ubuntu5
+    fontconfig-config:all 2.11.0-0ubuntu4.1
+    fontconfig:amd64 2.11.0-0ubuntu4.1
+    fonts-dejavu-core:all 2.34-1ubuntu1
+    fonts-freefont-ttf:all 20120503-4
+    foomatic-db-compressed-ppds:all 20140410-0ubuntu1
+    g++-4.8:amd64 4.8.4-2ubuntu1~14.04
+    g++:amd64 4:4.8.2-1ubuntu6
+    gcc-4.8:amd64 4.8.4-2ubuntu1~14.04
+    gcc:amd64 4:4.8.2-1ubuntu6
+    gconf-service-backend:amd64 3.2.6-0ubuntu2
+    gconf-service:amd64 3.2.6-0ubuntu2
+    gconf2-common:all 3.2.6-0ubuntu2
+    gconf2:amd64 3.2.6-0ubuntu2
+    gcr:amd64 3.10.1-1
+    gdebi-core:all 0.9.5.3ubuntu2
+    gdm:amd64 3.10.0.1-0ubuntu3.1
+    gedit-common:all 3.10.4-0ubuntu4
+    gedit:amd64 3.10.4-0ubuntu4
+    genisoimage:amd64 9:1.1.11-2ubuntu3
+    ghostscript-x:amd64 9.10~dfsg-0ubuntu10.4
+    ghostscript:amd64 9.10~dfsg-0ubuntu10.4
+    gir1.2-accountsservice-1.0:amd64 0.6.35-0ubuntu7.2
+    gir1.2-atk-1.0:amd64 2.10.0-2ubuntu2
+    gir1.2-atspi-2.0:amd64 2.10.2.is.2.10.1-0ubuntu1
+    gir1.2-caribou-1.0:amd64 0.4.13-0ubuntu1
+    gir1.2-clutter-1.0:amd64 1.16.4-0ubuntu2
+    gir1.2-cogl-1.0:amd64 1.16.2-1
+    gir1.2-coglpango-1.0:amd64 1.16.2-1
+    gir1.2-freedesktop:amd64 1.40.0-1ubuntu0.2
+    gir1.2-gck-1:amd64 3.10.1-1
+    gir1.2-gcr-3:amd64 3.10.1-1
+    gir1.2-gdesktopenums-3.0:amd64 3.10.1-0ubuntu1
+    gir1.2-gdkpixbuf-2.0:amd64 2.30.7-0ubuntu1.2
+    gir1.2-gdm-1.0:amd64 3.10.0.1-0ubuntu3.1
+    gir1.2-gkbd-3.0:amd64 3.6.0-0ubuntu2
+    gir1.2-gmenu-3.0:amd64 3.10.1-0ubuntu2
+    gir1.2-gnomebluetooth-1.0:amd64 3.8.2.1-0ubuntu4.2
+    gir1.2-gnomedesktop-3.0:amd64 3.8.4-0ubuntu3.2
+    gir1.2-gtk-3.0:amd64 3.10.8-0ubuntu1.6
+    gir1.2-gudev-1.0:amd64 1:204-5ubuntu20.15
+    gir1.2-ibus-1.0:amd64 1.5.5-1ubuntu3.2
+    gir1.2-javascriptcoregtk-3.0:amd64 2.4.8-1ubuntu1~ubuntu14.04.1
+    gir1.2-json-1.0:amd64 0.16.2-1ubuntu1
+    gir1.2-mutter-3.0:amd64 3.10.4-0ubuntu2.1
+    gir1.2-networkmanager-1.0:amd64 0.9.8.8-0ubuntu7.2
+    gir1.2-nmgtk-1.0:amd64 0.9.8.8-0ubuntu4.4
+    gir1.2-notify-0.7:amd64 0.7.6-1ubuntu3
+    gir1.2-packagekitglib-1.0:amd64 0.8.12-1ubuntu5
+    gir1.2-pango-1.0:amd64 1.36.3-1ubuntu1.1
+    gir1.2-peas-1.0:amd64 1.8.1-2ubuntu2
+    gir1.2-polkit-1.0:amd64 0.105-4ubuntu3.14.04.1
+    gir1.2-soup-2.4:amd64 2.44.2-1ubuntu2
+    gir1.2-telepathyglib-0.12:amd64 0.22.1-1ubuntu2
+    gir1.2-telepathylogger-0.2:amd64 0.8.0-3
+    gir1.2-upowerglib-1.0:amd64 0.9.23-2ubuntu1
+    gir1.2-vte-2.90:amd64 1:0.34.9-1ubuntu2
+    gir1.2-webkit-3.0:amd64 2.4.8-1ubuntu1~ubuntu14.04.1
+    gir1.2-xkl-1.0:amd64 5.4-0ubuntu1
+    git-man:all 1:1.9.1-1ubuntu0.2
+    git:amd64 1:1.9.1-1ubuntu0.2
+    gjs:amd64 1.40.1-0ubuntu0.3
+    gkbd-capplet:amd64 3.6.0-0ubuntu2
+    glances:all 1.7.3-2ubuntu1
+    glib-networking-common:all 2.40.0-1
+    glib-networking-services:amd64 2.40.0-1
+    glib-networking:amd64 2.40.0-1
+    gnome-accessibility-themes:all 3.10.0-1ubuntu2
+    gnome-bluetooth:amd64 3.8.2.1-0ubuntu4.2
+    gnome-calculator:amd64 1:3.10.3-0ubuntu0.1.1
+    gnome-contacts:amd64 3.8.3-1ubuntu1
+    gnome-control-center-data:all 1:3.6.3-0ubuntu56.1
+    gnome-control-center-shared-data:all 1:3.6.3-0ubuntu56.1
+    gnome-control-center:amd64 1:3.6.3-0ubuntu56.1
+    gnome-desktop3-data:all 3.8.4-0ubuntu3.2
+    gnome-font-viewer:amd64 3.8.0-1build1
+    gnome-icon-theme-full:all 3.10.0-0ubuntu2
+    gnome-icon-theme-symbolic:all 3.10.1-1ubuntu1
+    gnome-icon-theme:all 3.10.0-0ubuntu2
+    gnome-keyring:amd64 3.10.1-1ubuntu4.2
+    gnome-menus:amd64 3.10.1-0ubuntu2
+    gnome-power-manager:amd64 3.8.2-1ubuntu2
+    gnome-screenshot:amd64 3.10.1-0ubuntu1
+    gnome-session-bin:amd64 3.9.90-0ubuntu12.1
+    gnome-session-canberra:amd64 0.30-0ubuntu3
+    gnome-session-common:all 3.9.90-0ubuntu12.1
+    gnome-session:all 3.9.90-0ubuntu12.1
+    gnome-settings-daemon-schemas:all 3.8.6.1-0ubuntu11.2
+    gnome-settings-daemon:amd64 3.8.6.1-0ubuntu11.2
+    gnome-shell-common:all 3.10.4-0ubuntu5.2
+    gnome-shell:amd64 3.10.4-0ubuntu5.2
+    gnome-system-log:amd64 3.8.1-1svn1
+    gnome-system-monitor:amd64 3.8.2.1-2ubuntu1
+    gnome-themes-standard-data:all 3.10.0-1ubuntu2
+    gnome-themes-standard:amd64 3.10.0-1ubuntu2
+    gnome-user-guide:all 3.8.2-1
+    gsettings-desktop-schemas:all 3.10.1-0ubuntu1
+    gsettings-ubuntu-schemas:all 0.0.1+14.04.20140401-0ubuntu1
+    gsfonts:all 1:8.11+urwcyr1.0.7~pre44-4.2ubuntu1
+    gstreamer0.10-alsa:amd64 0.10.36-1.1ubuntu2
+    gstreamer0.10-plugins-base-apps:amd64 0.10.36-1.1ubuntu2
+    gstreamer0.10-pulseaudio:amd64 0.10.31-3+nmu1ubuntu5
+    gstreamer0.10-tools:amd64 0.10.36-1.2ubuntu3
+    gstreamer1.0-alsa:amd64 1.2.4-1~ubuntu2
+    gstreamer1.0-clutter:amd64 2.0.8-1build1
+    gstreamer1.0-plugins-base-apps:amd64 1.2.4-1~ubuntu2
+    gstreamer1.0-plugins-base:amd64 1.2.4-1~ubuntu2
+    gstreamer1.0-plugins-good:amd64 1.2.4-1~ubuntu1
+    gstreamer1.0-pulseaudio:amd64 1.2.4-1~ubuntu1
+    gstreamer1.0-tools:amd64 1.2.4-0ubuntu1
+    gstreamer1.0-x:amd64 1.2.4-1~ubuntu2
+    gtk2-engines-murrine:amd64 0.98.2-0ubuntu2
+    gtk2-engines-pixbuf:amd64 2.24.23-0ubuntu1.3
+    gtk3-engines-unico:amd64 1.0.3+14.04.20140109-0ubuntu1
+    gucharmap:amd64 1:3.10.1-0ubuntu2
+    gvfs-backends:amd64 1.20.3-0ubuntu1.2
+    gvfs-bin:amd64 1.20.3-0ubuntu1.2
+    gvfs-common:all 1.20.3-0ubuntu1.2
+    gvfs-daemons:amd64 1.20.3-0ubuntu1.2
+    gvfs-libs:amd64 1.20.3-0ubuntu1.2
+    gvfs:amd64 1.20.3-0ubuntu1.2
+    heirloom-mailx:amd64 12.5-2+deb7u1build0.14.04.1
+    hicolor-icon-theme:all 0.13-1
+    humanity-icon-theme:all 0.6.5
+    ibus:amd64 1.5.5-1ubuntu3.2
+    im-config:all 0.24-1ubuntu4.2
+    imagemagick-common:all 8:6.7.7.10-6ubuntu3
+    imagemagick:amd64 8:6.7.7.10-6ubuntu3
+    indicator-bluetooth:amd64 0.0.6+14.04.20140207-0ubuntu2
+    indicator-datetime:amd64 13.10.0+14.04.20140415.3-0ubuntu1
+    indicator-keyboard:amd64 0.0.0+14.04.20140410.1-0ubuntu1
+    indicator-power:amd64 12.10.6+14.04.20140411-0ubuntu1
+    indicator-sound:amd64 12.10.2+14.04.20140401-0ubuntu1
+    inputattach:amd64 1:1.4.7-1
+    iproute:all 1:3.12.0-2ubuntu1
+    iptables-persistent:all 0.5.7
+    iputils-arping:amd64 3:20121221-4ubuntu1.1
+    iw:amd64 3.4-1
+    krb5-multidev:amd64 1.12+dfsg-2ubuntu5.2
+    language-selector-gnome:all 0.129.3
+    libaa1:amd64 1.4p5-41
+    libaccounts-glib0:amd64 1.15+14.04.20131126.2-0ubuntu3
+    libalgorithm-diff-perl:all 1.19.02-3
+    libalgorithm-diff-xs-perl:amd64 0.04-2build4
+    libalgorithm-merge-perl:all 0.08-2
+    libapache2-mod-wsgi:amd64 3.4-4ubuntu2.1.14.04.2
+    libappindicator3-1:amd64 12.10.1+13.10.20130920-0ubuntu4.1
+    libapr1:amd64 1.5.0-1
+    libaprutil1-dbd-sqlite3:amd64 1.5.3-1
+    libaprutil1-ldap:amd64 1.5.3-1
+    libaprutil1:amd64 1.5.3-1
+    libarchive13:amd64 3.1.2-7ubuntu2.1
+    libasan0:amd64 4.8.4-2ubuntu1~14.04
+    libasound2-data:all 1.0.27.2-3ubuntu7
+    libasound2-plugins:amd64 1.0.27-2ubuntu2
+    libasound2:amd64 1.0.27.2-3ubuntu7
+    libaspell15:amd64 0.60.7~20110707-1ubuntu1
+    libassuan0:amd64 2.1.1-1ubuntu1
+    libasyncns0:amd64 0.8-4ubuntu2
+    libatasmart4:amd64 0.19-3
+    libatk-adaptor:amd64 2.10.2-2ubuntu1
+    libatk-bridge2.0-0:amd64 2.10.2-2ubuntu1
+    libatk1.0-0:amd64 2.10.0-2ubuntu2
+    libatk1.0-data:all 2.10.0-2ubuntu2
+    libatkmm-1.6-1:amd64 2.22.7-2ubuntu1
+    libatomic1:amd64 4.8.4-2ubuntu1~14.04
+    libatspi2.0-0:amd64 2.10.2.is.2.10.1-0ubuntu1
+    libaudio2:amd64 1.9.4-1
+    libavahi-client3:amd64 0.6.31-4ubuntu1
+    libavahi-common-data:amd64 0.6.31-4ubuntu1
+    libavahi-common3:amd64 0.6.31-4ubuntu1
+    libavahi-glib1:amd64 0.6.31-4ubuntu1
+    libavc1394-0:amd64 0.5.4-2
+    libbamf3-2:amd64 0.5.1+14.04.20140409-0ubuntu1
+    libbit-vector-perl:amd64 7.3-1build1
+    libbluetooth3:amd64 4.101-0ubuntu13.1
+    libc-dev-bin:amd64 2.19-0ubuntu6.6
+    libc6-dev:amd64 2.19-0ubuntu6.6
+    libcaca0:amd64 0.99.beta18-1ubuntu5
+    libcairo-gobject2:amd64 1.13.0~20140204-0ubuntu1.1
+    libcairo2:amd64 1.13.0~20140204-0ubuntu1.1
+    libcairomm-1.0-1:amd64 1.10.0-1ubuntu3
+    libcamel-1.2-45:amd64 3.10.4-0ubuntu1.5
+    libcanberra-gtk0:amd64 0.30-0ubuntu3
+    libcanberra-gtk3-0:amd64 0.30-0ubuntu3
+    libcanberra-pulse:amd64 0.30-0ubuntu3
+    libcanberra0:amd64 0.30-0ubuntu3
+    libcaribou-common:all 0.4.13-0ubuntu1
+    libcaribou0:amd64 0.4.13-0ubuntu1
+    libcarp-clan-perl:all 6.04-1
+    libcdio-cdda1:amd64 0.83-4.1ubuntu1
+    libcdio-paranoia1:amd64 0.83-4.1ubuntu1
+    libcdio13:amd64 0.83-4.1ubuntu1
+    libcdparanoia0:amd64 3.10.2+debian-11
+    libcheese-gtk23:amd64 3.10.2-0ubuntu2
+    libcheese7:amd64 3.10.2-0ubuntu2
+    libcloog-isl4:amd64 0.18.2-1
+    libclutter-1.0-0:amd64 1.16.4-0ubuntu2
+    libclutter-gst-2.0-0:amd64 2.0.8-1build1
+    libclutter-gtk-1.0-0:amd64 1.4.4-3ubuntu2.2
+    libcogl-pango15:amd64 1.16.2-1
+    libcogl15:amd64 1.16.2-1
+    libcolord1:amd64 1.0.6-1
+    libcompizconfig0:amd64 1:0.9.11.3+14.04.20150313-0ubuntu1
+    libcrack2:amd64 2.9.1-1build1
+    libcroco3:amd64 0.6.8-2ubuntu1
+    libcups2:amd64 1.7.2-0ubuntu1.7
+    libcupsfilters1:amd64 1.0.52-0ubuntu1.7
+    libcupsimage2:amd64 1.7.2-0ubuntu1.7
+    libdate-calc-perl:all 6.3-1
+    libdate-calc-xs-perl:amd64 6.3-1build1
+    libdate-manip-perl:all 6.42-1
+    libdatrie1:amd64 0.2.8-1
+    libdbusmenu-glib4:amd64 12.10.3+14.04.20140612-0ubuntu1
+    libdbusmenu-gtk3-4:amd64 12.10.3+14.04.20140612-0ubuntu1
+    libdconf1:amd64 0.20.0-1
+    libdecoration0:amd64 1:0.9.11.3+14.04.20150313-0ubuntu1
+    libdee-1.0-4:amd64 1.2.7+14.04.20140324-0ubuntu1
+    libdjvulibre-text:all 3.5.25.4-3
+    libdjvulibre21:amd64 3.5.25.4-3
+    libdpkg-perl:all 1.17.5ubuntu5.5
+    libdrm-intel1:amd64 2.4.64-1~ubuntu14.04.1
+    libdrm-nouveau2:amd64 2.4.64-1~ubuntu14.04.1
+    libdrm-radeon1:amd64 2.4.64-1~ubuntu14.04.1
+    libdv4:amd64 1.0.0-6
+    libebackend-1.2-7:amd64 3.10.4-0ubuntu1.5
+    libebook-1.2-14:amd64 3.10.4-0ubuntu1.5
+    libebook-contacts-1.2-0:amd64 3.10.4-0ubuntu1.5
+    libecal-1.2-16:amd64 3.10.4-0ubuntu1.5
+    libedata-book-1.2-20:amd64 3.10.4-0ubuntu1.5
+    libedata-cal-1.2-23:amd64 3.10.4-0ubuntu1.5
+    libedataserver-1.2-18:amd64 3.10.4-0ubuntu1.5
+    libegl1-mesa-drivers:amd64 10.1.3-0ubuntu0.6
+    libegl1-mesa:amd64 10.1.3-0ubuntu0.6
+    libelfg0:amd64 0.8.13-5
+    libenchant1c2a:amd64 1.6.0-10ubuntu1
+    liberror-perl:all 0.17-1.1
+    libevdocument3-4:amd64 3.10.3-0ubuntu10.2
+    libevview3-3:amd64 3.10.3-0ubuntu10.2
+    libexempi3:amd64 2.2.1-1ubuntu1
+    libexif12:amd64 0.6.21-1ubuntu1
+    libexpat1-dev:amd64 2.1.0-4ubuntu1.1
+    libfakeroot:amd64 1.20-3ubuntu2
+    libfftw3-double3:amd64 3.3.3-7ubuntu3
+    libfftw3-single3:amd64 3.3.3-7ubuntu3
+    libfile-fcntllock-perl:amd64 0.14-2build1
+    libflac8:amd64 1.3.0-2ubuntu0.14.04.1
+    libfolks-eds25:amd64 0.9.5-1ubuntu5
+    libfolks-telepathy25:amd64 0.9.5-1ubuntu5
+    libfolks25:amd64 0.9.5-1ubuntu5
+    libfontconfig1:amd64 2.11.0-0ubuntu4.1
+    libfontenc1:amd64 1:1.1.2-1
+    libframe6:amd64 2.5.0daily13.06.05-0ubuntu1
+    libfs6:amd64 2:1.0.5-1
+    libgail-3-0:amd64 3.10.8-0ubuntu1.6
+    libgbm1:amd64 10.1.3-0ubuntu0.6
+    libgcc-4.8-dev:amd64 4.8.4-2ubuntu1~14.04
+    libgconf-2-4:amd64 3.2.6-0ubuntu2
+    libgcr-ui-3-1:amd64 3.10.1-1
+    libgd3:amd64 2.1.0-3
+    libgdata-common:all 0.14.1-1
+    libgdata13:amd64 0.14.1-1
+    libgdk-pixbuf2.0-0:amd64 2.30.7-0ubuntu1.2
+    libgdk-pixbuf2.0-common:all 2.30.7-0ubuntu1.2
+    libgdm1:amd64 3.10.0.1-0ubuntu3.1
+    libgee-0.8-2:amd64 0.10.5-1ubuntu1
+    libgee2:amd64 0.6.8-1ubuntu1
+    libgeis1:amd64 2.2.16+14.04.20140303-0ubuntu1
+    libgeoclue0:amd64 0.12.99-3ubuntu1
+    libgjs0e:amd64 1.40.1-0ubuntu0.3
+    libgl1-mesa-dri:amd64 10.1.3-0ubuntu0.6
+    libgl1-mesa-glx:amd64 10.1.3-0ubuntu0.6
+    libglamor0:amd64 0.6.0-0ubuntu4
+    libglapi-mesa:amd64 10.1.3-0ubuntu0.6
+    libgles2-mesa:amd64 10.1.3-0ubuntu0.6
+    libglew1.10:amd64 1.10.0-3
+    libglewmx1.10:amd64 1.10.0-3
+    libglib2.0-bin:amd64 2.40.2-0ubuntu1
+    libglibmm-2.4-1c2a:amd64 2.39.93-0ubuntu1
+    libglu1-mesa:amd64 9.0.0-2
+    libgmp10:amd64 2:5.1.3+dfsg-1ubuntu1
+    libgnome-bluetooth11:amd64 3.8.2.1-0ubuntu4.2
+    libgnome-control-center1:amd64 1:3.6.3-0ubuntu56.1
+    libgnome-desktop-3-7:amd64 3.8.4-0ubuntu3.2
+    libgnome-keyring-common:all 3.8.0-2
+    libgnome-keyring0:amd64 3.8.0-2
+    libgnome-menu-3-0:amd64 3.10.1-0ubuntu2
+    libgnomekbd-common:all 3.6.0-0ubuntu2
+    libgnomekbd8:amd64 3.6.0-0ubuntu2
+    libgoa-1.0-0b:amd64 3.10.3-0ubuntu1
+    libgoa-1.0-common:all 3.10.3-0ubuntu1
+    libgoa-backend-1.0-1:amd64 3.10.3-0ubuntu1
+    libgomp1:amd64 4.8.4-2ubuntu1~14.04
+    libgpgme11:amd64 1.4.3-0.1ubuntu5.1
+    libgphoto2-6:amd64 2.5.3.1-1ubuntu2.2
+    libgphoto2-port10:amd64 2.5.3.1-1ubuntu2.2
+    libgrail6:amd64 3.1.0daily13.06.05-0ubuntu1
+    libgraphite2-3:amd64 1.2.4-1ubuntu1
+    libgrip0:amd64 0.3.7+14.04.20140303-0ubuntu1
+    libgs9-common:all 9.10~dfsg-0ubuntu10.4
+    libgs9:amd64 9.10~dfsg-0ubuntu10.4
+    libgssdp-1.0-3:amd64 0.14.7-1ubuntu1
+    libgssrpc4:amd64 1.12+dfsg-2ubuntu5.2
+    libgstreamer-plugins-base0.10-0:amd64 0.10.36-1.1ubuntu2
+    libgstreamer-plugins-base1.0-0:amd64 1.2.4-1~ubuntu2
+    libgstreamer-plugins-good1.0-0:amd64 1.2.4-1~ubuntu1
+    libgstreamer0.10-0:amd64 0.10.36-1.2ubuntu3
+    libgstreamer1.0-0:amd64 1.2.4-0ubuntu1
+    libgtk-3-0:amd64 3.10.8-0ubuntu1.6
+    libgtk-3-bin:amd64 3.10.8-0ubuntu1.6
+    libgtk-3-common:all 3.10.8-0ubuntu1.6
+    libgtk2.0-0:amd64 2.24.23-0ubuntu1.3
+    libgtk2.0-common:all 2.24.23-0ubuntu1.3
+    libgtkmm-3.0-1:amd64 3.10.1-0ubuntu2
+    libgtksourceview-3.0-1:amd64 3.10.2-0ubuntu1
+    libgtksourceview-3.0-common:all 3.10.2-0ubuntu1
+    libgtop2-7:amd64 2.28.5-2
+    libgtop2-common:all 2.28.5-2
+    libgucharmap-2-90-7:amd64 1:3.10.1-0ubuntu2
+    libgudev-1.0-0:amd64 1:204-5ubuntu20.15
+    libgupnp-1.0-4:amd64 0.20.10-1ubuntu1
+    libgweather-3-6:amd64 3.10.2-0ubuntu2
+    libgweather-common:all 3.10.2-0ubuntu2
+    libgxps2:amd64 0.2.2-2ubuntu2
+    libharfbuzz-icu0:amd64 0.9.27-1ubuntu1
+    libharfbuzz0b:amd64 0.9.27-1ubuntu1
+    libhud2:amd64 14.04+14.04.20140604-0ubuntu1
+    libhunspell-1.3-0:amd64 1.3.2-6ubuntu2.1
+    libibus-1.0-5:amd64 1.5.5-1ubuntu3.2
+    libical1:amd64 1.0-0ubuntu1
+    libice6:amd64 2:1.0.8-2
+    libido3-0.1-0:amd64 13.10.0+14.04.20151021-0ubuntu1
+    libiec61883-0:amd64 1.2.0-0.1ubuntu3
+    libijs-0.35:amd64 0.35-8build1
+    libilmbase6:amd64 1.0.1-6ubuntu1
+    libimobiledevice4:amd64 1.1.5+git20140313.bafe6a9e-0ubuntu1
+    libindicator3-7:amd64 12.10.2+14.04.20141007.1-0ubuntu1
+    libiptables-chainmgr-perl:all 1.2-1
+    libiptables-parse-perl:all 1.1-1
+    libisl10:amd64 0.12.2-1
+    libitm1:amd64 4.8.4-2ubuntu1~14.04
+    libiw30:amd64 30~pre9-8ubuntu1
+    libjack-jackd2-0:amd64 1.9.9.5+20130622git7de15e7a-1ubuntu1
+    libjasper1:amd64 1.900.1-14ubuntu3.2
+    libjavascriptcoregtk-3.0-0:amd64 2.4.8-1ubuntu1~ubuntu14.04.1
+    libjbig0:amd64 2.0-2ubuntu4.1
+    libjbig2dec0:amd64 0.11+20120125-1ubuntu1
+    libjpeg-turbo8:amd64 1.3.0-0ubuntu2
+    libjpeg8:amd64 8c-2ubuntu8
+    libjson-glib-1.0-0:amd64 0.16.2-1ubuntu1
+    libjson-glib-1.0-common:all 0.16.2-1ubuntu1
+    libkadm5clnt-mit9:amd64 1.12+dfsg-2ubuntu5.2
+    libkadm5srv-mit9:amd64 1.12+dfsg-2ubuntu5.2
+    libkdb5-7:amd64 1.12+dfsg-2ubuntu5.2
+    libkpathsea6:amd64 2013.20130729.30972-2build3
+    liblcms2-2:amd64 2.5-0ubuntu4
+    libldb1:amd64 1:1.1.16-1ubuntu0.1
+    liblightdm-gobject-1-0:amd64 1.10.6-0ubuntu1
+    libllvm3.4:amd64 1:3.4-1ubuntu3
+    liblqr-1-0:amd64 0.4.1-2ubuntu1
+    libltdl7:amd64 2.4.2-1.7ubuntu1
+    liblzo2-2:amd64 2.06-1.2ubuntu1.1
+    libmagickcore5-extra:amd64 8:6.7.7.10-6ubuntu3
+    libmagickcore5:amd64 8:6.7.7.10-6ubuntu3
+    libmagickwand5:amd64 8:6.7.7.10-6ubuntu3
+    libmbim-glib0:amd64 1.6.0-2ubuntu0.1
+    libmetacity-private0a:amd64 1:2.34.13-0ubuntu4.1
+    libmission-control-plugins0:amd64 1:5.16.1-1ubuntu3
+    libmm-glib0:amd64 1.0.0-2ubuntu1.1
+    libmnl0:amd64 1.0.3-3ubuntu1
+    libmozjs-24-0:amd64 24.2.0-1
+    libmpc3:amd64 1.0.1-1ubuntu1
+    libmpfr4:amd64 3.1.2-1
+    libmtdev1:amd64 1.1.4-1ubuntu1
+    libmtp-common:all 1.1.6-20-g1b9f164-1ubuntu2.1
+    libmtp9:amd64 1.1.6-20-g1b9f164-1ubuntu2.1
+    libmutter0c:amd64 3.10.4-0ubuntu2.1
+    libnautilus-extension1a:amd64 1:3.10.1-0ubuntu9.11
+    libnet-ip-perl:all 1.26-1
+    libnetaddr-ip-perl:amd64 4.071+dfsg-1
+    libnetfilter-conntrack3:amd64 1.0.4-1
+    libnetpbm10:amd64 2:10.0-15ubuntu2
+    libnettle4:amd64 2.7.1-1
+    libnl-3-200:amd64 3.2.21-1
+    libnl-genl-3-200:amd64 3.2.21-1
+    libnl-route-3-200:amd64 3.2.21-1
+    libnm-glib-vpn1:amd64 0.9.8.8-0ubuntu7.2
+    libnm-glib4:amd64 0.9.8.8-0ubuntu7.2
+    libnm-gtk-common:all 0.9.8.8-0ubuntu4.4
+    libnm-gtk0:amd64 0.9.8.8-0ubuntu4.4
+    libnm-util2:amd64 0.9.8.8-0ubuntu7.2
+    libnotify-bin:amd64 0.7.6-1ubuntu3
+    libnotify4:amd64 0.7.6-1ubuntu3
+    libnspr4:amd64 2:4.10.10-0ubuntu0.14.04.1
+    libnss3-nssdb:all 2:3.19.2.1-0ubuntu0.14.04.2
+    libnss3:amd64 2:3.19.2.1-0ubuntu0.14.04.2
+    libntdb1:amd64 1.0-2ubuntu1
+    libnux-4.0-0:amd64 4.0.6+14.04.20141107-0ubuntu1
+    libnux-4.0-common:amd64 4.0.6+14.04.20141107-0ubuntu1
+    liboauth0:amd64 1.0.1-1
+    libogg0:amd64 1.3.1-1ubuntu1
+    libopenexr6:amd64 1.6.1-7ubuntu1
+    libopenobex1:amd64 1.5-2.1
+    libopenvg1-mesa:amd64 10.1.3-0ubuntu0.6
+    libopts25:amd64 1:5.18-2ubuntu2
+    liborc-0.4-0:amd64 1:0.4.18-1ubuntu1
+    libossp-uuid16:amd64 1.6.2-1.3ubuntu1
+    libpackagekit-glib2-16:amd64 0.8.12-1ubuntu5
+    libpango-1.0-0:amd64 1.36.3-1ubuntu1.1
+    libpango1.0-0:amd64 1.36.3-1ubuntu1.1
+    libpangocairo-1.0-0:amd64 1.36.3-1ubuntu1.1
+    libpangoft2-1.0-0:amd64 1.36.3-1ubuntu1.1
+    libpangomm-1.4-1:amd64 2.34.0-1ubuntu1
+    libpangox-1.0-0:amd64 0.0.2-4ubuntu1
+    libpangoxft-1.0-0:amd64 1.36.3-1ubuntu1.1
+    libpaper1:amd64 1.1.24+nmu2ubuntu3
+    libpciaccess0:amd64 0.13.2-1
+    libpcsclite1:amd64 1.8.10-1ubuntu1
+    libpeas-1.0-0:amd64 1.8.1-2ubuntu2
+    libpeas-common:all 1.8.1-2ubuntu2
+    libpixman-1-0:amd64 0.30.2-2ubuntu1
+    libplist1:amd64 1.10-1
+    libpoppler-glib8:amd64 0.24.5-2ubuntu4.3
+    libpoppler44:amd64 0.24.5-2ubuntu4.3
+    libpq-dev:amd64 9.3.10-0ubuntu0.14.04
+    libpq5:amd64 9.3.10-0ubuntu0.14.04
+    libprotobuf8:amd64 2.5.0-9ubuntu1
+    libproxy1:amd64 0.4.11-0ubuntu4
+    libpulse-mainloop-glib0:amd64 1:4.0-0ubuntu11.1
+    libpulse0:amd64 1:4.0-0ubuntu11.1
+    libpwquality-common:all 1.2.3-1ubuntu1.1
+    libpwquality1:amd64 1.2.3-1ubuntu1.1
+    libpython-dev:amd64 2.7.5-5ubuntu3
+    libpython2.7-dev:amd64 2.7.6-8ubuntu0.2
+    libpython3.4:amd64 3.4.3-1ubuntu1~14.04.3
+    libqmi-glib0:amd64 1.4.0-1
+    libqt4-dbus:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-declarative:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-designer:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-help:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-network:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-opengl:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-script:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-scripttools:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-sql:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-svg:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-test:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-xml:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt4-xmlpatterns:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqt5core5a:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5dbus5:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5feedback5:amd64 5.0~git20130529-0ubuntu3
+    libqt5gui5:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5multimedia5:amd64 5.2.1-0ubuntu5
+    libqt5network5:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5organizer5:amd64 5.0~git20140203~e0c5eebe-0ubuntu2
+    libqt5qml-graphicaleffects:amd64 5.2.1-1
+    libqt5qml5:amd64 5.2.1-3ubuntu15.1
+    libqt5quick5:amd64 5.2.1-3ubuntu15.1
+    libqt5sql5-sqlite:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5sql5:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqt5svg5:amd64 5.2.1-1
+    libqt5widgets5:amd64 5.2.1+dfsg-1ubuntu14.3
+    libqtassistantclient4:amd64 4.6.3-6
+    libqtcore4:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqtdbus4:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqtgui4:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    libqtwebkit4:amd64 2.3.2-0ubuntu7
+    libquadmath0:amd64 4.8.4-2ubuntu1~14.04
+    libraw1394-11:amd64 2.1.0-1ubuntu1
+    libreadline5:amd64 5.2+dfsg-2
+    librest-0.7-0:amd64 0.7.90-0ubuntu1
+    librsvg2-2:amd64 2.40.2-1
+    librsvg2-common:amd64 2.40.2-1
+    libsamplerate0:amd64 0.1.8-7
+    libsecret-1-0:amd64 0.16-0ubuntu1
+    libsecret-common:all 0.16-0ubuntu1
+    libshout3:amd64 2.3.1-3
+    libsignon-glib1:amd64 1.10daily13.06.25-0ubuntu2
+    libsm6:amd64 2:1.2.1-2
+    libsmbclient:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11
+    libsndfile1:amd64 1.0.25-7ubuntu2.1
+    libsocket6-perl:amd64 0.25-1
+    libsoup-gnome2.4-1:amd64 2.44.2-1ubuntu2
+    libsoup2.4-1:amd64 2.44.2-1ubuntu2
+    libspectre1:amd64 0.2.7-2ubuntu1.1
+    libspeex1:amd64 1.2~rc1.1-1ubuntu1
+    libspeexdsp1:amd64 1.2~rc1.1-1ubuntu1
+    libspice-server1:amd64 0.12.4-0nocelt2ubuntu1.2
+    libssl-dev:amd64 1.0.1f-1ubuntu2.16
+    libssl-doc:all 1.0.1f-1ubuntu2.16
+    libstartup-notification0:amd64 0.12-3ubuntu1
+    libstdc++-4.8-dev:amd64 4.8.4-2ubuntu1~14.04
+    libsystemd-journal0:amd64 204-5ubuntu20.15
+    libt1-5:amd64 5.1.2-3.6ubuntu1
+    libtag1-vanilla:amd64 1.9.1-2
+    libtag1c2a:amd64 1.9.1-2
+    libtalloc2:amd64 2.1.0-1
+    libtdb1:amd64 1.2.12-1
+    libtelepathy-glib0:amd64 0.22.1-1ubuntu2
+    libtelepathy-logger3:amd64 0.8.0-3
+    libtevent0:amd64 0.9.19-1
+    libthai-data:all 0.1.20-3
+    libthai0:amd64 0.1.20-3
+    libtheora0:amd64 1.1.1+dfsg.1-3.2
+    libthumbnailer0:amd64 1.1+14.04.20150205-0ubuntu1
+    libtiff5:amd64 4.0.3-7ubuntu0.3
+    libtimezonemap1:amd64 0.4.1
+    libtokyocabinet9:amd64 1.4.48-2
+    libtsan0:amd64 4.8.4-2ubuntu1~14.04
+    libudisks2-0:amd64 2.1.3-1ubuntu0.1
+    libunity-action-qt1:amd64 1.1.0+14.04.20140304-0ubuntu1
+    libunity-control-center1:amd64 14.04.3+14.04.20150916-0ubuntu1
+    libunity-core-6.0-9:amd64 7.2.6+14.04.20151021-0ubuntu1
+    libunity-misc4:amd64 4.0.5+14.04.20140115-0ubuntu1
+    libunity-protocol-private0:amd64 7.1.4+14.04.20140210-0ubuntu1
+    libunity-scopes-json-def-desktop:all 7.1.4+14.04.20140210-0ubuntu1
+    libunity9:amd64 7.1.4+14.04.20140210-0ubuntu1
+    libunix-syslog-perl:amd64 1.1-2build5
+    libupower-glib1:amd64 0.9.23-2ubuntu1
+    liburl-dispatcher1:amd64 0.1+14.04.20140403-0ubuntu1
+    libusbmuxd2:amd64 1.0.8-2ubuntu1
+    libutempter0:amd64 1.1.5-4build1
+    libuuid-perl:amd64 0.05-1
+    libv4l-0:amd64 1.0.1-1
+    libv4lconvert0:amd64 1.0.1-1
+    libvisual-0.4-0:amd64 0.4.0-5
+    libvorbis0a:amd64 1.3.2-1.3ubuntu1
+    libvorbisenc2:amd64 1.3.2-1.3ubuntu1
+    libvorbisfile3:amd64 1.3.2-1.3ubuntu1
+    libvpx1:amd64 1.3.0-2
+    libvte-2.90-9:amd64 1:0.34.9-1ubuntu2
+    libvte-2.90-common:all 1:0.34.9-1ubuntu2
+    libwacom-common:all 0.8-1
+    libwacom2:amd64 0.8-1
+    libwavpack1:amd64 4.70.0-1
+    libwayland-client0:amd64 1.4.0-1ubuntu1
+    libwayland-cursor0:amd64 1.4.0-1ubuntu1
+    libwayland-egl1-mesa:amd64 10.1.3-0ubuntu0.6
+    libwayland-server0:amd64 1.4.0-1ubuntu1
+    libwbclient0:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11
+    libwebkitgtk-3.0-0:amd64 2.4.8-1ubuntu1~ubuntu14.04.1
+    libwebkitgtk-3.0-common:all 2.4.8-1ubuntu1~ubuntu14.04.1
+    libwebp5:amd64 0.4.0-4
+    libwebpmux1:amd64 0.4.0-4
+    libwmf0.2-7:amd64 0.2.8.4-10.3ubuntu1.14.04.1
+    libwnck-3-0:amd64 3.4.7-0ubuntu3.1
+    libwnck-3-common:all 3.4.7-0ubuntu3.1
+    libwnck-common:all 1:2.30.7-0ubuntu4
+    libwnck22:amd64 1:2.30.7-0ubuntu4
+    libx11-xcb1:amd64 2:1.6.2-1ubuntu2
+    libxatracker2:amd64 10.1.3-0ubuntu0.6
+    libxaw7:amd64 2:1.0.12-1
+    libxcb-dri2-0:amd64 1.10-2ubuntu1
+    libxcb-dri3-0:amd64 1.10-2ubuntu1
+    libxcb-glx0:amd64 1.10-2ubuntu1
+    libxcb-icccm4:amd64 0.4.1-1ubuntu1
+    libxcb-image0:amd64 0.3.9-1ubuntu2
+    libxcb-keysyms1:amd64 0.3.9-1ubuntu1
+    libxcb-present0:amd64 1.10-2ubuntu1
+    libxcb-randr0:amd64 1.10-2ubuntu1
+    libxcb-render-util0:amd64 0.3.8-1.1ubuntu1
+    libxcb-render0:amd64 1.10-2ubuntu1
+    libxcb-shape0:amd64 1.10-2ubuntu1
+    libxcb-shm0:amd64 1.10-2ubuntu1
+    libxcb-sync1:amd64 1.10-2ubuntu1
+    libxcb-util0:amd64 0.3.8-2ubuntu1
+    libxcb-xf86dri0:amd64 1.10-2ubuntu1
+    libxcb-xfixes0:amd64 1.10-2ubuntu1
+    libxcb-xkb1:amd64 1.10-2ubuntu1
+    libxcb-xv0:amd64 1.10-2ubuntu1
+    libxcomposite1:amd64 1:0.4.4-1
+    libxcursor1:amd64 1:1.1.14-1
+    libxdamage1:amd64 1:1.1.4-1ubuntu1
+    libxfixes3:amd64 1:5.0.1-1ubuntu1.1
+    libxfont1:amd64 1:1.4.7-1ubuntu0.2
+    libxft2:amd64 2.3.1-2
+    libxi6:amd64 2:1.7.1.901-1ubuntu1.1
+    libxinerama1:amd64 2:1.1.3-1
+    libxkbcommon-x11-0:amd64 0.4.1-0ubuntu1
+    libxkbcommon0:amd64 0.4.1-0ubuntu1
+    libxkbfile1:amd64 1:1.0.8-1
+    libxklavier16:amd64 5.4-0ubuntu1
+    libxmu6:amd64 2:1.1.1-1
+    libxp6:amd64 1:1.0.2-1ubuntu1
+    libxpm4:amd64 1:3.5.10-1
+    libxrandr2:amd64 2:1.4.2-1
+    libxrender1:amd64 1:0.9.8-1build0.14.04.1
+    libxres1:amd64 2:1.0.7-1
+    libxshmfence1:amd64 1.1-2
+    libxslt1.1:amd64 1.1.28-2build1
+    libxt6:amd64 1:1.1.4-1
+    libxtst6:amd64 2:1.2.2-1
+    libxv1:amd64 2:1.0.10-1
+    libxvmc1:amd64 2:1.0.8-1ubuntu1
+    libxxf86dga1:amd64 2:1.1.4-1
+    libxxf86vm1:amd64 1:1.1.3-1
+    libyaml-tiny-perl:all 1.56-1
+    libyelp0:amd64 3.10.2-0ubuntu1
+    libzeitgeist-1.0-1:amd64 0.3.18-1ubuntu2
+    libzeitgeist-2.0-0:amd64 0.9.14-0ubuntu4.1
+    light-themes:all 14.04+14.04.20140410-0ubuntu1
+    lightdm:amd64 1.10.6-0ubuntu1
+    linux-headers-3.13.0-77-generic:amd64 3.13.0-77.121
+    linux-headers-3.13.0-77:all 3.13.0-77.121
+    linux-image-3.13.0-77-generic:amd64 3.13.0-77.121
+    linux-libc-dev:amd64 3.13.0-77.121
+    linux-sound-base:all 1.0.25+dfsg-0ubuntu4
+    logwatch:all 7.4.0+svn20130529rev144-1ubuntu1
+    m4:amd64 1.4.17-2ubuntu1
+    make:amd64 3.81-8.2ubuntu3
+    manpages-dev:all 3.54-1ubuntu1
+    memtest86+:amd64 4.20-1.1ubuntu8
+    metacity-common:all 1:2.34.13-0ubuntu4.1
+    mobile-broadband-provider-info:all 20140317-1
+    modemmanager:amd64 1.0.0-2ubuntu1.1
+    mousetweaks:amd64 3.8.0-2
+    mutt:amd64 1.5.21-6.4ubuntu2.1
+    mutter-common:all 3.10.4-0ubuntu2.1
+    nautilus-data:all 1:3.10.1-0ubuntu9.11
+    nautilus-sendto:amd64 3.6.1-2ubuntu1
+    nautilus:amd64 1:3.10.1-0ubuntu9.11
+    netpbm:amd64 2:10.0-15ubuntu2
+    network-manager-gnome:amd64 0.9.8.8-0ubuntu4.4
+    network-manager-pptp-gnome:amd64 0.9.8.2-1ubuntu2
+    network-manager-pptp:amd64 0.9.8.2-1ubuntu2
+    network-manager:amd64 0.9.8.8-0ubuntu7.2
+    nginx-common:all 1.4.6-1ubuntu3.4
+    nginx-core:amd64 1.4.6-1ubuntu3.4
+    nginx:all 1.4.6-1ubuntu3.4
+    notification-daemon:amd64 0.7.6-1
+    notify-osd:amd64 0.9.35+14.04.20140213-0ubuntu1
+    ntp:amd64 1:4.2.6.p5+dfsg-3ubuntu2.14.04.7
+    nux-tools:amd64 4.0.6+14.04.20141107-0ubuntu1
+    obex-data-server:amd64 0.4.6-0ubuntu2
+    obexd-client:amd64 0.46-1ubuntu7
+    oneconf-common:all 0.3.7.14.04.1
+    oneconf:all 0.3.7.14.04.1
+    openprinting-ppds:all 20140410-0ubuntu1
+    p11-kit-modules:amd64 0.20.2-2ubuntu2
+    p11-kit:amd64 0.20.2-2ubuntu2
+    packagekit-backend-aptcc:amd64 0.8.12-1ubuntu5
+    packagekit:amd64 0.8.12-1ubuntu5
+    pkg-config:amd64 0.26-1ubuntu4
+    plainbox-provider-checkbox:amd64 0.4-1
+    plainbox-provider-resource-generic:amd64 0.3-1
+    plainbox-secure-policy:all 0.5.3-2
+    policykit-1-gnome:amd64 0.105-1ubuntu4
+    poppler-data:all 0.4.6-4
+    postfix:amd64 2.11.0-1ubuntu1
+    postgresql-9.3:amd64 9.3.10-0ubuntu0.14.04
+    postgresql-client-9.3:amd64 9.3.10-0ubuntu0.14.04
+    postgresql-client-common:all 154ubuntu1
+    postgresql-common:all 154ubuntu1
+    postgresql-contrib-9.3:amd64 9.3.10-0ubuntu0.14.04
+    postgresql-contrib:all 9.3+154ubuntu1
+    postgresql:all 9.3+154ubuntu1
+    pptp-linux:amd64 1.7.2-7
+    printer-driver-pnm2ppa:amd64 1.13+nondbs-0ubuntu4
+    procmail:amd64 3.22-21ubuntu0.1
+    psad:amd64 2.2.1-2.1
+    pulseaudio:amd64 1:4.0-0ubuntu11.1
+    python-aptdaemon.gtk3widgets:all 1.1.1-1ubuntu5.2
+    python-aptdaemon:all 1.1.1-1ubuntu5.2
+    python-cairo:amd64 1.8.8-1ubuntu5
+    python-chardet-whl:all 2.2.1-2~ubuntu1
+    python-colorama-whl:all 0.2.5-0.1ubuntu2
+    python-colorama:all 0.2.5-0.1ubuntu2
+    python-crypto:amd64 2.6.1-4build1
+    python-cups:amd64 1.9.66-0ubuntu2
+    python-cupshelpers:all 1.4.3+20140219-0ubuntu2.6
+    python-dbus-dev:all 1.2.0-2build2
+    python-dbus:amd64 1.2.0-2build2
+    python-debtagshw:all 1.12ubuntu2
+    python-defer:all 1.0.6-2build1
+    python-dev:amd64 2.7.5-5ubuntu3
+    python-dirspec:all 13.10-0ubuntu2
+    python-distlib-whl:all 0.1.8-1ubuntu1
+    python-distlib:all 0.1.8-1ubuntu1
+    python-egenix-mxdatetime:amd64 3.2.7-1build1
+    python-egenix-mxtools:amd64 3.2.7-1build1
+    python-gi-cairo:amd64 3.12.0-1ubuntu1
+    python-gi:amd64 3.12.0-1ubuntu1
+    python-gnomekeyring:amd64 2.32.0+dfsg-3
+    python-gobject-2:amd64 2.28.6-12build1
+    python-gtk2:amd64 2.24.0-3ubuntu3
+    python-html5lib-whl:all 0.999-3~ubuntu1
+    python-html5lib:all 0.999-3~ubuntu1
+    python-httplib2:all 0.8-2build1
+    python-imaging:all 2.3.0-1ubuntu3
+    python-jinja2:all 2.7.2-2
+    python-libxml2:amd64 2.9.1+dfsg1-3ubuntu4.7
+    python-lxml:amd64 3.3.3-1ubuntu0.1
+    python-markupsafe:amd64 0.18-1build2
+    python-notify:amd64 0.1.1-3ubuntu2
+    python-oauthlib:all 0.6.1-1
+    python-oneconf:all 0.3.7.14.04.1
+    python-pil:amd64 2.3.0-1ubuntu3
+    python-pip-whl:all 1.5.4-1ubuntu3
+    python-pip:all 1.5.4-1ubuntu3
+    python-piston-mini-client:all 0.7.5-0ubuntu2
+    python-psutil:amd64 1.2.1-1ubuntu2
+    python-psycopg2:amd64 2.4.5-1build5
+    python-pyinotify:all 0.9.4-1build1
+    python-qt4-dbus:amd64 4.10.4+dfsg-1ubuntu1
+    python-qt4:amd64 4.10.4+dfsg-1ubuntu1
+    python-requests-whl:all 2.2.1-1ubuntu0.3
+    python-setuptools-whl:all 3.3-1ubuntu2
+    python-setuptools:all 3.3-1ubuntu2
+    python-sip:amd64 4.15.5-1build1
+    python-six-whl:all 1.5.2-1ubuntu1
+    python-smbc:amd64 1.0.14.1-0ubuntu2
+    python-talloc:amd64 2.1.0-1
+    python-ubuntu-sso-client:all 13.10-0ubuntu6
+    python-urllib3-whl:all 1.7.1-1ubuntu4
+    python-wheel:all 0.24.0-1~ubuntu1
+    python-xdg:all 0.25-4
+    python2.7-dev:amd64 2.7.6-8ubuntu0.2
+    python3-aptdaemon.gtk3widgets:all 1.1.1-1ubuntu5.2
+    python3-aptdaemon:all 1.1.1-1ubuntu5.2
+    python3-chardet:all 2.2.1-2~ubuntu1
+    python3-checkbox-ng:all 0.3-2
+    python3-checkbox-support:all 0.2-1
+    python3-crypto:amd64 2.6.1-4build1
+    python3-debian:all 0.1.21+nmu2ubuntu2
+    python3-defer:all 1.0.6-2build1
+    python3-httplib2:all 0.8-2build1
+    python3-lxml:amd64 3.3.3-1ubuntu0.1
+    python3-oauthlib:all 0.6.1-1
+    python3-oneconf:all 0.3.7.14.04.1
+    python3-packagekit:all 0.8.12-1ubuntu5
+    python3-piston-mini-client:all 0.7.5-0ubuntu2
+    python3-pkg-resources:all 3.3-1ubuntu2
+    python3-plainbox:all 0.5.3-2
+    python3-pyparsing:all 2.0.1+dfsg1-1build1
+    python3-requests:all 2.2.1-1ubuntu0.3
+    python3-six:all 1.5.2-1ubuntu1
+    python3-urllib3:all 1.7.1-1ubuntu4
+    python3-xdg:all 0.25-4
+    python3-xkit:all 0.5.0ubuntu2
+    qdbus:amd64 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    qtchooser:amd64 39-g4717841-3
+    qtcore4-l10n:all 4:4.8.5+git192-g085f851+dfsg-2ubuntu4.1
+    qtdeclarative5-localstorage-plugin:amd64 5.2.1-3ubuntu15.1
+    qtdeclarative5-qtfeedback-plugin:amd64 5.0~git20130529-0ubuntu3
+    qtdeclarative5-qtquick2-plugin:amd64 5.2.1-3ubuntu15.1
+    qtdeclarative5-ubuntu-ui-toolkit-plugin:amd64 0.1.46+14.04.20140408.1-0ubuntu1
+    qtdeclarative5-unity-action-plugin:amd64 1.1.0+14.04.20140304-0ubuntu1
+    qtdeclarative5-window-plugin:amd64 5.2.1-3ubuntu15.1
+    rfkill:amd64 0.5-1ubuntu1
+    samba-libs:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11
+    seahorse:amd64 3.10.2-0ubuntu1
+    sendmail-base:all 8.14.4-4.1ubuntu1
+    sendmail-bin:amd64 8.14.4-4.1ubuntu1
+    sendmail-cf:all 8.14.4-4.1ubuntu1
+    sendmail:all 8.14.4-4.1ubuntu1
+    sensible-mda:amd64 8.14.4-4.1ubuntu1
+    session-migration:amd64 0.2.1
+    software-center-aptdaemon-plugins:all 0.1.6build1
+    software-center:all 13.10-0ubuntu4.1
+    software-properties-gtk:all 0.92.37.7
+    sound-theme-freedesktop:all 0.8-1
+    ssh-askpass-gnome:amd64 1:6.6p1-2ubuntu2.6
+    ssl-cert:all 1.0.33
+    sublime-text-installer:all 3083-1~webupd8~0
+    sublime-text:all 2.0.2-1~webupd8~3
+    system-config-printer-common:all 1.4.3+20140219-0ubuntu2.6
+    system-config-printer-gnome:all 1.4.3+20140219-0ubuntu2.6
+    telepathy-mission-control-5:amd64 1:5.16.1-1ubuntu3
+    ttf-ubuntu-font-family:all 0.80-0ubuntu6
+    ubuntu-artwork:all 1:14.04+14.04.20140410-0ubuntu1
+    ubuntu-desktop:amd64 1.325
+    ubuntu-drivers-common:amd64 1:0.2.91.11
+    ubuntu-extras-keyring:all 2010.09.27
+    ubuntu-mono:all 14.04+14.04.20140410-0ubuntu1
+    ubuntu-release-upgrader-gtk:all 1:0.220.8
+    ubuntu-session:all 3.9.90-0ubuntu12.1
+    ubuntu-settings:all 14.04.5
+    ubuntu-sounds:all 0.13
+    ubuntu-sso-client-qt:all 13.10-0ubuntu6
+    ubuntu-sso-client:all 13.10-0ubuntu6
+    ubuntu-system-service:all 0.2.5build1
+    ubuntu-ui-toolkit-theme:amd64 0.1.46+14.04.20140408.1-0ubuntu1
+    ubuntu-wallpapers-trusty:all 14.04.0.1-0ubuntu1
+    ubuntu-wallpapers:all 14.04.0.1-0ubuntu1
+    ubuntuone-client-data:all 13.05-0ubuntu1
+    udisks2:amd64 2.1.3-1ubuntu0.1
+    unity-asset-pool:all 0.8.24daily13.06.10-0ubuntu1
+    unity-control-center:amd64 14.04.3+14.04.20150916-0ubuntu1
+    unity-greeter:amd64 14.04.11-0ubuntu1
+    unity-scope-home:amd64 6.8.2+14.04.20131029.1-0ubuntu1
+    unity-scopes-master-default:all 6.8.2+14.04.20131029.1-0ubuntu1
+    unity-services:amd64 7.2.6+14.04.20151021-0ubuntu1
+    unity-settings-daemon:amd64 14.04.0+14.04.20151012-0ubuntu1
+    unity:amd64 7.2.6+14.04.20151021-0ubuntu1
+    unzip:amd64 6.0-9ubuntu1.5
+    update-manager:all 1:0.196.14
+    update-notifier:amd64 0.154.1ubuntu1
+    upower:amd64 0.9.23-2ubuntu1
+    usb-modeswitch-data:all 20140327-1
+    usb-modeswitch:amd64 2.1.1+repack0-1ubuntu1
+    usbmuxd:amd64 1.0.8-2ubuntu1
+    whois:amd64 5.1.1
+    wireless-regdb:all 2013.02.13-1ubuntu1
+    wireless-tools:amd64 30~pre9-8ubuntu1
+    wpasupplicant:amd64 2.1-0ubuntu1.4
+    x11-apps:amd64 7.7+2
+    x11-common:all 1:7.7+1ubuntu8.1
+    x11-session-utils:amd64 7.7+1
+    x11-utils:amd64 7.7+1
+    x11-xfs-utils:amd64 7.7+1
+    x11-xkb-utils:amd64 7.7+1
+    x11-xserver-utils:amd64 7.7+2ubuntu1
+    xbitmaps:all 1.1.1-2
+    xdg-user-dirs-gtk:amd64 0.10-1ubuntu1
+    xdg-user-dirs:amd64 0.15-1ubuntu3
+    xdiagnose:all 3.6.3build2
+    xfonts-base:all 1:1.0.3
+    xfonts-encodings:all 1:1.0.4-1ubuntu1
+    xfonts-utils:amd64 1:7.7+1
+    xinit:amd64 1.3.2-1
+    xinput:amd64 1.6.1-1
+    xorg-docs-core:all 1:1.7-1
+    xorg:amd64 1:7.7+1ubuntu8.1
+    xserver-common:all 2:1.15.1-0ubuntu2.7
+    xserver-xephyr:amd64 2:1.15.1-0ubuntu2.7
+    xserver-xorg-core:amd64 2:1.15.1-0ubuntu2.7
+    xserver-xorg-input-all:amd64 1:7.7+1ubuntu8.1
+    xserver-xorg-input-evdev:amd64 1:2.8.2-1ubuntu2
+    xserver-xorg-input-mouse:amd64 1:1.9.0-1build1
+    xserver-xorg-input-synaptics:amd64 1.7.4-0ubuntu1
+    xserver-xorg-input-vmmouse:amd64 1:13.0.0-1build1
+    xserver-xorg-input-wacom:amd64 1:0.23.0-0ubuntu2
+    xserver-xorg-video-all:amd64 1:7.7+1ubuntu8.1
+    xserver-xorg-video-ati:amd64 1:7.3.0-1ubuntu3.1
+    xserver-xorg-video-cirrus:amd64 1:1.5.2-1build1
+    xserver-xorg-video-fbdev:amd64 1:0.4.4-1build1
+    xserver-xorg-video-glamoregl:amd64 0.6.0-0ubuntu4
+    xserver-xorg-video-intel:amd64 2:2.99.910-0ubuntu1.6
+    xserver-xorg-video-mach64:amd64 6.9.4-1build1
+    xserver-xorg-video-mga:amd64 1:1.6.3-1build1
+    xserver-xorg-video-modesetting:amd64 0.8.1-1build1
+    xserver-xorg-video-neomagic:amd64 1:1.2.8-1build1
+    xserver-xorg-video-nouveau:amd64 1:1.0.10-1ubuntu2
+    xserver-xorg-video-openchrome:amd64 1:0.3.3-1build1
+    xserver-xorg-video-qxl:amd64 0.1.1-0ubuntu3
+    xserver-xorg-video-r128:amd64 6.9.2-1build1
+    xserver-xorg-video-radeon:amd64 1:7.3.0-1ubuntu3.1
+    xserver-xorg-video-s3:amd64 1:0.6.5-0ubuntu4
+    xserver-xorg-video-savage:amd64 1:2.3.7-2ubuntu2
+    xserver-xorg-video-siliconmotion:amd64 1:1.7.7-2build1
+    xserver-xorg-video-sis:amd64 1:0.10.7-0ubuntu6
+    xserver-xorg-video-sisusb:amd64 1:0.9.6-2build1
+    xserver-xorg-video-tdfx:amd64 1:1.4.5-1build1
+    xserver-xorg-video-trident:amd64 1:1.3.6-0ubuntu5
+    xserver-xorg-video-vesa:amd64 1:2.3.3-1build1
+    xserver-xorg-video-vmware:amd64 1:13.0.2-2ubuntu1
+    xserver-xorg:amd64 1:7.7+1ubuntu8.1
+    xterm:amd64 297-1ubuntu1
+    yelp-xsl:all 3.10.1-1
+    yelp:amd64 3.10.2-0ubuntu1
+    zenity-common:all 3.8.0-1ubuntu1
+    zenity:amd64 3.8.0-1ubuntu1
+    zip:amd64 3.0-8
+    zlib1g-dev:amd64 1:1.2.8.dfsg-1ubuntu1
+
+ Upgraded:
+    accountsservice:amd64 0.6.35-0ubuntu7.1 => 0.6.35-0ubuntu7.2
+    apparmor:amd64 2.8.95~2430-0ubuntu5.1 => 2.8.95~2430-0ubuntu5.3
+    apport:all 2.14.1-0ubuntu3.6 => 2.14.1-0ubuntu3.19
+    apt-transport-https:amd64 1.0.1ubuntu2.6 => 1.0.1ubuntu2.11
+    apt-utils:amd64 1.0.1ubuntu2.6 => 1.0.1ubuntu2.11
+    apt:amd64 1.0.1ubuntu2.6 => 1.0.1ubuntu2.11
+    base-files:amd64 7.2ubuntu5.1 => 7.2ubuntu5.3
+    base-files:amd64 7.2ubuntu5.3 => 7.2ubuntu5.4
+    bash-completion:all 1:2.1-4 => 1:2.1-4ubuntu0.1
+    bind9-host:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    bsdutils:amd64 1:2.20.1-5.1ubuntu20.3 => 1:2.20.1-5.1ubuntu20.7
+    ca-certificates:all 20130906ubuntu2 => 20141019ubuntu0.14.04.1
+    cloud-guest-utils:all 0.27-0ubuntu9 => 0.27-0ubuntu9.1
+    cloud-init:all 0.7.5-0ubuntu1.3 => 0.7.5-0ubuntu1.15
+    coreutils:amd64 8.21-1ubuntu5.1 => 8.21-1ubuntu5.3
+    cpp-4.8:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    curl:amd64 7.35.0-1ubuntu2.3 => 7.35.0-1ubuntu2.6
+    dh-python:all 1.20140128-1ubuntu8 => 1.20140128-1ubuntu8.2
+    dnsutils:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    dpkg:amd64 1.17.5ubuntu5.3 => 1.17.5ubuntu5.5
+    e2fslibs:amd64 1.42.9-3ubuntu1 => 1.42.9-3ubuntu1.3
+    e2fsprogs:amd64 1.42.9-3ubuntu1 => 1.42.9-3ubuntu1.3
+    eog:amd64 3.10.2-0ubuntu5 => 3.10.2-0ubuntu5.1
+    file:amd64 1:5.14-2ubuntu3.2 => 1:5.14-2ubuntu3.3
+    fuse:amd64 2.9.2-4ubuntu4 => 2.9.2-4ubuntu4.14.04.1
+    g++-4.8:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    gcc-4.8-base:amd64 4.8.2-19ubuntu1 => 4.8.4-2ubuntu1~14.04
+    gcc-4.8-base:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    gcc-4.8:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    gcc-4.9-base:amd64 4.9.1-0ubuntu1 => 4.9.3-0ubuntu4
+    gdisk:amd64 0.8.8-1build1 => 0.8.8-1ubuntu0.1
+    gir1.2-gudev-1.0:amd64 1:204-5ubuntu20.15 => 1:204-5ubuntu20.18
+    gnupg:amd64 1.4.16-1ubuntu2.1 => 1.4.16-1ubuntu2.3
+    gpgv:amd64 1.4.16-1ubuntu2.1 => 1.4.16-1ubuntu2.3
+    grub-common:amd64 2.02~beta2-9ubuntu1 => 2.02~beta2-9ubuntu1.7
+    grub-legacy-ec2:all 0.7.5-0ubuntu1.3 => 0.7.5-0ubuntu1.15
+    grub-pc-bin:amd64 2.02~beta2-9ubuntu1 => 2.02~beta2-9ubuntu1.7
+    grub-pc:amd64 2.02~beta2-9ubuntu1 => 2.02~beta2-9ubuntu1.7
+    grub2-common:amd64 2.02~beta2-9ubuntu1 => 2.02~beta2-9ubuntu1.7
+    gtk2-engines-pixbuf:amd64 2.24.23-0ubuntu1.3 => 2.24.23-0ubuntu1.4
+    ifupdown:amd64 0.7.47.2ubuntu4.1 => 0.7.47.2ubuntu4.3
+    initscripts:amd64 2.88dsf-41ubuntu6 => 2.88dsf-41ubuntu6.2
+    initscripts:amd64 2.88dsf-41ubuntu6.2 => 2.88dsf-41ubuntu6.3
+    iproute2:amd64 3.12.0-2 => 3.12.0-2ubuntu1
+    irqbalance:amd64 1.0.6-2ubuntu0.14.04.1 => 1.0.6-2ubuntu0.14.04.4
+    isc-dhcp-client:amd64 4.2.4-7ubuntu12 => 4.2.4-7ubuntu12.4
+    isc-dhcp-common:amd64 4.2.4-7ubuntu12 => 4.2.4-7ubuntu12.4
+    krb5-locales:all 1.12+dfsg-2ubuntu4.2 => 1.12+dfsg-2ubuntu5.2
+    libaccountsservice0:amd64 0.6.35-0ubuntu7.1 => 0.6.35-0ubuntu7.2
+    libapparmor-perl:amd64 2.8.95~2430-0ubuntu5.1 => 2.8.95~2430-0ubuntu5.3
+    libapparmor1:amd64 2.8.95~2430-0ubuntu5.1 => 2.8.95~2430-0ubuntu5.3
+    libapt-inst1.5:amd64 1.0.1ubuntu2.6 => 1.0.1ubuntu2.11
+    libapt-pkg4.12:amd64 1.0.1ubuntu2.6 => 1.0.1ubuntu2.11
+    libasan0:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libasn1-8-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libatomic1:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libbind9-90:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libblkid1:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+    libc-bin:amd64 2.19-0ubuntu6.5 => 2.19-0ubuntu6.6
+    libc-bin:amd64 2.19-0ubuntu6.6 => 2.19-0ubuntu6.7
+    libc-dev-bin:amd64 2.19-0ubuntu6.6 => 2.19-0ubuntu6.7
+    libc6-dev:amd64 2.19-0ubuntu6.6 => 2.19-0ubuntu6.7
+    libc6:amd64 2.19-0ubuntu6.5 => 2.19-0ubuntu6.6
+    libc6:amd64 2.19-0ubuntu6.6 => 2.19-0ubuntu6.7
+    libcgmanager0:amd64 0.24-0ubuntu7.2 => 0.24-0ubuntu7.5
+    libcomerr2:amd64 1.42.9-3ubuntu1 => 1.42.9-3ubuntu1.3
+    libcurl3-gnutls:amd64 7.35.0-1ubuntu2.3 => 7.35.0-1ubuntu2.6
+    libcurl3:amd64 7.35.0-1ubuntu2.3 => 7.35.0-1ubuntu2.6
+    libdns100:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libdrm2:amd64 2.4.56-1~ubuntu1 => 2.4.60-2~ubuntu14.04.1
+    libdrm2:amd64 2.4.60-2~ubuntu14.04.1 => 2.4.64-1~ubuntu14.04.1
+    libelf1:amd64 0.158-0ubuntu5.1 => 0.158-0ubuntu5.2
+    libexpat1:amd64 2.1.0-4ubuntu1 => 2.1.0-4ubuntu1.1
+    libffi6:amd64 3.1~rc1+r3.0.13-12 => 3.1~rc1+r3.0.13-12ubuntu0.1
+    libfreetype6:amd64 2.5.2-1ubuntu2.2 => 2.5.2-1ubuntu2.5
+    libfuse2:amd64 2.9.2-4ubuntu4 => 2.9.2-4ubuntu4.14.04.1
+    libgcc-4.8-dev:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libgcc1:amd64 1:4.9.1-0ubuntu1 => 1:4.9.3-0ubuntu4
+    libgcrypt11:amd64 1.5.3-2ubuntu4.1 => 1.5.3-2ubuntu4.2
+    libgcrypt11:amd64 1.5.3-2ubuntu4.2 => 1.5.3-2ubuntu4.3
+    libgnutls-openssl27:amd64 2.12.23-12ubuntu2.1 => 2.12.23-12ubuntu2.4
+    libgnutls26:amd64 2.12.23-12ubuntu2.1 => 2.12.23-12ubuntu2.4
+    libgomp1:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libgraphite2-3:amd64 1.2.4-1ubuntu1 => 1.2.4-1ubuntu1.1
+    libgssapi-krb5-2:amd64 1.12+dfsg-2ubuntu4.2 => 1.12+dfsg-2ubuntu5.2
+    libgssapi3-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libgtk2.0-0:amd64 2.24.23-0ubuntu1.3 => 2.24.23-0ubuntu1.4
+    libgtk2.0-common:all 2.24.23-0ubuntu1.3 => 2.24.23-0ubuntu1.4
+    libgudev-1.0-0:amd64 1:204-5ubuntu20.15 => 1:204-5ubuntu20.18
+    libhcrypto4-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libheimbase1-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libheimntlm0-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libhx509-5-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libicu52:amd64 52.1-3 => 52.1-3ubuntu0.4
+    libisc95:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libisccc90:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libisccfg90:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libitm1:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libk5crypto3:amd64 1.12+dfsg-2ubuntu4.2 => 1.12+dfsg-2ubuntu5.2
+    libkrb5-26-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libkrb5-3:amd64 1.12+dfsg-2ubuntu4.2 => 1.12+dfsg-2ubuntu5.2
+    libkrb5support0:amd64 1.12+dfsg-2ubuntu4.2 => 1.12+dfsg-2ubuntu5.2
+    libldap-2.4-2:amd64 2.4.31-1+nmu2ubuntu8 => 2.4.31-1+nmu2ubuntu8.2
+    liblwres90:amd64 1:9.9.5.dfsg-3ubuntu0.1 => 1:9.9.5.dfsg-3ubuntu0.7
+    libmagic1:amd64 1:5.14-2ubuntu3.2 => 1:5.14-2ubuntu3.3
+    libmount1:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+    libnettle4:amd64 2.7.1-1 => 2.7.1-1ubuntu0.1
+    libnss3-nssdb:all 2:3.19.2.1-0ubuntu0.14.04.2 => 2:3.21-0ubuntu0.14.04.1
+    libnss3:amd64 2:3.19.2.1-0ubuntu0.14.04.2 => 2:3.21-0ubuntu0.14.04.1
+    libnuma1:amd64 2.0.9~rc5-1ubuntu2 => 2.0.9~rc5-1ubuntu3.14.04.1
+    libpam-systemd:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    libpam-systemd:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    libparted0debian1:amd64 2.3-19ubuntu1 => 2.3-19ubuntu1.14.04.1
+    libpci3:amd64 1:3.2.1-1ubuntu5 => 1:3.2.1-1ubuntu5.1
+    libpcre3:amd64 1:8.31-2ubuntu2 => 1:8.31-2ubuntu2.1
+    libpng12-0:amd64 1.2.50-1ubuntu2 => 1.2.50-1ubuntu2.14.04.2
+    libpolkit-agent-1-0:amd64 0.105-4ubuntu2 => 0.105-4ubuntu3.14.04.1
+    libpolkit-backend-1-0:amd64 0.105-4ubuntu2 => 0.105-4ubuntu3.14.04.1
+    libpolkit-gobject-1-0:amd64 0.105-4ubuntu2 => 0.105-4ubuntu3.14.04.1
+    libpq-dev:amd64 9.3.10-0ubuntu0.14.04 => 9.3.11-0ubuntu0.14.04
+    libpq5:amd64 9.3.10-0ubuntu0.14.04 => 9.3.11-0ubuntu0.14.04
+    libprocps3:amd64 1:3.3.9-1ubuntu2 => 1:3.3.9-1ubuntu2.2
+    libpython2.7-minimal:amd64 2.7.6-8 => 2.7.6-8ubuntu0.2
+    libpython2.7-stdlib:amd64 2.7.6-8 => 2.7.6-8ubuntu0.2
+    libpython2.7:amd64 2.7.6-8 => 2.7.6-8ubuntu0.2
+    libpython3.4-minimal:amd64 3.4.0-2ubuntu1 => 3.4.3-1ubuntu1~14.04.3
+    libpython3.4-stdlib:amd64 3.4.0-2ubuntu1 => 3.4.3-1ubuntu1~14.04.3
+    libquadmath0:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libroken18-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libsmbclient:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11 => 2:4.1.6+dfsg-1ubuntu2.14.04.12
+    libsqlite3-0:amd64 3.8.2-1ubuntu2 => 3.8.2-1ubuntu2.1
+    libss2:amd64 1.42.9-3ubuntu1 => 1.42.9-3ubuntu1.3
+    libssl1.0.0:amd64 1.0.1f-1ubuntu2.8 => 1.0.1f-1ubuntu2.16
+    libstdc++-4.8-dev:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libstdc++6:amd64 4.8.2-19ubuntu1 => 4.8.4-2ubuntu1~14.04
+    libstdc++6:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libsystemd-daemon0:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    libsystemd-daemon0:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    libsystemd-journal0:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    libsystemd-login0:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    libsystemd-login0:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    libtasn1-6:amd64 3.4-3ubuntu0.1 => 3.4-3ubuntu0.3
+    libtsan0:amd64 4.8.4-2ubuntu1~14.04 => 4.8.4-2ubuntu1~14.04.1
+    libudev1:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    libudev1:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    libuuid1:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+    libwbclient0:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11 => 2:4.1.6+dfsg-1ubuntu2.14.04.12
+    libwind0-heimdal:amd64 1.6~git20131207+dfsg-1ubuntu1 => 1.6~git20131207+dfsg-1ubuntu1.1
+    libxext6:amd64 2:1.3.2-1 => 2:1.3.2-1ubuntu0.0.14.04.1
+    libxml2:amd64 2.9.1+dfsg1-3ubuntu4.4 => 2.9.1+dfsg1-3ubuntu4.7
+    linux-headers-generic:amd64 3.13.0.44.51 => 3.13.0.77.83
+    linux-headers-virtual:amd64 3.13.0.44.51 => 3.13.0.77.83
+    linux-image-virtual:amd64 3.13.0.44.51 => 3.13.0.77.83
+    linux-virtual:amd64 3.13.0.44.51 => 3.13.0.77.83
+    login:amd64 1:4.1.5.1-1ubuntu9 => 1:4.1.5.1-1ubuntu9.2
+    lshw:amd64 02.16-2ubuntu1.2 => 02.16-2ubuntu1.3
+    mount:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+    multiarch-support:amd64 2.19-0ubuntu6.5 => 2.19-0ubuntu6.6
+    multiarch-support:amd64 2.19-0ubuntu6.6 => 2.19-0ubuntu6.7
+    ntp:amd64 1:4.2.6.p5+dfsg-3ubuntu2.14.04.7 => 1:4.2.6.p5+dfsg-3ubuntu2.14.04.8
+    ntpdate:amd64 1:4.2.6.p5+dfsg-3ubuntu2.14.04.1 => 1:4.2.6.p5+dfsg-3ubuntu2.14.04.7
+    ntpdate:amd64 1:4.2.6.p5+dfsg-3ubuntu2.14.04.7 => 1:4.2.6.p5+dfsg-3ubuntu2.14.04.8
+    openssh-client:amd64 1:6.6p1-2ubuntu2 => 1:6.6p1-2ubuntu2.6
+    openssh-server:amd64 1:6.6p1-2ubuntu2 => 1:6.6p1-2ubuntu2.6
+    openssh-sftp-server:amd64 1:6.6p1-2ubuntu2 => 1:6.6p1-2ubuntu2.6
+    openssl:amd64 1.0.1f-1ubuntu2.8 => 1.0.1f-1ubuntu2.16
+    os-prober:amd64 1.63ubuntu1 => 1.63ubuntu1.1
+    overlayroot:all 0.25ubuntu1 => 0.25ubuntu1.14.04.1
+    parted:amd64 2.3-19ubuntu1 => 2.3-19ubuntu1.14.04.1
+    passwd:amd64 1:4.1.5.1-1ubuntu9 => 1:4.1.5.1-1ubuntu9.2
+    patch:amd64 2.7.1-4ubuntu1 => 2.7.1-4ubuntu2.3
+    pciutils:amd64 1:3.2.1-1ubuntu5 => 1:3.2.1-1ubuntu5.1
+    policykit-1:amd64 0.105-4ubuntu2 => 0.105-4ubuntu3.14.04.1
+    pollinate:all 4.7-0ubuntu1.2 => 4.7-0ubuntu1.4
+    postgresql-9.3:amd64 9.3.10-0ubuntu0.14.04 => 9.3.11-0ubuntu0.14.04
+    postgresql-client-9.3:amd64 9.3.10-0ubuntu0.14.04 => 9.3.11-0ubuntu0.14.04
+    postgresql-contrib-9.3:amd64 9.3.10-0ubuntu0.14.04 => 9.3.11-0ubuntu0.14.04
+    ppp:amd64 2.4.5-5.1ubuntu2.1 => 2.4.5-5.1ubuntu2.2
+    procps:amd64 1:3.3.9-1ubuntu2 => 1:3.3.9-1ubuntu2.2
+    python-apt-common:all 0.9.3.5ubuntu1 => 0.9.3.5ubuntu2
+    python-apt:amd64 0.9.3.5ubuntu1 => 0.9.3.5ubuntu2
+    python-pkg-resources:all 3.3-1ubuntu1 => 3.3-1ubuntu2
+    python-requests:all 2.2.1-1ubuntu0.1 => 2.2.1-1ubuntu0.3
+    python-six:all 1.5.2-1 => 1.5.2-1ubuntu1
+    python-urllib3:all 1.7.1-1build1 => 1.7.1-1ubuntu4
+    python2.7-minimal:amd64 2.7.6-8 => 2.7.6-8ubuntu0.2
+    python2.7:amd64 2.7.6-8 => 2.7.6-8ubuntu0.2
+    python3-apport:all 2.14.1-0ubuntu3.6 => 2.14.1-0ubuntu3.19
+    python3-apt:amd64 0.9.3.5ubuntu1 => 0.9.3.5ubuntu2
+    python3-distupgrade:all 1:0.220.6 => 1:0.220.8
+    python3-gdbm:amd64 3.4.0-0ubuntu1 => 3.4.3-1~14.04.2
+    python3-problem-report:all 2.14.1-0ubuntu3.6 => 2.14.1-0ubuntu3.19
+    python3-software-properties:all 0.92.37.2 => 0.92.37.7
+    python3-update-manager:all 1:0.196.12 => 1:0.196.14
+    python3.4-minimal:amd64 3.4.0-2ubuntu1 => 3.4.3-1ubuntu1~14.04.3
+    python3.4:amd64 3.4.0-2ubuntu1 => 3.4.3-1ubuntu1~14.04.3
+    rsync:amd64 3.1.0-2ubuntu0.1 => 3.1.0-2ubuntu0.2
+    rsyslog:amd64 7.4.4-1ubuntu2.3 => 7.4.4-1ubuntu2.6
+    samba-libs:amd64 2:4.1.6+dfsg-1ubuntu2.14.04.11 => 2:4.1.6+dfsg-1ubuntu2.14.04.12
+    software-properties-common:all 0.92.37.2 => 0.92.37.7
+    sudo:amd64 1.8.9p5-1ubuntu1 => 1.8.9p5-1ubuntu1.2
+    systemd-services:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    systemd-services:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    sysv-rc:all 2.88dsf-41ubuntu6 => 2.88dsf-41ubuntu6.2
+    sysv-rc:all 2.88dsf-41ubuntu6.2 => 2.88dsf-41ubuntu6.3
+    sysvinit-utils:amd64 2.88dsf-41ubuntu6 => 2.88dsf-41ubuntu6.2
+    sysvinit-utils:amd64 2.88dsf-41ubuntu6.2 => 2.88dsf-41ubuntu6.3
+    tcpdump:amd64 4.5.1-2ubuntu1.1 => 4.5.1-2ubuntu1.2
+    tzdata:all 2014i-0ubuntu0.14.04 => 2015g-0ubuntu0.14.04
+    ubuntu-release-upgrader-core:all 1:0.220.6 => 1:0.220.8
+    udev:amd64 204-5ubuntu20.15 => 204-5ubuntu20.18
+    udev:amd64 204-5ubuntu20.9 => 204-5ubuntu20.15
+    unattended-upgrades:all 0.82.1ubuntu2 => 0.82.1ubuntu2.4
+    update-manager-core:all 1:0.196.12 => 1:0.196.14
+    util-linux:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+    uuid-runtime:amd64 2.20.1-5.1ubuntu20.3 => 2.20.1-5.1ubuntu20.7
+
+ Removed:
+    bamfdaemon:amd64 0.5.1+14.04.20140409-0ubuntu1
+    imagemagick-common:all 8:6.7.7.10-6ubuntu3
+    imagemagick:amd64 8:6.7.7.10-6ubuntu3
+    libbamf3-2:amd64 0.5.1+14.04.20140409-0ubuntu1
+    libfftw3-double3:amd64 3.3.3-7ubuntu3
+    libglew1.10:amd64 1.10.0-3
+    libglewmx1.10:amd64 1.10.0-3
+    libido3-0.1-0:amd64 13.10.0+14.04.20151021-0ubuntu1
+    libilmbase6:amd64 1.0.1-6ubuntu1
+    liblqr-1-0:amd64 0.4.1-2ubuntu1
+    libmagickcore5-extra:amd64 8:6.7.7.10-6ubuntu3
+    libmagickcore5:amd64 8:6.7.7.10-6ubuntu3
+    libmagickwand5:amd64 8:6.7.7.10-6ubuntu3
+    libnetpbm10:amd64 2:10.0-15ubuntu2
+    libnux-4.0-0:amd64 4.0.6+14.04.20141107-0ubuntu1
+    libnux-4.0-common:amd64 4.0.6+14.04.20141107-0ubuntu1
+    libopenexr6:amd64 1.6.1-7ubuntu1
+    libunity-core-6.0-9:amd64 7.2.6+14.04.20151021-0ubuntu1
+    libunity-misc4:amd64 4.0.5+14.04.20140115-0ubuntu1
+    libwmf0.2-7:amd64 0.2.8.4-10.3ubuntu1.14.04.1
+    lightdm:amd64 1.10.6-0ubuntu1
+    netpbm:amd64 2:10.0-15ubuntu2
+    nginx-common:all 1.4.6-1ubuntu3.4
+    nginx-core:amd64 1.4.6-1ubuntu3.4
+    nginx:all 1.4.6-1ubuntu3.4
+    nux-tools:amd64 4.0.6+14.04.20141107-0ubuntu1
+    postfix:amd64 2.11.0-1ubuntu1
+    sublime-text-installer:all 3083-1~webupd8~0
+    sublime-text:all 2.0.2-1~webupd8~3
+    sublime-text:all 2.0.2-1~webupd8~3
+    ubuntu-desktop:amd64 1.325
+    unity-asset-pool:all 0.8.24daily13.06.10-0ubuntu1
+    unity-greeter:amd64 14.04.11-0ubuntu1
+    unity-scope-home:amd64 6.8.2+14.04.20131029.1-0ubuntu1
+    unity-scopes-master-default:all 6.8.2+14.04.20131029.1-0ubuntu1
+    unity-services:amd64 7.2.6+14.04.20151021-0ubuntu1
+    unity:amd64 7.2.6+14.04.20151021-0ubuntu1
+
+ Purged:
+    imagemagick:amd64 8:6.7.7.10-6ubuntu3
+    nginx-common:all 1.4.6-1ubuntu3.4
+    sublime-text-installer:all 3083-1~webupd8~0
+    sublime-text:all 2.0.2-1~webupd8~3
+
+ ---------------------- dpkg status changes End -------------------------
+
+
+ --------------------- fail2ban-messages Begin ------------------------
+
+
+ 13 faulty iptables invocation(s)
+ **Unmatched Entries**
+ 2016-02-10 00:19:14,063 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-10 00:19:14,080 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:03:15,222 fail2ban.server : INFO   Stopping all jails
+ 2016-02-10 01:04:08,129 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-10 01:04:08,150 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:04:08,179 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-10 01:04:08,182 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:04:08,189 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-10 01:04:08,192 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:06:08,413 fail2ban.actions.action: ERROR  printf %b "Subject: [Fail2Ban] recidive: started on `uname -n`
+ 2016-02-10 01:09:03,517 fail2ban.server : INFO   Stopping all jails
+ 2016-02-10 01:11:53,893 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-10 01:11:53,914 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:11:53,944 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-10 01:11:53,947 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-10 01:11:53,955 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-10 01:11:53,958 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 02:27:45,341 fail2ban.server : INFO   Stopping all jails
+ 2016-02-15 03:27:28,761 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-15 03:27:28,783 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,816 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-15 03:27:28,819 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,830 fail2ban.jail   : INFO   Jail 'apache' uses pyinotify
+ 2016-02-15 03:27:28,833 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,859 fail2ban.jail   : INFO   Jail 'apache-noscript' uses pyinotify
+ 2016-02-15 03:27:28,862 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,874 fail2ban.jail   : INFO   Jail 'apache-overflows' uses pyinotify
+ 2016-02-15 03:27:28,877 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,888 fail2ban.jail   : INFO   Jail 'nginx-http-auth' uses pyinotify
+ 2016-02-15 03:27:28,891 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,901 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-15 03:27:28,905 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,915 fail2ban.jail   : INFO   Jail 'apache-badbots' uses pyinotify
+ 2016-02-15 03:27:28,918 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:27:28,936 fail2ban.jail   : INFO   Jail 'apache-nohome' uses pyinotify
+ 2016-02-15 03:27:28,939 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:36:25,631 fail2ban.server : INFO   Stopping all jails
+ 2016-02-15 03:54:42,190 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-15 03:54:42,211 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,245 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-15 03:54:42,248 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,259 fail2ban.jail   : INFO   Jail 'apache' uses pyinotify
+ 2016-02-15 03:54:42,262 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,289 fail2ban.jail   : INFO   Jail 'apache-noscript' uses pyinotify
+ 2016-02-15 03:54:42,293 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,304 fail2ban.jail   : INFO   Jail 'apache-overflows' uses pyinotify
+ 2016-02-15 03:54:42,307 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,318 fail2ban.jail   : INFO   Jail 'nginx-http-auth' uses pyinotify
+ 2016-02-15 03:54:42,321 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,332 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-15 03:54:42,335 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,347 fail2ban.jail   : INFO   Jail 'apache-badbots' uses pyinotify
+ 2016-02-15 03:54:42,350 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:54:42,367 fail2ban.jail   : INFO   Jail 'apache-nohome' uses pyinotify
+ 2016-02-15 03:54:42,371 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:55:09,303 fail2ban.server : INFO   Stopping all jails
+ 2016-02-15 03:59:27,896 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-15 03:59:27,912 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:27,946 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-15 03:59:27,950 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:27,963 fail2ban.jail   : INFO   Jail 'apache' uses pyinotify
+ 2016-02-15 03:59:27,966 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:27,993 fail2ban.jail   : INFO   Jail 'apache-noscript' uses pyinotify
+ 2016-02-15 03:59:27,996 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:28,010 fail2ban.jail   : INFO   Jail 'apache-overflows' uses pyinotify
+ 2016-02-15 03:59:28,013 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:28,026 fail2ban.jail   : INFO   Jail 'nginx-http-auth' uses pyinotify
+ 2016-02-15 03:59:28,030 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:28,042 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-15 03:59:28,046 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:28,058 fail2ban.jail   : INFO   Jail 'apache-badbots' uses pyinotify
+ 2016-02-15 03:59:28,062 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 03:59:28,080 fail2ban.jail   : INFO   Jail 'apache-nohome' uses pyinotify
+ 2016-02-15 03:59:28,084 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:33:26,893 fail2ban.server : INFO   Stopping all jails
+ 2016-02-15 04:34:20,873 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-15 04:34:20,889 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:20,923 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-15 04:34:20,927 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:20,940 fail2ban.jail   : INFO   Jail 'apache' uses pyinotify
+ 2016-02-15 04:34:20,944 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:20,971 fail2ban.jail   : INFO   Jail 'apache-noscript' uses pyinotify
+ 2016-02-15 04:34:20,975 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:20,988 fail2ban.jail   : INFO   Jail 'apache-overflows' uses pyinotify
+ 2016-02-15 04:34:20,992 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:21,004 fail2ban.jail   : INFO   Jail 'nginx-http-auth' uses pyinotify
+ 2016-02-15 04:34:21,007 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:21,019 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-15 04:34:21,023 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:21,036 fail2ban.jail   : INFO   Jail 'apache-badbots' uses pyinotify
+ 2016-02-15 04:34:21,039 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 04:34:21,058 fail2ban.jail   : INFO   Jail 'apache-nohome' uses pyinotify
+ 2016-02-15 04:34:21,061 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-15 05:38:43,724 fail2ban.filter : ERROR  Unable to open /var/log/nginx/error.log
+ 2016-02-15 05:38:43,724 fail2ban.filter : ERROR  [Errno 2] No such file or directory: '/var/log/nginx/error.log'
+ 2016-02-15 05:38:43,726 fail2ban.filter : ERROR  Unable to get failures in /var/log/nginx
+ 2016-02-17 03:29:01,644 fail2ban.server : INFO   Stopping all jails
+ 2016-02-17 04:45:51,668 fail2ban.jail   : INFO   Jail 'ssh' uses pyinotify
+ 2016-02-17 04:45:51,690 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,723 fail2ban.jail   : INFO   Jail 'ssh-ddos' uses pyinotify
+ 2016-02-17 04:45:51,727 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,737 fail2ban.jail   : INFO   Jail 'apache' uses pyinotify
+ 2016-02-17 04:45:51,741 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,767 fail2ban.jail   : INFO   Jail 'apache-noscript' uses pyinotify
+ 2016-02-17 04:45:51,770 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,781 fail2ban.jail   : INFO   Jail 'apache-overflows' uses pyinotify
+ 2016-02-17 04:45:51,784 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,795 fail2ban.jail   : INFO   Jail 'recidive' uses pyinotify
+ 2016-02-17 04:45:51,798 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,809 fail2ban.jail   : INFO   Jail 'apache-badbots' uses pyinotify
+ 2016-02-17 04:45:51,812 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+ 2016-02-17 04:45:51,829 fail2ban.jail   : INFO   Jail 'apache-nohome' uses pyinotify
+ 2016-02-17 04:45:51,832 fail2ban.jail   : INFO   Initiated 'pyinotify' backend
+
+ ---------------------- fail2ban-messages End -------------------------
+
+
+ --------------------- httpd Begin ------------------------
+
+ 7.38 MB transferred in 1997 responses  (1xx 0, 2xx 1321, 3xx 229, 4xx 444, 5xx 3)
+      59 Images (0.10 MB),
+      13 Documents (0.07 MB),
+       1 Windows executable files (0.00 MB),
+    1238 Content pages (3.68 MB),
+      33 Redirects (0.03 MB),
+       2 Fonts (0.09 MB),
+     651 Other (3.42 MB)
+
+ Attempts to use known hacks by 4 hosts were logged 26 time(s) from:
+    73.230.130.89: 14 Time(s)
+
+    38.99.82.191: 8 Time(s)
+
+    169.229.3.91: 3 Time(s)
+
+    89.248.167.162: 1 Time(s)
+
+
+ A total of 4 sites probed the server
+    169.229.3.91
+    38.99.82.191
+    73.230.130.89
+    89.248.167.162
+
+ Requests with error response codes
+    400 Bad Request
+       /: 2 Time(s)
+       /tmUnblock.cgi: 2 Time(s)
+       /x: 2 Time(s)
+       null: 2 Time(s)
+       towards: 1 Time(s)
+    403 Forbidden
+       /server-status: 1 Time(s)
+    404 Not Found
+       /: 74 Time(s)
+       /favicon.ico: 25 Time(s)
+       /blog/: 20 Time(s)
+       /blogs/: 20 Time(s)
+       /wordpress/: 20 Time(s)
+       /wp/: 20 Time(s)
+       http://check.proxyradar.com/azenv.php?auth ... =915760238&p=80: 6 Time(s)
+       /wp-login.php: 5 Time(s)
+       http://testp3.pospr.waw.pl/testproxy.php: 5 Time(s)
+       /administrator/index.php: 4 Time(s)
+       /catalog: 3 Time(s)
+       /phpmyadmin/scripts/setup.php: 3 Time(s)
+       /pma/scripts/setup.php: 3 Time(s)
+       /samscatalogapp: 3 Time(s)
+       http://testp5.mielno.lubin.pl/testproxy.php: 3 Time(s)
+       /MyAdmin/scripts/setup.php: 2 Time(s)
+       /manager/html: 2 Time(s)
+       /myadmin/scripts/setup.php: 2 Time(s)
+       /phpMyAdmin/scripts/setup.php: 2 Time(s)
+       /robots.txt: 2 Time(s)
+       /w00tw00t.at.blackhats.romanian.anti-sec:): 2 Time(s)
+       http://testp2.czar.bielawa.pl/testproxy.php: 2 Time(s)
+       null: 2 Time(s)
+       //myadmin/scripts/setup.php: 1 Time(s)
+       //mysql/scripts/setup.php: 1 Time(s)
+       //mysqladmin/scripts/setup.php: 1 Time(s)
+       //phpmyadmin/scripts/setup.php: 1 Time(s)
+       //web/scripts/setup.php: 1 Time(s)
+       //websql/scripts/setup.php: 1 Time(s)
+       /admin.php: 1 Time(s)
+       /img.aspx?q=L3MkWGAkYGZ5ZGDlBGLlZQx4Zmp2Zw ... 2MzqjWGAkZN==-1: 1 Time(s)
+       /img.aspx?q=L3MkWGAkYGtjBQt0BQt3ZGV1ZwZ2ZG ... yZwMzM3NyZ3Rj-1: 1 Time(s)
+       /index.php: 1 Time(s)
+       /invoker/JMXInvokerServlet: 1 Time(s)
+       /jmx-console/HtmlAdaptor?action=inspectMBe ... type=ServerInfo: 1 Time(s)
+       /muieblackcat: 1 Time(s)
+       /web-console/ServerInfo.jsp: 1 Time(s)
+       http://54.149.100.110:80/2phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/MyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/PMA/: 1 Time(s)
+       http://54.149.100.110:80/PMA2005/: 1 Time(s)
+       http://54.149.100.110:80/PMA2009/: 1 Time(s)
+       http://54.149.100.110:80/admin/: 1 Time(s)
+       http://54.149.100.110:80/admin/db/: 1 Time(s)
+       http://54.149.100.110:80/admin/pMA/: 1 Time(s)
+       http://54.149.100.110:80/admin/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/admin/phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/admin/sqladmin/: 1 Time(s)
+       http://54.149.100.110:80/admin/sysadmin/: 1 Time(s)
+       http://54.149.100.110:80/admin/web/: 1 Time(s)
+       http://54.149.100.110:80/administrator/PMA/: 1 Time(s)
+       http://54.149.100.110:80/administrator/admin/: 1 Time(s)
+       http://54.149.100.110:80/administrator/db/: 1 Time(s)
+       http://54.149.100.110:80/administrator/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/administrator/phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/administrator/pma/: 1 Time(s)
+       http://54.149.100.110:80/administrator/web/: 1 Time(s)
+       http://54.149.100.110:80/database/: 1 Time(s)
+       http://54.149.100.110:80/database/database/: 1 Time(s)
+       http://54.149.100.110:80/database/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/database/phpMyAdmin2/: 1 Time(s)
+       http://54.149.100.110:80/database/phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/database/phpmyadmin2/: 1 Time(s)
+       http://54.149.100.110:80/db/: 1 Time(s)
+       http://54.149.100.110:80/db/db-admin/: 1 Time(s)
+       http://54.149.100.110:80/db/dbadmin/: 1 Time(s)
+       http://54.149.100.110:80/db/dbweb/: 1 Time(s)
+       http://54.149.100.110:80/db/myadmin/: 1 Time(s)
+       http://54.149.100.110:80/db/phpMyAdmin-2/: 1 Time(s)
+       http://54.149.100.110:80/db/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/db/phpMyAdmin2/: 1 Time(s)
+       http://54.149.100.110:80/db/phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/db/phpmyadmin2/: 1 Time(s)
+       http://54.149.100.110:80/db/webadmin/: 1 Time(s)
+       http://54.149.100.110:80/db/webdb/: 1 Time(s)
+       http://54.149.100.110:80/db/websql/: 1 Time(s)
+       http://54.149.100.110:80/dbadmin/: 1 Time(s)
+       http://54.149.100.110:80/myadmin/: 1 Time(s)
+       http://54.149.100.110:80/mysql-admin/: 1 Time(s)
+       http://54.149.100.110:80/mysql/: 1 Time(s)
+       http://54.149.100.110:80/mysql/admin/: 1 Time(s)
+       http://54.149.100.110:80/mysql/db/: 1 Time(s)
+       http://54.149.100.110:80/mysql/dbadmin/: 1 Time(s)
+       http://54.149.100.110:80/mysql/mysqlmanager/: 1 Time(s)
+       http://54.149.100.110:80/mysql/pMA/: 1 Time(s)
+       http://54.149.100.110:80/mysql/pma/: 1 Time(s)
+       http://54.149.100.110:80/mysql/sqlmanager/: 1 Time(s)
+       http://54.149.100.110:80/mysql/web/: 1 Time(s)
+       http://54.149.100.110:80/mysqladmin/: 1 Time(s)
+       http://54.149.100.110:80/mysqlmanager/: 1 Time(s)
+       http://54.149.100.110:80/p/m/a/: 1 Time(s)
+       http://54.149.100.110:80/php-my-admin/: 1 Time(s)
+       http://54.149.100.110:80/php-myadmin/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.5.1-all-languages/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.6-all-languages/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.7 ... ges-utf-8-only/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.7.1-all-languages/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.8 ... ges-utf-8-only/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.11.8.1-all-languages/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.2.3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.2.6/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.4/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.5-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.5-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.5-rc2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.5/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.6-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.6-rc2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.6/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.7-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.5.7/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-alpha/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-alpha2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-beta1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-beta2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-pl2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-pl3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-rc2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0-rc3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.0/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1-pl2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1-pl3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1-rc2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.2-beta1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.2-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.2-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.3-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.3-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4-pl2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4-pl3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4-pl4/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.6.4/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.7.0-beta1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.7.0-pl1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.7.0-pl2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.7.0-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.7.0/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0-beta1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0-rc2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0.1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0.2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0.3/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0.4/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.0/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.1-rc1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.1/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2.8.2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin-2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/phpMyAdmin2/: 1 Time(s)
+       http://54.149.100.110:80/phpMyadmin/: 1 Time(s)
+       http://54.149.100.110:80/phpmanager/: 1 Time(s)
+       http://54.149.100.110:80/phpmy-admin/: 1 Time(s)
+       http://54.149.100.110:80/phpmy/: 1 Time(s)
+       http://54.149.100.110:80/phpmyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/phpmyadmin/: 1 Time(s)
+       http://54.149.100.110:80/phpmyadmin2/: 1 Time(s)
+       http://54.149.100.110:80/phppma/: 1 Time(s)
+       http://54.149.100.110:80/pma/: 1 Time(s)
+       http://54.149.100.110:80/pma2005/: 1 Time(s)
+       http://54.149.100.110:80/pma2009/: 1 Time(s)
+       http://54.149.100.110:80/program/: 1 Time(s)
+       http://54.149.100.110:80/qql/: 1 Time(s)
+       http://54.149.100.110:80/sql/myadmin/: 1 Time(s)
+       http://54.149.100.110:80/sql/php-myadmin/: 1 Time(s)
+       http://54.149.100.110:80/sql/phpMyAdmin/: 1 Time(s)
+       http://54.149.100.110:80/sql/phpMyAdmin2/: 1 Time(s)
+       http://54.149.100.110:80/sql/phpmanager/: 1 Time(s)
+       http://54.149.100.110:80/sql/phpmy-admin/: 1 Time(s)
+       http://54.149.100.110:80/sql/phpmyadmin2/: 1 Time(s)
+       http://54.149.100.110:80/sql/sql-admin/: 1 Time(s)
+       http://54.149.100.110:80/sql/sql/: 1 Time(s)
+       http://54.149.100.110:80/sql/sqladmin/: 1 Time(s)
+       http://54.149.100.110:80/sql/sqlweb/: 1 Time(s)
+       http://54.149.100.110:80/sql/webadmin/: 1 Time(s)
+       http://54.149.100.110:80/sql/webdb/: 1 Time(s)
+       http://54.149.100.110:80/sql/websql/: 1 Time(s)
+       http://54.149.100.110:80/sqlmanager/: 1 Time(s)
+       http://54.149.100.110:80/sqlweb/: 1 Time(s)
+       http://54.149.100.110:80/webadmin/: 1 Time(s)
+       http://54.149.100.110:80/webdb/: 1 Time(s)
+       http://54.149.100.110:80/websql/: 1 Time(s)
+       http://iwannaknow.tk/index.php: 1 Time(s)
+       http://testp4.pospr.waw.pl/testproxy.php: 1 Time(s)
+    405 Method Not Allowed
+       /fbconnect?state=0G3CRJ8LYMXOSYYQKNQYVMZSM37NTZ7T: 1 Time(s)
+       /fbconnect?state=2AAYEVXFB0AXPHEGWUMXERBL65130MWB: 1 Time(s)
+       /fbconnect?state=40HDS166GGDA1CNVSYQE0QR85Z03UQJG: 1 Time(s)
+       /fbconnect?state=E88H2RC90FVBQJ5BW9EGN1C9SJFJ58L0: 1 Time(s)
+       /fbconnect?state=RS5BXNQF6YFJ84KG6VJZK2EYSHU044MT: 1 Time(s)
+       /gconnect?state=0G3CRJ8LYMXOSYYQKNQYVMZSM37NTZ7T: 1 Time(s)
+       /gconnect?state=2AAYEVXFB0AXPHEGWUMXERBL65130MWB: 1 Time(s)
+       /gconnect?state=40HDS166GGDA1CNVSYQE0QR85Z03UQJG: 1 Time(s)
+       /gconnect?state=E88H2RC90FVBQJ5BW9EGN1C9SJFJ58L0: 1 Time(s)
+       /gconnect?state=RS5BXNQF6YFJ84KG6VJZK2EYSHU044MT: 1 Time(s)
+    408 Request Timeout
+       null: 22 Time(s)
+    500 Internal Server Error
+       /: 2 Time(s)
+       /catalog: 1 Time(s)
+
+ A total of 11 ROBOTS were logged
+
+ ---------------------- httpd End -------------------------
+
+
+ --------------------- Kernel Begin ------------------------
+
+
+ WARNING:  Kernel Errors Present
+    INFO: recovery required on readonly filesyste ...:  2 Time(s)
+
+ 1 Time(s):    avx       : 21793.000 MB/sec
+ 1 Time(s):    avx       : 22557.000 MB/sec
+ 9 Time(s): * Found PM-Timer Bug on the chipset. Due to workarounds for a bug,
+ 9 Time(s): * this clock source is slow. Consider trying other clock sources
+ 9 Time(s): ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=0 pin2=0
+ 9 Time(s): 0 base 0000F0000000 mask 3FFFF8000000 uncachable
+ 9 Time(s): 00000-9FFFF write-back
+ 9 Time(s): 00:09: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+ 9 Time(s): 1 base 0000F8000000 mask 3FFFFC000000 uncachable
+ 9 Time(s): 2 disabled
+ 9 Time(s): 3 disabled
+ 9 Time(s): 4 disabled
+ 9 Time(s): 5 disabled
+ 9 Time(s): 6 disabled
+ 9 Time(s): 7 disabled
+ 9 Time(s): A0000-BFFFF write-combining
+ 9 Time(s): ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20131115/hwxface-580)
+ 9 Time(s): ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20131115/hwxface-580)
+ 9 Time(s): ACPI: (supports S0 S3 S4 S5)
+ 9 Time(s): ACPI: APIC 00000000fc00f360 0000D8 (v02    Xen      HVM 00000000 HVML 00000000)
+ 9 Time(s): ACPI: Added _OSI(3.0 _SCP Extensions)
+ 9 Time(s): ACPI: Added _OSI(Module Device)
+ 9 Time(s): ACPI: Added _OSI(Processor Aggregator Device)
+ 9 Time(s): ACPI: Added _OSI(Processor Device)
+ 9 Time(s): ACPI: All ACPI Tables successfully acquired
+ 9 Time(s): ACPI: Core revision 20131115
+ 9 Time(s): ACPI: DSDT 00000000fc0035e0 00BBF6 (v02    Xen      HVM 00000000 INTL 20090123)
+ 9 Time(s): ACPI: Enabled 2 GPEs in block 00 to 0F
+ 9 Time(s): ACPI: FACP 00000000fc00f260 0000F4 (v04    Xen      HVM 00000000 HVML 00000000)
+ 9 Time(s): ACPI: FACS 00000000fc0035a0 000040
+ 9 Time(s): ACPI: HPET 00000000fc00f4b0 000038 (v01    Xen      HVM 00000000 HVML 00000000)
+ 9 Time(s): ACPI: HPET id: 0x8086a201 base: 0xfed00000
+ 9 Time(s): ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+ 9 Time(s): ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 low level)
+ 9 Time(s): ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 low level)
+ 9 Time(s): ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 low level)
+ 9 Time(s): ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+ 9 Time(s): ACPI: IRQ0 used by override.
+ 9 Time(s): ACPI: IRQ10 used by override.
+ 9 Time(s): ACPI: IRQ11 used by override.
+ 9 Time(s): ACPI: IRQ2 used by override.
+ 9 Time(s): ACPI: IRQ5 used by override.
+ 9 Time(s): ACPI: IRQ9 used by override.
+ 9 Time(s): ACPI: Interpreter enabled
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x02] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x03] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x04] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x05] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x06] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x07] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x08] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x09] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x0a] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x0b] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x0c] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x0d] lapic_id[0x00] disabled)
+ 9 Time(s): ACPI: LAPIC (acpi_id[0x0e] lapic_id[0x00] disabled)
+ 18 Time(s): ACPI: Local APIC address 0xfee00000
+ 9 Time(s): ACPI: No dock devices found.
+ 9 Time(s): ACPI: PCI Interrupt Link [LNKA] (IRQs *5 10 11)
+ 9 Time(s): ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+ 9 Time(s): ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+ 9 Time(s): ACPI: PCI Interrupt Link [LNKD] (IRQs *5 10 11)
+ 9 Time(s): ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+ 9 Time(s): ACPI: PM-Timer IO Port: 0xb008
+ 9 Time(s): ACPI: Power Button [PWRF]
+ 9 Time(s): ACPI: RSDP 00000000000ea020 000024 (v02    Xen)
+ 9 Time(s): ACPI: SSDT 00000000fc00f520 000031 (v02    Xen      HVM 00000000 INTL 20090123)
+ 9 Time(s): ACPI: SSDT 00000000fc00f560 000031 (v02    Xen      HVM 00000000 INTL 20090123)
+ 9 Time(s): ACPI: Sleep Button [SLPF]
+ 9 Time(s): ACPI: Using IOAPIC for interrupt routing
+ 9 Time(s): ACPI: WAET 00000000fc00f4f0 000028 (v01    Xen      HVM 00000000 HVML 00000000)
+ 9 Time(s): ACPI: XSDT 00000000fc00f5a0 000054 (v01    Xen      HVM 00000000 HVML 00000000)
+ 9 Time(s): ACPI: \_SB_.PCI0: notify handler is installed
+ 9 Time(s): ACPI: bus type PCI registered
+ 9 Time(s): ACPI: bus type PNP registered
+ 9 Time(s): ACPI: bus type PNP unregistered
+ 9 Time(s): ACPI: bus type USB registered
+ 9 Time(s): AMD AuthenticAMD
+ 9 Time(s): AppArmor: AppArmor Filesystem Enabled
+ 9 Time(s): AppArmor: AppArmor initialized
+ 9 Time(s): AppArmor: AppArmor sha1 policy hashing enabled
+ 9 Time(s): Asymmetric key parser 'x509' registered
+ 9 Time(s): BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+ 9 Time(s): BIOS-e820: [mem 0x0000000000000000-0x000000000009dfff] usable
+ 9 Time(s): BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+ 9 Time(s): BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+ 9 Time(s): BIOS-e820: [mem 0x0000000000100000-0x000000003fffffff] usable
+ 9 Time(s): BIOS-e820: [mem 0x00000000fc000000-0x00000000ffffffff] reserved
+ 6 Time(s): BRK [0x01fe2000, 0x01fe2fff] PGTABLE
+ 9 Time(s): BRK [0x01fe3000, 0x01fe3fff] PGTABLE
+ 9 Time(s): BRK [0x01fe4000, 0x01fe4fff] PGTABLE
+ 3 Time(s): BRK [0x01fe5000, 0x01fe5fff] PGTABLE
+ 9 Time(s): Base memory trampoline at [ffff880000098000] 98000 size 24576
+ 9 Time(s): Blkfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated disks.
+ 9 Time(s): Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+ 9 Time(s): Booting paravirtualized kernel on Xen HVM
+ 3 Time(s): Btrfs loaded
+ 9 Time(s): Built 1 zonelists in Node order, mobility grouping on.  Total pages: 257928
+ 9 Time(s): C0000-FFFFF write-back
+ 9 Time(s): CPU: Physical Processor ID: 0
+ 9 Time(s): Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+ 9 Time(s): Calgary: detecting Calgary via BIOS EBDA area
+ 9 Time(s): Calibrating delay loop (skipped), value calculated using timer frequency.. 4988.08 BogoMIPS (lpj=9976176)
+ 18 Time(s): Cannot get hvm parameter CONSOLE_EVTCHN (18): -22!
+ 9 Time(s): Centaur CentaurHauls
+ 9 Time(s): Checking aperture...
+ 6 Time(s): Command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-44-generic root=UUID=ae649ac3-2a1a-438f-8c02-10e03ec86be5 ro console=tty1 console=ttyS0
+ 3 Time(s): Command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-77-generic root=UUID=ae649ac3-2a1a-438f-8c02-10e03ec86be5 ro console=tty1 console=ttyS0
+ 9 Time(s): Console: colour VGA+ 80x25
+ 9 Time(s): DMA      [mem 0x00001000-0x00ffffff]
+ 9 Time(s): DMA zone: 21 pages reserved
+ 9 Time(s): DMA zone: 3997 pages, LIFO batch:0
+ 9 Time(s): DMA zone: 64 pages used for memmap
+ 9 Time(s): DMA32    [mem 0x01000000-0xffffffff]
+ 9 Time(s): DMA32 zone: 258048 pages, LIFO batch:31
+ 9 Time(s): DMA32 zone: 4032 pages used for memmap
+ 9 Time(s): DMI: Xen HVM domU, BIOS 4.2.amazon 12/07/2015
+ 9 Time(s): Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+ 9 Time(s): Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+ 9 Time(s): EDD information not available.
+ 9 Time(s): EVM: security.SMACK64
+ 9 Time(s): EVM: security.capability
+ 9 Time(s): EVM: security.ima
+ 9 Time(s): EVM: security.selinux
+ 1 Time(s): EXT4-fs (xvda1): 1 orphan inode deleted
+ 1 Time(s): EXT4-fs (xvda1): 4 orphan inodes deleted
+ 9 Time(s): EXT4-fs (xvda1): mounted filesystem with ordered data mode. Opts: (null)
+ 2 Time(s): EXT4-fs (xvda1): orphan cleanup on readonly fs
+ 9 Time(s): EXT4-fs (xvda1): re-mounted. Opts: discard
+ 2 Time(s): EXT4-fs (xvda1): recovery complete
+ 2 Time(s): EXT4-fs (xvda1): write access will be enabled during recovery
+ 9 Time(s): Early memory node ranges
+ 9 Time(s): FDC 0 is a S82078B
+ 9 Time(s): Faking a node at [mem 0x0000000000000000-0x000000003fffffff]
+ 9 Time(s): Found 1 acpi root devices
+ 1 Time(s): Freeing initrd memory: 7100K (ffff880037212000 - ffff880037901000)
+ 5 Time(s): Freeing initrd memory: 7552K (ffff880037130000 - ffff880037890000)
+ 3 Time(s): Freeing initrd memory: 7564K (ffff88003712a000 - ffff88003788d000)
+ 9 Time(s): Freeing unused kernel memory: 1336K (ffffffff81d20000 - ffffffff81e6e000)
+ 3 Time(s): Freeing unused kernel memory: 680K (ffff880001b56000 - ffff880001c00000)
+ 6 Time(s): Freeing unused kernel memory: 688K (ffff880001b54000 - ffff880001c00000)
+ 3 Time(s): Freeing unused kernel memory: 780K (ffff88000173d000 - ffff880001800000)
+ 6 Time(s): Freeing unused kernel memory: 796K (ffff880001739000 - ffff880001800000)
+ 9 Time(s): GHES: HEST is not enabled!
+ 9 Time(s): Grant table initialized
+ 9 Time(s): HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+ 9 Time(s): HVMOP_pagetable_dying not supported
+ 9 Time(s): Hierarchical RCU implementation.
+ 9 Time(s): HugeTLB registered 2 MB page size, pre-allocated 0 pages
+ 9 Time(s): Hypervisor detected: Xen HVM
+ 9 Time(s): IMA: No TPM chip found, activating TPM-bypass!
+ 9 Time(s): IOAPIC[0]: apic_id 1, version 17, address 0xfec00000, GSI 0-47
+ 18 Time(s): IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+ 9 Time(s): IPv6: ADDRCONF(NETDEV_UP): lo: link is not ready
+ 9 Time(s): Initialise system trusted keyring
+ 9 Time(s): Initializing cgroup subsys blkio
+ 9 Time(s): Initializing cgroup subsys cpu
+ 9 Time(s): Initializing cgroup subsys cpuacct
+ 9 Time(s): Initializing cgroup subsys cpuset
+ 9 Time(s): Initializing cgroup subsys devices
+ 9 Time(s): Initializing cgroup subsys freezer
+ 9 Time(s): Initializing cgroup subsys hugetlb
+ 9 Time(s): Initializing cgroup subsys memory
+ 9 Time(s): Initializing cgroup subsys perf_event
+ 9 Time(s): Initmem setup node 0 [mem 0x00000000-0x3fffffff]
+ 9 Time(s): Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+ 9 Time(s): Intel GenuineIntel
+ 9 Time(s): KERNEL supported cpus:
+ 6 Time(s): Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-44-generic root=UUID=ae649ac3-2a1a-438f-8c02-10e03ec86be5 ro console=tty1 console=ttyS0
+ 3 Time(s): Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-77-generic root=UUID=ae649ac3-2a1a-438f-8c02-10e03ec86be5 ro console=tty1 console=ttyS0
+ 9 Time(s): Key type asymmetric registered
+ 9 Time(s): Key type big_key registered
+ 9 Time(s): Key type dns_resolver registered
+ 9 Time(s): Key type encrypted registered
+ 9 Time(s): Key type trusted registered
+ 9 Time(s): Last level dTLB entries: 4KB 512, 2MB 0, 4MB 0
+ 9 Time(s): Last level iTLB entries: 4KB 512, 2MB 0, 4MB 0
+ 9 Time(s): Linux agpgart interface v0.103
+ 6 Time(s): Linux version 3.13.0-44-generic (buildd@lamiak) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #73-Ubuntu SMP Tue Dec 16 00:22:43 UTC 2014 (Ubuntu 3.13.0-44.73-generic 3.13.11-ckt12)
+ 3 Time(s): Linux version 3.13.0-77-generic (buildd@lcy01-30) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #121-Ubuntu SMP Wed Jan 20 10:50:42 UTC 2016 (Ubuntu 3.13.0-77.121-generic 3.13.11-ckt32)
+ 6 Time(s): Loaded X.509 cert 'Magrathea: Glacier signing key: 508c3b4bf108ed36b6062f812782f77c37b98537'
+ 3 Time(s): Loaded X.509 cert 'Magrathea: Glacier signing key: d961bd20e8ac66643fc6dc2d56668f426e33e88f'
+ 9 Time(s): Loading compiled-in X.509 certificates
+ 9 Time(s): MTRR default type: write-back
+ 9 Time(s): MTRR fixed ranges enabled:
+ 9 Time(s): MTRR variable ranges enabled:
+ 1 Time(s): Magic number: 4:11:968
+ 1 Time(s): Magic number: 4:131:308
+ 1 Time(s): Magic number: 4:337:510
+ 1 Time(s): Magic number: 4:341:53
+ 1 Time(s): Magic number: 4:440:611
+ 1 Time(s): Magic number: 4:444:154
+ 1 Time(s): Magic number: 4:596:563
+ 1 Time(s): Magic number: 4:687:385
+ 1 Time(s): Magic number: 4:755:866
+ 5 Time(s): Memory: 1005920K/1048180K available (7383K kernel code, 1144K rwdata, 3408K rodata, 1336K init, 1444K bss, 42260K reserved)
+ 3 Time(s): Memory: 1005964K/1048180K available (7400K kernel code, 1146K rwdata, 3416K rodata, 1336K init, 1448K bss, 42216K reserved)
+ 1 Time(s): Memory: 1006372K/1048180K available (7383K kernel code, 1144K rwdata, 3408K rodata, 1336K init, 1444K bss, 41808K reserved)
+ 9 Time(s): Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+ 9 Time(s): Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+ 9 Time(s): Movable zone start for each node
+ 9 Time(s): NET: Registered protocol family 1
+ 9 Time(s): NET: Registered protocol family 10
+ 9 Time(s): NET: Registered protocol family 16
+ 9 Time(s): NET: Registered protocol family 17
+ 9 Time(s): NET: Registered protocol family 2
+ 9 Time(s): NMI watchdog: disabled (cpu0): hardware events not enabled
+ 9 Time(s): NODE_DATA [mem 0x3fffb000-0x3fffffff]
+ 9 Time(s): NR_IRQS:16640 nr_irqs:1208 16
+ 9 Time(s): NX (Execute Disable) protection: active
+ 9 Time(s): NetLabel:  domain hash size = 128
+ 9 Time(s): NetLabel:  protocols = UNLABELED CIPSOv4
+ 9 Time(s): NetLabel:  unlabeled traffic allowed by default
+ 9 Time(s): NetLabel: Initializing
+ 9 Time(s): Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+ 18 Time(s): No AGP bridge found
+ 9 Time(s): No NUMA configuration found
+ 9 Time(s): Normal   empty
+ 9 Time(s): Offload RCU callbacks from CPUs: 0-14.
+ 9 Time(s): Offload RCU callbacks from all CPUs
+ 9 Time(s): On node 0 totalpages: 262045
+ 9 Time(s): PCI host bridge to bus 0000:00
+ 9 Time(s): PCI: CLS 0 bytes, default 64
+ 9 Time(s): PCI: Using ACPI for IRQ routing
+ 9 Time(s): PCI: Using configuration type 1 for base access
+ 9 Time(s): PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+ 9 Time(s): PCI: pci_cache_line_size set to 64 bytes
+ 3 Time(s): PERCPU: Embedded 27 pages/cpu @ffff88003fc00000 s81536 r8192 d20864 u131072
+ 6 Time(s): PERCPU: Embedded 28 pages/cpu @ffff88003fc00000 s82304 r8192 d24192 u131072
+ 9 Time(s): PID hash table entries: 4096 (order: 3, 32768 bytes)
+ 9 Time(s): PM: Hibernation image not present or could not be loaded.
+ 9 Time(s): PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+ 9 Time(s): PM: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+ 9 Time(s): PM: Registered nosave memory: [mem 0x000e0000-0x000fffff]
+ 9 Time(s): PPP generic driver version 2.4.2
+ 9 Time(s): Performance Events: unsupported p6 CPU model 62 no PMU driver, software events only.
+ 9 Time(s): Policy zone: DMA32
+ 3 Time(s): RAMDISK: [mem 0x3712a000-0x3788cfff]
+ 5 Time(s): RAMDISK: [mem 0x37130000-0x3788ffff]
+ 1 Time(s): RAMDISK: [mem 0x37212000-0x37900fff]
+ 9 Time(s): RCU dyntick-idle grace-period acceleration is enabled.
+ 9 Time(s): RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=15.
+ 1 Time(s): RTC time:  1:03:48, date: 02/10/16
+ 1 Time(s): RTC time:  1:10:37, date: 02/10/16
+ 1 Time(s): RTC time:  2:19:27, date: 02/09/16
+ 1 Time(s): RTC time:  2:31:32, date: 02/09/16
+ 1 Time(s): RTC time:  2:38:01, date: 02/09/16
+ 1 Time(s): RTC time:  3:33:10, date: 02/17/16
+ 1 Time(s): RTC time:  3:53:07, date: 02/15/16
+ 1 Time(s): RTC time:  3:59:44, date: 02/17/16
+ 1 Time(s): RTC time: 15:23:17, date: 02/04/16
+ 9 Time(s): SCSI subsystem initialized
+ 3 Time(s): SGI XFS with ACLs, security attributes, realtime, large block/inode numbers, no debug enabled
+ 9 Time(s): SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=15, Nodes=1
+ 9 Time(s): SMBIOS 2.4 present.
+ 9 Time(s): Scanning 1 areas for low memory corruption
+ 9 Time(s): Scanning for low memory corruption every 60 seconds
+ 9 Time(s): Security Framework initialized
+ 9 Time(s): Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+ 9 Time(s): Switched APIC routing to physical flat.
+ 9 Time(s): Switched to clocksource xen
+ 9 Time(s): TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+ 9 Time(s): TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+ 9 Time(s): TCP: Hash tables configured (established 8192 bind 8192)
+ 9 Time(s): TCP: cubic registered
+ 9 Time(s): TCP: reno registered
+ 9 Time(s): Trying to unpack rootfs image as initramfs...
+ 9 Time(s): UDP hash table entries: 512 (order: 2, 16384 bytes)
+ 9 Time(s): UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+ 9 Time(s): Using ACPI (MADT) for SMP configuration information
+ 9 Time(s): VFS: Disk quotas dquot_6.5.2
+ 9 Time(s): Write protecting the kernel read-only data: 12288k
+ 9 Time(s): Xen Platform PCI: I/O protocol version 1
+ 9 Time(s): Xen version 4.2.
+ 9 Time(s): Xen: using vcpuop timer interface
+ 9 Time(s): Yama: becoming mindful.
+ 9 Time(s): You might have to change the root device
+ 9 Time(s): Zone ranges:
+ 9 Time(s): [ffffea0000000000-ffffea0000ffffff] PMD -> [ffff88003e600000-ffff88003f5fffff] on node 0
+ 9 Time(s): [mem 0x00000000-0x000fffff] page 4k
+ 9 Time(s): [mem 0x00100000-0x001fffff] page 4k
+ 9 Time(s): [mem 0x00200000-0x3bffffff] page 2M
+ 9 Time(s): [mem 0x3c000000-0x3fdfffff] page 2M
+ 9 Time(s): [mem 0x3fe00000-0x3fffffff] page 2M
+ 9 Time(s): [mem 0x40000000-0x47ffffff] page 2M
+ 9 Time(s): acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+ 9 Time(s): acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+ 9 Time(s): acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+ 9 Time(s): acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+ 9 Time(s): acpiphp: Slot [0] registered
+ 9 Time(s): acpiphp: Slot [10] registered
+ 9 Time(s): acpiphp: Slot [11] registered
+ 9 Time(s): acpiphp: Slot [12] registered
+ 9 Time(s): acpiphp: Slot [13] registered
+ 9 Time(s): acpiphp: Slot [14] registered
+ 9 Time(s): acpiphp: Slot [15] registered
+ 9 Time(s): acpiphp: Slot [16] registered
+ 9 Time(s): acpiphp: Slot [17] registered
+ 9 Time(s): acpiphp: Slot [18] registered
+ 9 Time(s): acpiphp: Slot [19] registered
+ 9 Time(s): acpiphp: Slot [20] registered
+ 9 Time(s): acpiphp: Slot [21] registered
+ 9 Time(s): acpiphp: Slot [22] registered
+ 9 Time(s): acpiphp: Slot [23] registered
+ 9 Time(s): acpiphp: Slot [24] registered
+ 9 Time(s): acpiphp: Slot [25] registered
+ 9 Time(s): acpiphp: Slot [26] registered
+ 9 Time(s): acpiphp: Slot [27] registered
+ 9 Time(s): acpiphp: Slot [28] registered
+ 9 Time(s): acpiphp: Slot [29] registered
+ 9 Time(s): acpiphp: Slot [30] registered
+ 9 Time(s): acpiphp: Slot [31] registered
+ 9 Time(s): acpiphp: Slot [3] registered
+ 9 Time(s): acpiphp: Slot [4] registered
+ 9 Time(s): acpiphp: Slot [5] registered
+ 9 Time(s): acpiphp: Slot [6] registered
+ 9 Time(s): acpiphp: Slot [7] registered
+ 9 Time(s): acpiphp: Slot [8] registered
+ 9 Time(s): acpiphp: Slot [9] registered
+ 9 Time(s): allocated 4194304 bytes of page_cgroup
+ 9 Time(s): ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc100 irq 14
+ 9 Time(s): ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc108 irq 15
+ 9 Time(s): ata_piix 0000:00:01.1: version 2.13
+ 9 Time(s): audit: initializing netlink socket (disabled)
+ 1 Time(s): audit_printk_skb: 108 callbacks suppressed
+ 1 Time(s): audit_printk_skb: 114 callbacks suppressed
+ 1 Time(s): audit_printk_skb: 132 callbacks suppressed
+ 1 Time(s): audit_printk_skb: 60 callbacks suppressed
+ 1 Time(s): avx       : 22046.000 MB/sec
+ 1 Time(s): bdi 1:6: hash matches
+ 9 Time(s): bio: create slab <bio-0> at 0
+ 3 Time(s): bio: create slab <bio-1> at 1
+ 9 Time(s): blkfront: xvda: barrier or flush: disabled; persistent grants: disabled; indirect descriptors: enabled;
+ 9 Time(s): brd: module loaded
+ 9 Time(s): console [tty1] enabled
+ 9 Time(s): console [ttyS0] enabled
+ 9 Time(s): cpu 0 spinlock event irq 69
+ 9 Time(s): cpuidle: using governor ladder
+ 9 Time(s): cpuidle: using governor menu
+ 9 Time(s): device-mapper: ioctl: 4.27.0-ioctl (2013-10-30) initialised: dm-devel@redhat.com
+ 9 Time(s): device-mapper: uevent: version 1.0.3
+ 9 Time(s): devtmpfs: initialized
+ 9 Time(s): e820: BIOS-provided physical RAM map:
+ 9 Time(s): e820: [mem 0x40000000-0xfbffffff] available for PCI devices
+ 9 Time(s): e820: last_pfn = 0x40000 max_arch_pfn = 0x400000000
+ 9 Time(s): e820: remove [mem 0x000a0000-0x000fffff] usable
+ 9 Time(s): e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+ 9 Time(s): e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+ 9 Time(s): ehci-pci: EHCI PCI platform driver
+ 9 Time(s): ehci-platform: EHCI generic platform driver
+ 9 Time(s): ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ 9 Time(s): found SMP MP-table at [mem 0x000fbba0-0x000fbbaf] mapped at [ffff8800000fbba0]
+ 9 Time(s): from /dev/hd[a-d] to /dev/xvd[a-d]
+ 6 Time(s): ftrace: allocating 28554 entries in 112 pages
+ 3 Time(s): ftrace: allocating 28601 entries in 112 pages
+ 9 Time(s): fuse init (API version 7.22)
+ 9 Time(s): hpet clockevent registered
+ 9 Time(s): hpet0: 3 comparators, 64-bit 62.500000 MHz counter
+ 9 Time(s): hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+ 9 Time(s): i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+ 9 Time(s): in your root= kernel command line option
+ 9 Time(s): init_memory_mapping: [mem 0x00000000-0x000fffff]
+ 9 Time(s): init_memory_mapping: [mem 0x00100000-0x3bffffff]
+ 9 Time(s): init_memory_mapping: [mem 0x3c000000-0x3fdfffff]
+ 9 Time(s): init_memory_mapping: [mem 0x3fe00000-0x3fffffff]
+ 9 Time(s): init_memory_mapping: [mem 0x40000000-0x47ffffff]
+ 9 Time(s): input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+ 9 Time(s): input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+ 9 Time(s): input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+ 9 Time(s): input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+ 9 Time(s): installing Xen timer for CPU 0
+ 9 Time(s): intel_idle: does not run on family 6 model 62
+ 9 Time(s): io scheduler cfq registered
+ 9 Time(s): io scheduler deadline registered (default)
+ 9 Time(s): io scheduler noop registered
+ 9 Time(s): ip6_tables: (C) 2000-2006 Netfilter Core Team
+ 9 Time(s): ip_tables: (C) 2000-2006 Netfilter Core Team
+ 9 Time(s): ipmi message handler version 39.2
+ 9 Time(s): ledtrig-cpu: registered to indicate activity on CPUs
+ 9 Time(s): libata version 3.00 loaded.
+ 9 Time(s): libphy: Fixed MDIO Bus: probed
+ 9 Time(s): loop: module loaded
+ 9 Time(s): mce: CPU supports 2 MCE banks
+ 9 Time(s): microcode: CPU0 sig=0x306e4, pf=0x1, revision=0x428
+ 9 Time(s): microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+ 9 Time(s): mousedev: PS/2 mouse device common for all mice
+ 9 Time(s): msgmni has been set to 1979
+ 7 Time(s): mtrr: no MTRR for f0000000,100000 found
+ 6 Time(s): nf_conntrack version 0.5.0 (7939 buckets, 31756 max)
+ 3 Time(s): nf_conntrack version 0.5.0 (7940 buckets, 31760 max)
+ 9 Time(s): node   0: [mem 0x00001000-0x0009dfff]
+ 9 Time(s): node   0: [mem 0x00100000-0x3fffffff]
+ 9 Time(s): nr_irqs_gsi: 64
+ 9 Time(s): ohci-pci: OHCI PCI platform driver
+ 9 Time(s): ohci-platform: OHCI generic platform driver
+ 9 Time(s): ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ 9 Time(s): pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+ 9 Time(s): pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+ 9 Time(s): pci 0000:00:01.0: Activating ISA DMA hang workarounds
+ 9 Time(s): pci 0000:00:01.0: PIIX3: Enabling Passive Release
+ 9 Time(s): pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+ 9 Time(s): pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+ 9 Time(s): pci 0000:00:01.1: reg 0x20: [io  0xc100-0xc10f]
+ 9 Time(s): pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+ 9 Time(s): pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+ 9 Time(s): pci 0000:00:02.0: Video device with shadowed ROM
+ 9 Time(s): pci 0000:00:02.0: [1013:00b8] type 00 class 0x030000
+ 9 Time(s): pci 0000:00:02.0: reg 0x10: [mem 0xf0000000-0xf1ffffff pref]
+ 9 Time(s): pci 0000:00:02.0: reg 0x14: [mem 0xf3000000-0xf3000fff]
+ 9 Time(s): pci 0000:00:03.0: [5853:0001] type 00 class 0xff8000
+ 9 Time(s): pci 0000:00:03.0: reg 0x10: [io  0xc000-0xc0ff]
+ 9 Time(s): pci 0000:00:03.0: reg 0x14: [mem 0xf2000000-0xf2ffffff pref]
+ 9 Time(s): pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+ 9 Time(s): pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+ 9 Time(s): pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+ 9 Time(s): pci_bus 0000:00: resource 7 [mem 0xf0000000-0xfbffffff]
+ 9 Time(s): pci_bus 0000:00: root bus resource [bus 00-ff]
+ 9 Time(s): pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+ 9 Time(s): pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+ 9 Time(s): pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+ 9 Time(s): pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfbffffff]
+ 9 Time(s): pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+ 9 Time(s): pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+ 9 Time(s): pcpu-alloc: [0] 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 --
+ 3 Time(s): pcpu-alloc: s81536 r8192 d20864 u131072 alloc=1*2097152
+ 6 Time(s): pcpu-alloc: s82304 r8192 d24192 u131072 alloc=1*2097152
+ 9 Time(s): pid_max: default: 32768 minimum: 301
+ 9 Time(s): pinctrl core: initialized pinctrl subsystem
+ 1 Time(s): platform Fixed MDIO bus.0: hash matches
+ 9 Time(s): please try 'cgroup_disable=memory' option if you don't want memory cgroups
+ 9 Time(s): pnp 00:01: Plug and Play ACPI device, IDs PNP0103 (active)
+ 9 Time(s): pnp 00:03: Plug and Play ACPI device, IDs PNP0200 (active)
+ 9 Time(s): pnp 00:03: [dma 4]
+ 9 Time(s): pnp 00:04: Plug and Play ACPI device, IDs PNP0b00 (active)
+ 9 Time(s): pnp 00:05: Plug and Play ACPI device, IDs PNP0800 (active)
+ 9 Time(s): pnp 00:06: Plug and Play ACPI device, IDs PNP0f13 (active)
+ 9 Time(s): pnp 00:07: Plug and Play ACPI device, IDs PNP0303 PNP030b (active)
+ 9 Time(s): pnp 00:08: Plug and Play ACPI device, IDs PNP0700 (active)
+ 9 Time(s): pnp 00:08: [dma 2]
+ 9 Time(s): pnp 00:09: Plug and Play ACPI device, IDs PNP0501 (active)
+ 9 Time(s): pnp: PnP ACPI init
+ 9 Time(s): pnp: PnP ACPI: found 11 devices
+ 1 Time(s): raid6: sse2x1    7378 MB/s
+ 1 Time(s): raid6: sse2x1    7694 MB/s
+ 1 Time(s): raid6: sse2x1    7771 MB/s
+ 1 Time(s): raid6: sse2x2    9439 MB/s
+ 1 Time(s): raid6: sse2x2    9516 MB/s
+ 1 Time(s): raid6: sse2x2    9625 MB/s
+ 1 Time(s): raid6: sse2x4   10991 MB/s
+ 1 Time(s): raid6: sse2x4   11180 MB/s
+ 1 Time(s): raid6: sse2x4   11333 MB/s
+ 1 Time(s): raid6: using algorithm sse2x4 (10991 MB/s)
+ 1 Time(s): raid6: using algorithm sse2x4 (11180 MB/s)
+ 1 Time(s): raid6: using algorithm sse2x4 (11333 MB/s)
+ 3 Time(s): raid6: using ssse3x2 recovery algorithm
+ 1 Time(s): random: init urandom read with 127 bits of entropy available
+ 1 Time(s): random: init urandom read with 52 bits of entropy available
+ 1 Time(s): random: init urandom read with 53 bits of entropy available
+ 3 Time(s): random: init urandom read with 54 bits of entropy available
+ 1 Time(s): random: init urandom read with 55 bits of entropy available
+ 1 Time(s): random: init urandom read with 74 bits of entropy available
+ 9 Time(s): random: nonblocking pool is initialized
+ 9 Time(s): registered taskstats version 1
+ 9 Time(s): regulator-dummy: disabling
+ 9 Time(s): regulator-dummy: no parameters
+ 9 Time(s): rtc_cmos 00:04: alarms up to one day, 114 bytes nvram, hpet irqs
+ 9 Time(s): rtc_cmos 00:04: rtc core: registered rtc_cmos as rtc0
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-04 15:23:19 UTC (1454599399)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-09 02:19:27 UTC (1454984367)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-09 02:31:33 UTC (1454985093)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-09 02:38:02 UTC (1454985482)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-10 01:03:49 UTC (1455066229)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-10 01:10:38 UTC (1455066638)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-15 03:53:08 UTC (1455508388)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-17 03:33:11 UTC (1455679991)
+ 1 Time(s): rtc_cmos 00:04: setting system clock to 2016-02-17 03:59:45 UTC (1455681585)
+ 9 Time(s): scsi0 : ata_piix
+ 9 Time(s): scsi1 : ata_piix
+ 9 Time(s): serio: i8042 AUX port at 0x60,0x64 irq 12
+ 9 Time(s): serio: i8042 KBD port at 0x60,0x64 irq 1
+ 9 Time(s): setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:15 nr_node_ids:1
+ 9 Time(s): smpboot: Allowing 15 CPUs, 14 hotplug CPUs
+ 9 Time(s): smpboot: CPU0: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz (fam: 06, model: 3e, stepping: 04)
+ 9 Time(s): smpboot: Total of 1 processors activated (4988.08 BogoMIPS)
+ 9 Time(s): system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+ 9 Time(s): system 00:00: [mem 0x00000000-0x0009ffff] could not be reserved
+ 9 Time(s): system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+ 9 Time(s): system 00:02: [io  0x04d0-0x04d1] has been reserved
+ 9 Time(s): system 00:02: [io  0x08a0-0x08a3] has been reserved
+ 9 Time(s): system 00:02: [io  0x0cc0-0x0ccf] has been reserved
+ 9 Time(s): system 00:0a: Plug and Play ACPI device, IDs PNP0c02 (active)
+ 9 Time(s): system 00:0a: [io  0x10c0-0x1141] has been reserved
+ 9 Time(s): system 00:0a: [io  0xb044-0xb047] has been reserved
+ 1 Time(s): thermal cooling_device0: hash matches
+ 9 Time(s): tlb_flushall_shift: 6
+ 9 Time(s): tsc: Detected 2494.044 MHz processor
+ 1 Time(s): tsc: Refined TSC clocksource calibration: 2493.989 MHz
+ 5 Time(s): tsc: Refined TSC clocksource calibration: 2493.990 MHz
+ 3 Time(s): tsc: Refined TSC clocksource calibration: 2493.991 MHz
+ 1 Time(s): tty tty37: hash matches
+ 9 Time(s): tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+ 9 Time(s): tun: Universal TUN/TAP device driver, 1.6
+ 9 Time(s): uhci_hcd: USB Universal Host Controller Interface driver
+ 9 Time(s): usbcore: registered new device driver usb
+ 9 Time(s): usbcore: registered new interface driver hub
+ 9 Time(s): usbcore: registered new interface driver usbfs
+ 9 Time(s): vgaarb: bridge control possible 0000:00:02.0
+ 9 Time(s): vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+ 9 Time(s): vgaarb: loaded
+ 9 Time(s): vgaarb: setting as boot device: PCI:0000:00:02.0
+ 9 Time(s): x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+ 9 Time(s): x86: Booted up 1 node, 1 CPUs
+ 9 Time(s): xen: --> pirq=16 -> irq=8 (gsi=8)
+ 9 Time(s): xen: --> pirq=17 -> irq=12 (gsi=12)
+ 9 Time(s): xen: --> pirq=18 -> irq=1 (gsi=1)
+ 9 Time(s): xen: --> pirq=19 -> irq=6 (gsi=6)
+ 9 Time(s): xen: --> pirq=20 -> irq=4 (gsi=4)
+ 9 Time(s): xen: --> pirq=21 -> irq=28 (gsi=28)
+ 9 Time(s): xen: PV spinlocks enabled
+ 9 Time(s): xen:balloon: Initialising balloon driver
+ 9 Time(s): xen:events: Xen HVM callback vector for event delivery is enabled
+ 9 Time(s): xen:grant_table: Grant tables using version 1 layout
+ 9 Time(s): xen_balloon: Initialising balloon driver
+ 9 Time(s): xen_netfront: Initialising Xen virtual ethernet driver
+ 9 Time(s): xenbus_probe_frontend: Device with no driver: device/vfb/0
+ 3 Time(s): xor: automatically using best checksumming function:
+ 9 Time(s): xsave: enabled xstate_bv 0x7, cntxt size 0x340
+ 9 Time(s): xvda: xvda1
+ 9 Time(s): zbud: loaded
+
+ ---------------------- Kernel End -------------------------
+
+
+ --------------------- pam_unix Begin ------------------------
+
+ cron:
+    Sessions Opened:
+       root: 918 Time(s)
+       smmsp: 777 Time(s)
+
+ gdm-launch-environment:
+    Unknown Entries:
+       session opened for user gdm by (uid=0): 6 Time(s)
+
+ lightdm-greeter:
+    Unknown Entries:
+       session opened for user lightdm by (uid=0): 1 Time(s)
+
+ passwd:
+    Password changed:
+       grader: 1 Time(s)
+       root: 1 Time(s)
+       v2saumb: 1 Time(s)
+
+ sshd:
+    Sessions Opened:
+       v2saumb: 70 Time(s)
+       root: 7 Time(s)
+       grader: 1 Time(s)
+
+ su:
+    Authentication Failures:
+       v2saumb(1001) -> root: 11 Time(s)
+       v2saumb(1001) -> postgres: 7 Time(s)
+       root(1001) -> root: 1 Time(s)
+    Sessions Opened:
+       v2saumb -> root: 47 Time(s)
+       v2saumb -> postgres: 8 Time(s)
+       v2saumb -> grader: 4 Time(s)
+       root -> root: 2 Time(s)
+       root -> v2saumb: 2 Time(s)
+       root -> grader: 1 Time(s)
+       root -> postgres: 1 Time(s)
+
+ sudo:
+    Sessions Opened:
+       root -> root: 286 Time(s)
+       v2saumb -> root: 74 Time(s)
+       v2saumb -> postgres: 5 Time(s)
+
+
+ ---------------------- pam_unix End -------------------------
+
+
+ --------------------- Postfix Begin ------------------------
+
+ ****** Summary *************************************************************************************
+
+    1.078K  Bytes accepted                               1,104
+ ========   ==================================================
+
+        2   Accepted                                   100.00%
+ --------   --------------------------------------------------
+        2   Total                                      100.00%
+ ========   ==================================================
+
+        4   Removed from queue
+        4   Bounced (local)
+        2   Notifications sent
+
+ ****** Detail (10) *********************************************************************************
+
+        4   Bounced (local) -------------------------------------------------------------------------
+        4      5.4.4: Permanent failure: Network & routing status: Unable to route
+
+        2   Notifications sent ----------------------------------------------------------------------
+        2      Non-delivery
+
+ === Delivery Delays Percentiles ============================================================
+                     0%       25%       50%       75%       90%       95%       98%      100%
+ --------------------------------------------------------------------------------------------
+ Before qmgr       0.00      0.00      0.01      0.01      0.02      0.02      0.02      0.02
+ In qmgr           0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+ Conn setup        0.00      0.00      0.00      0.00      0.01      0.01      0.01      0.01
+ Transmission      0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+ Total             0.00      0.00      0.01      0.01      0.02      0.02      0.02      0.02
+ ============================================================================================
+
+ ---------------------- Postfix End -------------------------
+
+
+ --------------------- PostgreSQL Begin ------------------------
+
+ Fatals:
+ -------
+
+ 4 times:
+ [2016-02-13 19:08:09 +/-16 seconds]  password authentication failed for user "catalog"
+
+ 2 times:
+ [2016-02-13 22:30:02 +/-0 seconds]  password authentication failed for user "cataloga"
+ [2016-02-13 19:44:41 +/-2 hour(s)]  database "catalog" does not exist
+ [2016-02-13 05:04:38 +/-35 seconds]  Peer authentication failed for user "catalog"
+ [2016-02-13 20:50:07 +/-0 seconds]  terminating connection due to administrator command
+
+ 1 times:
+ [2016-02-13 21:18:38]  Peer authentication failed for user "catalogadmin"
+
+ Errors:
+ -------
+
+ 3 times:
+ [2016-02-13 19:14:26 +/-3 minute(s)]  syntax error at or near "all"
+ [2016-02-13 20:54:11 +/-5 minute(s)]  syntax error at or near "to"
+ [2016-02-13 19:02:27 +/-26 minute(s)]  syntax error at or near "in"
+
+ 2 times:
+ [2016-02-13 18:21:58 +/-5 seconds]  database "catalogdb" already exists
+ [2016-02-13 21:08:01 +/-16 seconds]  syntax error at or near ";"
+ [2016-02-11 11:19:47 +/-4 day(s)]  syntax error at or near "user"
+ [2016-02-09 03:01:21 +/-12 seconds]  syntax error at or near "createuser"
+
+ 1 times:
+ [2016-02-13 20:58:01]  syntax error at or near "select"
+ [2016-02-13 21:32:49]  syntax error at or near "value"
+ [2016-02-09 01:36:16]  syntax error at or near "CREATE"
+ [2016-02-09 01:39:02]  syntax error at or near "Alter"
+ [2016-02-13 20:43:38]  syntax error at or near "dropdb"
+ [2016-02-13 21:32:38]  syntax error at or near "table"
+ [2016-02-13 18:19:24]  syntax error at or near "/"
+ [2016-02-08 01:18:17]  column "date" does not exist
+ [2016-02-09 01:39:33]  syntax error at or near "role"
+ [2016-02-13 21:44:58]  syntax error at or near "clear"
+ [2016-02-09 01:36:32]  role "db_admin" already exists
+ [2016-02-13 19:11:36]  syntax error at or near "privlages"
+ [2016-02-13 22:14:23]  syntax error at or near "cataloguser"
+ [2016-02-09 02:02:33]  syntax error at or near "create"
+ [2016-02-13 20:53:55]  role "catalog" cannot be dropped because some objects depend on it
+ [2016-02-13 21:11:58]  unrecognized role option "pasword"
+ [2016-02-13 19:11:06]  syntax error at or near "privilages"
+ [2016-02-13 20:44:01]  database "catalogdb" is being accessed by other users
+ [2016-02-08 01:37:31]  syntax error at or near ","
+ [2016-02-13 19:09:55]  syntax error at or near ""catalog""
+ [2016-02-19 02:56:21]  syntax error at or near "history"
+ [2016-02-13 18:43:25]  syntax error at or near "public"
+ [2016-02-13 21:45:07]  must be owner of relation test
+ [2016-02-13 18:43:06]  syntax error at or near "revode"
+ [2016-02-13 20:51:18]  syntax error at or near "schema"
+ [2016-02-13 21:42:42]  relation "test" does not exist
+ [2016-02-13 21:32:58]  invalid input syntax for integer: "ss"
+ [2016-02-13 20:43:14]  syntax error at or near "db"
+ [2016-02-13 18:47:46]  role "catalogdb" does not exist
+ [2016-02-13 20:38:42]  relation "catalog.user" does not exist
+ [2016-02-09 03:02:35]  role "catalog" already exists
+ [2016-02-13 19:12:02]  syntax error at or near "privleges"
+ [2016-02-13 20:44:47]  syntax error at or near "sessions"
+
+
+ ---------------------- PostgreSQL End -------------------------
+
+
+ --------------------- Connections (secure-log) Begin ------------------------
+
+ New Users:
+    grader (1000)
+    v2saumb (1001)
+    postgres (106)
+    glances (116)
+    usbmux (107)
+    lightdm (108)
+    pulse (109)
+    dnsmasq (110)
+    gdm (111)
+    postfix (112)
+    smmta (113)
+    smmsp (114)
+    ntp (115)
+
+ New Groups:
+    grader (1000)
+    v2saumb (1001)
+    ssl-cert (111)
+    postgres (112)
+    glances (125)
+    lightdm (113)
+    nopasswdlogin (114)
+    bluetooth (115)
+    utempter (116)
+    pulse (117)
+    pulse-access (118)
+    gdm (119)
+    postfix (120)
+    postdrop (121)
+    smmta (122)
+    smmsp (123)
+    ntp (124)
+
+
+ Added User to group:
+    root:
+       v2saumb
+
+ Changed password expiry for users:
+    dnsmasq : 1 Time(s)
+    gdm : 1 Time(s)
+    glances : 1 Time(s)
+    lightdm : 1 Time(s)
+    ntp : 1 Time(s)
+    postfix : 1 Time(s)
+    postgres : 1 Time(s)
+    pulse : 1 Time(s)
+    smmsp : 1 Time(s)
+    smmta : 1 Time(s)
+    usbmux : 1 Time(s)
+
+ **Unmatched Entries**
+    chfn: changed user 'dnsmasq' information: 1 Time(s)
+    chfn: changed user 'grader' information: 1 Time(s)
+    chfn: changed user 'postgres' information: 1 Time(s)
+    chfn: changed user 'pulse' information: 1 Time(s)
+    chfn: changed user 'smmsp' information: 1 Time(s)
+    chfn: changed user 'smmta' information: 1 Time(s)
+    chfn: changed user 'usbmux' information: 1 Time(s)
+    chfn: changed user 'v2saumb' information: 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.12" (uid=0 pid=1287 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.13" (uid=0 pid=1350 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.12" (uid=0 pid=1287 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.13" (uid=0 pid=1361 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.12" (uid=0 pid=1289 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.13" (uid=0 pid=1360 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.13" (uid=0 pid=1291 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.14" (uid=0 pid=1356 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.13" (uid=0 pid=1310 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.14" (uid=0 pid=1383 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.14" (uid=0 pid=1242 comm="gdm ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.15" (uid=0 pid=1320 comm="/usr/lib/gdm/gdm-simple-slave --display-id /org/gn"): 1 Time(s)
+    dbus: [system] Rejected send message, 7 matched rules; type="method_return", sender=":1.40" (uid=0 pid=2461 comm="/usr/sbin/dnsmasq --no-resolv --keep-in-foreground") interface="(unset)" member="(unset)" error name="(unset)" requested_reply="0" destination=":1.4" (uid=0 pid=972 comm="NetworkManager "): 1 Time(s)
+    gpasswd: user postgres added by root to group ssl-cert: 1 Time(s)
+    gpasswd: user pulse added by root to group audio: 1 Time(s)
+    lightdm: PAM adding faulty module: pam_gnome_keyring.so: 2 Time(s)
+    lightdm: PAM adding faulty module: pam_kwallet.so: 2 Time(s)
+    lightdm: PAM unable to dlopen(pam_gnome_keyring.so): /lib/security/pam_gnome_keyring.so: cannot open shared object file: No such file or directory: 2 Time(s)
+    lightdm: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory: 2 Time(s)
+    lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "v2saumb": 1 Time(s)
+    su: No passwd entry for user 'postgressu': 1 Time(s)
+    su: No passwd entry for user 'rooot': 1 Time(s)
+    su: No passwd entry for user 'rootsuroot': 1 Time(s)
+    su: No passwd entry for user 'rppsssu': 1 Time(s)
+    systemd-logind: Linked /tmp/.X11-unix/X0 to /run/user/111/X11-display.: 6 Time(s)
+    systemd-logind: New seat seat0.: 8 Time(s)
+    systemd-logind: Watching system buttons on /dev/input/event0 (Power Button): 9 Time(s)
+    systemd-logind: Watching system buttons on /dev/input/event1 (Sleep Button): 9 Time(s)
+    usermod: add 'v2saumb' to shadow group 'root': 1 Time(s)
+    usermod: change user 'dnsmasq' password: 1 Time(s)
+    usermod: change user 'gdm' password: 1 Time(s)
+    usermod: change user 'glances' password: 1 Time(s)
+    usermod: change user 'lightdm' password: 1 Time(s)
+    usermod: change user 'ntp' password: 1 Time(s)
+    usermod: change user 'postfix' password: 1 Time(s)
+    usermod: change user 'postgres' password: 1 Time(s)
+    usermod: change user 'pulse' password: 1 Time(s)
+    usermod: change user 'smmsp' password: 1 Time(s)
+    usermod: change user 'smmta' password: 1 Time(s)
+    usermod: change user 'usbmux' password: 1 Time(s)
+
+ ---------------------- Connections (secure-log) End -------------------------
+
+
+ --------------------- sendmail Begin ------------------------
+
+
+
+ SENDMAIL CONFIGURATION
+ ----------------------
+
+ Aliases database out of date 12 Time(s)
+
+ STATISTICS
+ ----------
+
+ Sendmail was started 6 time(s)
+
+ Messages To Recipients:  1277
+ Addressed Recipients:    2015
+ Bytes Transferred:       8518188
+ Messages No Valid Rcpts: 5
+
+ SMTP SESSION, MESSAGE, OR RECIPIENT ERRORS
+ ------------------------------------------
+
+ WARNING!!!!  Possible Attack:
+    Attempt from [UNKNOWN] with:
+       newline in string " (from root@localhost) \tby #ip-10-20-12-228 sams-catalog-server (8.14.4/8.14.4/Submit) id u1A148id002046 \tfor root; Wed, 10 Feb 2016 01:04:08 GMT": 1 Time(s)
+       newline in string " <201602100104.u1A148id002046@#ip-10-20-12-228 sams-catalog-server>": 1 Time(s)
+       newline in string " <201602100104.u1A148ie002046@#ip-10-20-12-228 sams-catalog-server>": 1 Time(s)
+       newline in string " <201602100104.u1A148if002046@#ip-10-20-12-228 sams-catalog-server>": 1 Time(s)
+       newline in string " from localhost (localhost) \tby #ip-10-20-12-228 sams-catalog-server (8.14.4/8.14.4/Submit) id u1A148ie002046; \tWed, 10 Feb 2016 01:04:08 GMT": 1 Time(s)
+       newline in string " from localhost (localhost) \tby #ip-10-20-12-228 sams-catalog-server (8.14.4/8.14.4/Submit) id u1A148if002046; \tWed, 10 Feb 2016 01:04:08 GMT": 1 Time(s)
+       newline in string " multipart/report; report-type=delivery-status; \tboundary="u1A148ie002046.1455066248/#ip-10-20-12-228 sams-catalog-server"": 1 Time(s)
+       newline in string " multipart/report; report-type=delivery-status; \tboundary="u1A148if002046.1455066248/#ip-10-20-12-228 sams-catalog-server"": 1 Time(s)
+        Total:  8 Time(s)
+
+ Timeouts:  [Occurrences >= 1]
+     from [127.0.0.1]: 1 Time(s)
+        Total:  1
+
+ Errors during Collect:
+     unexpected close: [Occurrences >= 1]
+       localhost : 3 Time(s)
+     Total: 3
+
+ Mail Rejected:
+     Can't create output:
+         To: /root/mailbox: 2 Time(s)
+     Host unknown (Name server: loclhost: host not found):
+         To: <grader@loclhost>: 16 Time(s)
+     Remote protocol error:
+         To: fail2ban: 1 Time(s)
+     Service unavailable:
+         To: postmaster: 1 Time(s)
+         To: root: 1 Time(s)
+     User unknown:
+         To: <fail2ban@localhost>: 16 Time(s)
+         To: sams-catalog-server: 1 Time(s)
+         To: MAILER-DAEMON: 2 Time(s)
+        Total:  40
+
+ Mail Deferred:
+     Connection timed out with alt4.gmail-smtp-in.l.google.com.:
+         To: v2saumb@gmail.com: 40 Time(s)
+     Connection timed out with mail.yaxmail.net.:
+         To: <v2saumb@gmil.com>: 1 Time(s)
+        Total:  41
+
+ Total SMTP Session, Message, and Recipient Errors handled by Sendmail:  93
+
+ **Unmatched Entries**
+    My unqualified host name (localhost) unknown; sleeping for retry: 209 Time(s)
+    unable to qualify my own domain name (localhost) -- using short name: 199 Time(s)
+    gethostbyaddr(10.20.12.228) failed: 1: 11 Time(s)
+    Saved message in /var/lib/sendmail/dead.letter: 2 Time(s)
+    [127.0.0.1]: SMTP DATA-1 protocol error: 250 2.1.5 <fail2ban@#ip-10-20-12-228.sams-catalog-server>... Recipient ok: 1 Time(s)
+
+ ---------------------- sendmail End -------------------------
+
+
+ --------------------- SSHD Begin ------------------------
+
+
+ SSHD Killed: 7 Time(s)
+
+ SSHD Started: 32 Time(s)
+
+
+ WARNING!!!
+ Refused ROOT login attempt from:
+    73.230.130.89 : 1 Time(s)
+
+ Illegal users from:
+    undef: 30 times
+       Sorin [preauth]: 1 time
+       admln [preauth]: 1 time
+       app [preauth]: 1 time
+       bill [preauth]: 1 time
+       buka [preauth]: 1 time
+       dh [preauth]: 1 time
+       ghost [preauth]: 1 time
+       gusr [preauth]: 1 time
+       gyaseen [preauth]: 1 time
+       ld [preauth]: 1 time
+       lihan [preauth]: 1 time
+       mysql [preauth]: 1 time
+       nan [preauth]: 1 time
+       nano [preauth]: 1 time
+       nfsnobod [preauth]: 1 time
+       nmrsu [preauth]: 1 time
+       notice [preauth]: 1 time
+       oracle [preauth]: 1 time
+       payment [preauth]: 1 time
+       perl [preauth]: 1 time
+       postgres [preauth]: 1 time
+       r00t [preauth]: 1 time
+       red [preauth]: 1 time
+       sergeev [preauth]: 1 time
+       sm0k3y [preauth]: 1 time
+       smokey [preauth]: 1 time
+       syncro [preauth]: 1 time
+       tose [preauth]: 1 time
+       username [preauth]: 1 time
+       xVIRal [preauth]: 1 time
+    46.148.16.98: 39 times
+       r00t: 3 times
+       sergeev: 3 times
+       admln: 2 times
+       lihan: 2 times
+       nan: 2 times
+       postgres: 2 times
+       syncro: 2 times
+       Sorin: 1 time
+       app: 1 time
+       bill: 1 time
+       buka: 1 time
+       dh: 1 time
+       ghost: 1 time
+       gusr: 1 time
+       gyaseen: 1 time
+       ld: 1 time
+       mysql: 1 time
+       nano: 1 time
+       nfsnobod: 1 time
+       nmrsu: 1 time
+       notice: 1 time
+       oracle: 1 time
+       payment: 1 time
+       perl: 1 time
+       red: 1 time
+       sm0k3y: 1 time
+       smokey: 1 time
+       tose: 1 time
+       username: 1 time
+       xVIRal: 1 time
+
+ Users logging in through sshd:
+    grader:
+       73.230.130.89 (c-73-230-130-89.hsd1.pa.comcast.net): 1 time
+    root:
+       73.230.130.89 (c-73-230-130-89.hsd1.pa.comcast.net): 6 times
+       52.88.191.18 (ec2-52-88-191-18.us-west-2.compute.amazonaws.com): 1 time
+    v2saumb:
+       73.230.130.89 (c-73-230-130-89.hsd1.pa.comcast.net): 70 times
+
+
+ Received disconnect:
+    11:  [preauth]
+       58.218.211.198 : 1 Time(s)
+    11: Bye Bye [preauth]
+       137.135.47.83 : 15 Time(s)
+       46.148.16.98 : 150 Time(s)
+    11: disconnected by user
+       52.88.191.18 : 1 Time(s)
+       73.230.130.89 : 21 Time(s)
+
+ **Unmatched Entries**
+ error: Received disconnect from 73.230.130.89: 14: No supported authentication methods available [preauth] : 3 time(s)
+ ROOT LOGIN REFUSED FROM 73.230.130.89 [preauth] : 1 time(s)
+ error: Could not load host key: /etc/ssh/ssh_host_ed25519_key : 176 time(s)
+
+ ---------------------- SSHD End -------------------------
+
+
+ --------------------- Sudo (secure-log) Begin ------------------------
+
+
+ root => postgres
+ ----------------
+ /bin/bash                      -   1 Time(s).
+ /usr/bin/createuser            -   1 Time(s).
+
+ root => root
+ ------------
+ /bin/cp                        -   4 Time(s).
+ /sbin/shutdown                 -   2 Time(s).
+ /usr/bin/apt-get               -   9 Time(s).
+ /usr/bin/nano                  -   3 Time(s).
+ /usr/bin/pip                   -   2 Time(s).
+ /usr/bin/update-alternatives   -   1 Time(s).
+ /usr/sbin/a2ensite             -   4 Time(s).
+ /usr/sbin/dpkg-reconfigure     -   3 Time(s).
+ /usr/sbin/service              - 143 Time(s).
+ /usr/sbin/ufw                  - 143 Time(s).
+
+ v2saumb => postgres
+ -------------------
+ /bin/bash                      -   2 Time(s).
+ /usr/bin/psql                  -   1 Time(s).
+
+ v2saumb => root
+ ---------------
+ /bin/mkdir                     -   1 Time(s).
+ /usr/bin/add-apt-repository    -   1 Time(s).
+ /usr/bin/apt-get               -  28 Time(s).
+ /usr/bin/crontab               -   2 Time(s).
+ /usr/bin/nano                  -   3 Time(s).
+ /usr/bin/pip                   -   3 Time(s).
+ /usr/bin/python                -   2 Time(s).
+ /usr/bin/tail                  -   3 Time(s).
+ /usr/local/bin/virtualenv      -   1 Time(s).
+ /usr/sbin/service              -   2 Time(s).
+
+
+ **Unmatched Entries**
+     v2saumb : unable to resolve host ip-10-20-12-228: 40 Time(s)
+        root : unable to resolve host ip-10-20-12-228: 16 Time(s)
+        root : unable to resolve host #ip-10-20-12-228#012sams-catalog-server: 1 Time(s)
+ ---------------------- Sudo (secure-log) End -------------------------
+
+
+ --------------------- Disk Space Begin ------------------------
+
+ Filesystem      Size  Used Avail Use% Mounted on
+ udev            492M   12K  492M   1% /dev
+ /dev/xvda1      7.8G  2.9G  4.5G  39% /
+
+
+ ---------------------- Disk Space End -------------------------
+
+
+ ###################### Logwatch End #########################
+
